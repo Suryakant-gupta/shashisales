@@ -1,0 +1,494 @@
+.first-component{
+    padding: 3vw;
+    display: flex;
+    background-color: black;
+    color: white;
+    /* height: 30rem; */
+    margin-bottom: 3vw;
+}
+.comp1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.in{
+    height: 26vw;
+    width: 42vw;
+    display: grid;
+    justify-content: space-between;
+}
+.in1{
+    line-height: 1.5;
+    font-size: 4.3vw;
+}
+.in2 button{
+    height: 3vw;
+    width: 25vw;
+    font-size: 1.5vw;
+    background: none;
+    color: #C4C800;
+    border: 1px solid #C4C800;
+    border-radius: 2vw;
+}
+.in2 button:hover{
+    background-color: #C4C800;
+    color: black;
+}
+.comp2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.comp2 .imgr{
+    position: absolute;
+    top: 0%;
+    left: 8%;
+}
+.web-dev{
+    z-index: 0;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 25%;
+    left: 40%;
+}
+.web-dev h2{
+    font-size: 2.3vw;
+    width: 30vw;
+    color: #C4C800;
+}
+.w-img1{
+    z-index: 1;
+    height: 40vw;
+    width: auto;
+}
+
+/* Second Component */
+.wheel-animation {
+    width: 100%;
+    /* margin-left: 4vw; */
+    height: 45vw;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .wheel {
+    padding-left: 1vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5vw;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .wheel.active {
+    opacity: 1;
+  }
+  
+  .wheel-text {
+    width: 59%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1.5vw;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.5s;
+  }
+  
+  .wheel.active .wheel-text {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .wheel-text .iwt {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1.5vw;
+  }
+  .iwt h3, .iwt p{
+    font-size: 1.5vw;
+  }
+  .iwt p {
+    line-height: 1.5;
+  }
+  
+  .wheel-image {
+    width: 39%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .wheel.active .wheel-image {
+    opacity: 1;
+  }
+  
+  .wheel-image img {
+    width: 85%;
+    transform: rotate(45deg);
+    transition: transform 1s ease-in-out;
+  }
+  
+  .wheel.active .wheel-image img {
+    transform: rotate(0deg);
+  }
+/* .sec-com{
+    padding: 0 0 0 3vw;
+    display: flex;
+    margin-bottom: 3vw;
+    gap: 2rem;
+}
+.sec-com-1{
+    width: 70%;
+    display: grid;
+    gap: 2rem;
+}
+.sec-com-1 div{
+    display: grid;
+    gap: 1rem;
+}
+.fc-g{
+    color: grey;
+    padding: 0 10rem 0 0;
+    font-size: 1.1rem;
+}
+.sec-com-2{
+    width: 30%;
+    position: relative;
+}
+.sec-com-2 div{
+    position: absolute;
+    top: 40%;
+    right: 18%;
+    font-size: 2.5rem;
+    width: 10rem;
+    text-align: center;
+}
+.sec-com-2 img{
+    height: 100%;
+    width: 100%;
+} */
+
+
+
+/* What makes us different section  */
+.w-cont{
+    /* padding: 3vw 0; */
+    display: flex;
+    height: 33vw;
+}
+.w-cont-1{
+    width: 50%;
+    position: relative;
+}
+.sd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25vw;
+    background-color: #D9D9D9;
+}
+.sd ul{
+    color: #404040;
+    line-height: 1.5;
+    margin-left: 2.2vw;
+    font-size: 1.3vw;
+}
+.sd h1{
+    line-height: 1.5;
+}
+.ad{
+    width: 100%;
+    height: 25vw;
+}
+.w-cont-2{
+    width: 50%;
+}
+.w-cont-2 img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Require website development */
+.require-cont{
+    padding: 3vw;
+    display: flex;
+    justify-content: center;
+}
+.require-cont-in{
+    font-size: 1.3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    height: 5vw;
+    width: 60vw;
+    color: white;
+    background: black;
+    border-radius: 10px;
+}
+.require-cont div{
+    display: flex;
+    border: 1px solid #C4C800;
+    border-radius: 0.5vw;
+    /* background: white; */
+}
+.require-cont-in button{
+    /* background: white; */
+    font-size: 1.2vw;
+    border: none;
+    height: 1.8vw;
+    width: 15vw;
+}
+.b1{
+    border-top-left-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+}
+.b2{
+    border-top-right-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    background: #C4C800;
+}
+.col-green{
+    background-color: #C4C800;
+}
+
+
+/* How We Do It Section  */
+.out-cont{
+    padding: 3vw;
+}
+.main-con{
+    /* padding: 3vw; */
+    display: flex;
+}
+.con-1{
+    font-size: 1.3vw;
+    width: 20%;
+    display: grid;
+    justify-content: space-between;
+    gap: 4vw;
+    color: #666666;
+}
+.con-1 div{
+    border-bottom: 1px solid grey;
+    height: 1.3vw;
+}
+.con-1 div:hover{
+    cursor: pointer;
+}
+.con-2{
+    width: 80%;
+    background-color: #DEDEDE;
+}
+.con-2-in{
+    padding: 4vw 1vw 4vw 1vw;
+    display: grid;
+    gap: 1.5vw;
+}
+.con-2-in p{
+    font-size: 1.5vw;
+    color: #4B4A4A;
+}
+.con-2-in h3{
+    font-size: 1.8vw;
+}
+.fl{
+    display: flex;
+}
+.wi{
+    width: 20%;
+}
+.wi2{
+    font-size: 1.3vw;
+    width: 80%;
+    display: flex;
+    gap: 8vw;
+    justify-content: center;
+}
+.wi2 div{
+    height: 2.5vw;
+}
+.wi2 div:hover{
+    cursor: pointer;
+}
+
+
+/* Basic Standard Premium */
+.premium-out-cont{
+    padding: 0 3vw 3vw 3vw;
+}
+.premium-in-cont{
+    display: flex;
+    gap: 2.5vw;
+}
+/* .bor-btm{
+    border-bottom: 3px solid #C4C800;
+} */
+.premium-cont-top-left{
+    width: 70%;
+    display: flex;
+    gap: 10vw;
+    justify-content: center;
+}
+.premium-cont-top-left div{
+    height: 4.5vw;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+.premium-cont-top-left div:hover{
+    cursor: pointer;
+}
+.premium-cont-top-left img{
+    height: 3.5vw;
+    width: 3.5vw;
+}
+.premium-cont-top-right{
+    width: 30%;
+}
+.premium-end{
+    display: flex;
+    height: 25vw;
+    gap: 2vw;
+}
+.premium-end-l{
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #DEDEDE;
+}
+.premium-end-l-in{
+    height: 100%;
+    display: flex;
+}
+.premium-end-l-l{
+    width: 50%;
+}
+.premium-end-l-l img{
+    height: 100%;
+    width: 100%;
+}
+.premium-end-l-r{
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.premium-end-l-r div{
+    margin: 2vw;
+    line-height: 1.7;
+}
+.premium-end-l-r h3, .premium-end-l-r p{
+    font-size: 1.3vw;
+}
+.premium-end-l-r p{
+    color: #4B4A4A;
+}
+.bor div:nth-child(2){
+    font-size: 1.3vw;
+}
+.premium-end-r{
+    width: 30%;
+    text-align: end;
+    line-height: 1.5;
+}
+.premium-end-r-mobview{
+    display: none;
+    padding: 2vw 4vw;
+    line-height: 1.5;
+}
+.premium-end-r-mobview div:nth-child(2){
+    display: flex;
+    width: 100%;
+}
+.premium-end-r-mobview div:nth-child(2) div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+.premium-end-r-mobview h1{
+    display: block;
+}
+.premium-end-r button, .premium-end-r-mobview button{
+    font-size: 1.2vw;
+    margin-top: 1vw;
+    background: none;
+    height: 2.5vw;
+    width: 18vw;
+    border: 1px solid black;
+    border-radius: 2vw;
+    font-weight: bold;
+}
+.premium-end-r button:hover{
+    cursor: pointer;
+}
+.fs2, .fs2-mobview{
+    font-size: 2.6vw;
+}
+.fs1-3{
+    font-size: 1.6vw;
+}
+.fs1-3-mobview{
+    font-size: 1.6vw;
+    width: 60%;
+}
+
+.testimonial-section{
+    padding: 4vw;
+}
+.web-gap{
+    padding: 2vw;
+}
+
+@media only screen and (max-width: 600px){
+    .premium-end-r-mobview{
+        display: block;
+    }
+    .premium-end-r {
+        display: none;
+    }
+    .premium-end-l {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #DEDEDE;
+    }
+    .premium-cont-top-right {
+        display: none;
+    }
+    .premium-cont-top-left {
+        width: 100%;
+        display: flex;
+        gap: 20vw;
+        justify-content: center;
+    }
+    .premium-end {
+        display: flex;
+        height: 30vw;
+        gap: 2vw;
+    }
+    .premium-end-l-r div {
+        margin: 2vw;
+        line-height: 2;
+    }
+}

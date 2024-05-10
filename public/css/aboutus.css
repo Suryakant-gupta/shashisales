@@ -1,0 +1,1027 @@
+.who-cont{
+    padding: 3vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.who-cont-l{
+    width: 55%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.who-cont-l div{
+    line-height: 1.6;
+}
+.who-cont-l button{
+    margin-top: 1rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    width: 18rem;
+    background: rgb(196, 200, 0);
+    border: none;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+.who-cont-r{
+    width: 45%;
+    height: 30rem;
+    overflow: hidden;
+}
+.who-cont-r img{
+    height: 100%;
+    width: 100%;
+}
+.co-g{
+    color: #C4C800;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.co-grey{
+    color: #404040;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+/* We're are all about relationships and results */
+.rel-cont{
+    padding: 3vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.rel-cont-l{
+    width: 50%;
+    height: 30rem;
+    overflow: hidden;
+}
+.rel-cont-l img{
+    width: 100%;
+    height: 100%;
+}
+.rel-cont-r{
+    width: 50%;
+    line-height: 1.6;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.rel-cont-r-in{
+    margin-top: 1rem;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    border-radius: 10px;
+}
+.rel-cont-r-in div{
+    padding: 0 1vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bol{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.smg{
+    font-size: 0.7rem;
+    color: #404040;
+}
+
+/* Our History */
+.hist-cont{
+    padding: 3vw;
+}
+.hist-cont-in{
+    background-color: #D9D9D9;
+    height: 10rem;
+    border-radius: 5rem;
+    display: flex;
+}
+.hist-cont-l{
+    width: 15%;
+    display: flex;
+    background: white;
+    border-radius: 5rem;
+    align-items: center;
+    font-weight: bold;
+}
+.hist-cont-l-in{
+    background-color: #C4C800;
+    width: 80%;
+    height: 85%;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.hist-cont-r{
+    width: 85%;
+    position: relative;
+}
+.hist-cont-r-t{
+    height: 50%;
+    width: 70%;
+    display: grid;
+    align-content: center;
+    position: absolute;
+    right: 8rem;
+}
+.hist-cont-r-t-in{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+.hist-box{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hist-cont-r-b{
+    height: 50%;
+    width: 70%;
+    align-content: center;
+    position: absolute;
+    left: 2rem;
+    bottom: 0;
+}
+.hist-cont-r-b-in{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+.smg2{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5a5555;
+}
+.bol2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* Why Choose Us */
+.why-cont{
+    padding: 0 3vw 3vw 3vw;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.why-cont-l{
+    width: 50%;
+    line-height: 1.7;
+}
+.why-cont-l p{
+    font-size: 1.3rem;
+}
+.why-cont-r{
+    border-radius: 10px;
+    height: 25rem;
+    width: 50%;
+    overflow: hidden;
+}
+.why-cont-r img{
+    height: 100%;
+    width: 101%;
+}
+
+/* Problems and Solutions */
+.prob-cont{
+    padding: 0 3vw 3vw 3vw;
+}
+.prob-cont h1{
+    text-align: center;
+    padding: 0 0 3vw 0;
+}
+.prob-cont-s1{
+    display: flex;
+    justify-content: space-between;
+}
+.b-cen{
+    display: flex;
+    justify-content: center;
+}
+.s1-card{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 23rem;
+    width: 20rem;
+    background-color: #000000;
+}
+.headi{
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 3rem;
+    background-color: #D9D9D9;
+    height: 5rem;
+    width: 5rem;
+}
+.s1-card p{
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #979797;
+    margin: 1rem;
+    height: 13rem;
+}
+.prob-cont-s2{
+    display: flex;
+    justify-content: space-between;
+}
+.s2-card{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 23rem;
+    width: 20rem;
+    background-color: #D9D9D9;
+}
+.s2-card .headi{
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 3rem;
+    background-color: #000000;
+    color: white;
+    height: 5rem;
+    width: 5rem;
+}
+.s2-card p{
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #404040;
+    margin: 1rem;
+    height: 13rem;
+}
+.sep{
+    height: 0px;
+    border-bottom: 1px solid;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+/* Our Missions, Vision, Future Plan */
+.mission-cont{
+    padding: 0vw 3vw 3vw 3vw;
+}
+.mission-cont h1{
+    text-align: center;
+}
+.mission-cont-in{
+    padding: 3vw 0vw 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+.mission-card{
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+    position: relative;
+    background-color: #ECECEC;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8rem;
+    box-shadow: 10px 12px 16px #cbbaba;
+}
+.mission-card-in{
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    line-height: 1.5;
+}
+.a1{
+    font-size: 6rem;
+    color: #D9D9D9;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Key Pillars & Success Mantras */
+.pillars-cont{
+    padding: 0 3vw 3vw 3vw;
+}
+.pillars-cont h1{
+    text-align: center;
+    padding: 0 3vw 3vw 3vw;
+}
+.pillars-cont-in{
+    padding: 0vw 3vw 3vw 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+.pill{
+    text-align: center;
+    line-height: 1.3;
+}
+.pill img{
+    width: 15rem;
+}
+.pill p{
+    color: #404040;
+    font-size: 0.8rem;
+}
+
+
+/* Meet Our Brilliant Team */
+.brilliant-cont{
+    padding: 0 3vw 3vw 3vw;
+}
+.brilliant-cont h1{
+    text-align: center;
+}
+.bri-card-out{
+    padding: 2vw 0vw 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.bri-card{
+    position: relative;
+    height: 20rem;
+    width: 15rem;
+}
+.img-cont{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    height: 7rem;
+}
+.img-cont img{
+    height: 100%;
+    width: 100%;
+}
+.bri-card-t{
+    height: 50%;
+    width: 100%;
+    background-color: #DEDEDE;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.bri-card-t h3{
+    text-align: center;
+}
+.bri-card-t p{
+    text-align: center;
+}
+.bri-card-b{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bri-card-b p{
+    padding: 4vw 2vw 2vw 2vw;
+    line-height: 1.4;
+}
+
+@media only screen and (max-width: 1024px){
+    .who-cont-r {
+        width: 45%;
+        height: 25rem;
+        overflow: hidden;
+    }
+    .smg {
+        font-size: 0.6rem;
+        color: #404040;
+    }
+    /* Our History */
+    .hist-cont-in {
+        background-color: #D9D9D9;
+        height: 8rem;
+        border-radius: 5rem;
+        display: flex;
+    }
+    .hist-cont-l-in {
+        background-color: #C4C800;
+        width: 80%;
+        height: 85%;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .bol2 {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .smg2 {
+        font-size: 0.6rem;
+        font-weight: bold;
+        color: #5a5555;
+    }
+    /* Why Choose Us */
+    .why-cont-l p {
+        font-size: 1.1rem;
+    }
+    /* Problem & Solution */
+    .s1-card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 23rem;
+        width: 18rem;
+        background-color: #000000;
+    }
+    .s2-card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 23rem;
+        width: 18rem;
+        background-color: #D9D9D9;
+    }
+    /* Our Missions, Vision, Future Plans */
+    .mission-cont-in {
+        padding: 3vw 0vw 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+    }
+    /* Key Pillars & Success Mantras */
+    .pillars-cont-in {
+        padding: 0vw 3vw 3vw 3vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Meet Our Brilliant Team */
+    .bri-card {
+        position: relative;
+        height: 18rem;
+        width: 12rem;
+    }
+    .img-cont {
+        position: absolute;
+        top: 35%;
+        left: 21%;
+        height: 6rem;
+    }
+    .bri-card-b {
+        font-size: 0.9rem;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 820px){
+    /* Who We Are */
+    .co-g {
+        color: #C4C800;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .co-grey {
+        color: #404040;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .who-cont-r {
+        width: 45%;
+        height: 20rem;
+        overflow: hidden;
+    }
+    /* We Are All About Relationships and Results */
+    .rel-cont-l {
+        width: 50%;
+        height: 25rem;
+        overflow: hidden;
+    }
+    .title-fs{
+        font-size: 1.7rem;
+    }
+    .rel-cont-r-in {
+        margin-top: 1rem;
+        background-color: #D9D9D9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .bol {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .smg {
+        font-size: 0.5rem;
+        color: #404040;
+    }
+    /* Our History */
+    .hist-cont-in {
+        background-color: #D9D9D9;
+        height: 7rem;
+        border-radius: 5rem;
+        display: flex;
+    }
+    .hist-cont-l-in {
+        background-color: #C4C800;
+        width: 80%;
+        height: 85%;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .hist-cont-r-t-in {
+        display: flex;
+        justify-content: center;
+        gap: 7rem;
+    }
+    .hist-cont-r-b-in {
+        display: flex;
+        justify-content: center;
+        gap: 7rem;
+    }
+    .hist-cont-r-t {
+        height: 50%;
+        width: 70%;
+        display: grid;
+        align-content: center;
+        position: absolute;
+        right: 5rem;
+    }
+    .bol2 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .smg2 {
+        font-size: 0.6rem;
+        font-weight: bold;
+        color: #5a5555;
+    }
+    /* Why Choose Us */
+    .why-cont-l p {
+        font-size: 1rem;
+    }
+    .why-cont-r {
+        border-radius: 10px;
+        height: 20rem;
+        width: 50%;
+        overflow: hidden;
+    }
+    /* Problems & Solutions */
+    .s1-card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 20rem;
+        width: 14rem;
+        background-color: #000000;
+    }
+    .s2-card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 20rem;
+        width: 14rem;
+        background-color: #D9D9D9;
+    }
+    .headi {
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 3rem;
+        background-color: #D9D9D9;
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    .s2-card .headi {
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 3rem;
+        background-color: #000000;
+        color: white;
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    .s1-card p {
+        text-align: center;
+        line-height: 1.7;
+        font-size: 0.9rem;
+        color: #979797;
+        margin: 1rem;
+        height: 13rem;
+    }
+    .s2-card p {
+        text-align: center;
+        line-height: 1.7;
+        font-size: 0.9rem;
+        color: #404040;
+        margin: 1rem;
+        height: 13rem;
+    }
+    /* Our Missions, Vision, Future Plans */
+    .mission-card {
+        height: 12rem;
+        width: 12rem;
+        display: flex;
+        position: relative;
+        background-color: #ECECEC;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8rem;
+        box-shadow: 10px 12px 16px #cbbaba;
+    }
+    .mission-cont-in {
+        padding: 3vw 0vw 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .a1 {
+        font-size: 5rem;
+        color: #D9D9D9;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .mission-card-in p{
+        font-size: 0.8rem;
+    }
+    /* Key Pillars & Success Mantras */
+    .pill img {
+        width: 12rem;
+    }
+    .pill p {
+        color: #404040;
+        font-size: 0.6rem;
+    }
+    /* Meet Our Brilliant Team */
+    .bri-card {
+        position: relative;
+        height: 16rem;
+        width: 10rem;
+    }
+    .img-cont {
+        position: absolute;
+        top: 35%;
+        left: 21%;
+        height: 5rem;
+    }
+    .bri-card-b p {
+        padding: 4vw 2vw 2vw 2vw;
+        line-height: 1.1;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    /* We are all About Relationships and Results */
+    .rel-cont-l {
+        width: 50%;
+        height: 22rem;
+        overflow: hidden;
+    }
+    .rel-cont-r {
+        width: 50%;
+        line-height: 1.2;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Our History */
+    .hist-cont-in {
+        background-color: #D9D9D9;
+        height: 6rem;
+        border-radius: 5rem;
+        display: flex;
+    }
+    .hist-cont-r-t-in {
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+    }
+    .hist-cont-r-b-in {
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+    }
+    /* Why Choose Us */
+    .why-cont-l p {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    /* Who We Are */
+    .who-cont {
+        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+    .who-cont-l div {
+        line-height: 1.6;
+    }
+    .co-g {
+        color: #C4C800;
+        font-size: 0.6rem;
+        font-weight: bold;
+    }
+    .co-grey {
+        color: #404040;
+        font-size: 0.5rem;
+        /* line-height: 1.6; */
+    }
+    .who-cont-l button {
+        margin-top: 0.5rem;
+        height: 1.5rem;
+        font-size: 0.6rem;
+        width: 10rem;
+        background: rgb(196, 200, 0);
+        border: none;
+        border-radius: 2rem;
+        font-weight: bold;
+    }
+    .who-cont-r {
+        width: 45%;
+        height: 10rem;
+        overflow: hidden;
+    }
+    /* We Are All About Relationships and Results */
+    .rel-cont {
+        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+    .rel-cont-l {
+        width: 50%;
+        height: 11rem;
+        overflow: hidden;
+    }
+    .title-fs{
+        font-size: 1rem;
+    }
+    .title-fs2{
+        font-size: 0.8rem;
+    }
+    .rel-cont-r-in {
+        margin-top: 0.5rem;
+        background-color: #D9D9D9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 1.3rem;
+        width: 100%;
+        border-radius: 2px;
+    }
+    .rel-cont-r-in div {
+        padding: 0 0.8vw;
+        font-size: 4px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    /* Our History */
+    .hist-cont-in {
+        background-color: #D9D9D9;
+        height: 3rem;
+        border-radius: 5rem;
+        display: flex;
+    }
+    .hist-cont-l-in {
+        background-color: #C4C800;
+        width: 80%;
+        height: 85%;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    .hist-cont-r-t-in {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .hist-cont-r-b-in {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .hist-cont-r-t {
+        height: 50%;
+        width: 70%;
+        display: grid;
+        align-content: center;
+        position: absolute;
+        right: 3rem;
+    }
+    .hist-cont-r-b {
+        height: 50%;
+        width: 70%;
+        align-content: center;
+        position: absolute;
+        left: 0rem;
+        bottom: 0;
+    }
+    .bol2 {
+        font-size: 7px;
+        font-weight: bold;
+    }
+    .smg2 {
+        font-size: 6px;
+        font-weight: bold;
+        color: #5a5555;
+    }
+    /* Why Choose Us */
+    .why-cont-l p {
+        font-size: 7px;
+    }
+    .why-cont-r {
+        border-radius: 10px;
+        height: 10rem;
+        width: 50%;
+        overflow: hidden;
+    }
+    /* Problems & Solutions */
+    .s1-card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 13rem;
+        width: 7rem;
+        background-color: #000000;
+    }
+    .s2-card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 13rem;
+        width: 7rem;
+        background-color: #D9D9D9;
+    }
+    .headi {
+        font-weight: bold;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 3rem;
+        background-color: #D9D9D9;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .s2-card .headi {
+        font-weight: bold;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 3rem;
+        background-color: #000000;
+        color: white;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .s1-card p {
+        text-align: center;
+        line-height: 1.7;
+        font-size: 0.5rem;
+        color: #979797;
+        margin: 0.5rem;
+        height: 8rem;
+    }
+    .s2-card p {
+        text-align: center;
+        line-height: 1.7;
+        font-size: 0.5rem;
+        color: #404040;
+        margin: 0.5rem;
+        height: 8rem;
+    }
+    /* Our Missions, Vision, Future Plans */
+    .mission-card {
+        height: 6rem;
+        width: 6rem;
+        display: flex;
+        position: relative;
+        background-color: #ECECEC;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8rem;
+        box-shadow: 10px 12px 16px #cbbaba;
+    }
+    .mission-cont-in {
+        padding: 3vw 0vw 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .a1 {
+        font-size: 3rem;
+        color: #D9D9D9;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .mission-card-in p {
+        font-size: 6px;
+    }
+    .title-fs09{
+        font-size: 0.9rem;
+    }
+    /* Key Pillars & Success Mantras */
+    .t-fs{
+        font-size: 9px;
+    }
+    .pill {
+        width: 5rem;
+        display: grid;
+        text-align: center;
+        line-height: 1.3;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .pill img {
+        width: 6rem;
+    }
+    .pill p {
+        color: #404040;
+        font-size: 8px;
+        width: 6rem;
+    }
+    /* Meet Our Brilliant Team */
+    .bri-card {
+        position: relative;
+        height: 8rem;
+        width: 5rem;
+    }
+    .img-cont {
+        position: absolute;
+        top: 35%;
+        left: 21%;
+        height: 41px;
+    }
+    .bri-card-t div{
+        font-size: 8px;
+    }
+    .bri-card-b {
+        font-size: 7px;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .bri-card-b p {
+        padding: 4vw 2vw 2vw 2vw;
+        line-height: 1.1;
+    }
+}
