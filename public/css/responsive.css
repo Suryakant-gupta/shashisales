@@ -18,6 +18,27 @@
     }
  
 
+ 
+
+
+
+}
+
+  
+  @media only screen and (max-width: 768px){
+  
+    .text {
+      width: 100%;
+      color: white;
+      position: absolute;
+      bottom: 5.5%;
+      background-color: #0d0c0c53;
+      padding: 0.5vw;
+    }
+  .testimonial-buttons{
+    padding-top: 4vw;
+  }
+
   .leads{
     width: 95%;
     /* margin-inline: 1rem; */
@@ -25,6 +46,10 @@
 
   .leads>p{
     font-size: 2.2vw ;
+  }
+
+  .container{
+    align-items: center;
   }
 
   .first-part, .last-part{
@@ -118,21 +143,29 @@ h3{
 
 
 
-}
-
+  .search-container{
+    background: #fff;
+    margin-bottom: 1rem;
   
-  @media only screen and (max-width: 768px){
+  }
   
-    .text {
-      width: 100%;
-      color: white;
-      position: absolute;
-      bottom: 5.5%;
-      background-color: #0d0c0c53;
-      padding: 0.5vw;
-    }
-  .testimonial-buttons{
-    padding-top: 4vw;
+  .search-container .form-field input{
+    font-size: 2vw;
+    padding: 2vw 3vw;
+    border: none;
+  }
+   
+  
+  .search-container .form-field input:first-child {
+   width: 170px;
+    background-color: #dedede;
+  
+  }
+  .search-container .form-field .sfaqb{
+    width: 90px;
+    background-color: #C4C800;
+    font-size: 2vw;
+  
   }
     
   
