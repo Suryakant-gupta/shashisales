@@ -145,13 +145,19 @@ nav{
 
 
 .clients-bar {
+  /* height: 20px; */
   background-color: #C4C800;
   width: 100%;
   position: absolute;
   bottom: 12%;
   overflow: hidden;
   white-space: nowrap;
-  transform: matrix(1, -0.1, 0, 1, 0, 9);}
+  transform: matrix(1, -0.1, 0, 1, 0, 9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
 
 .clients-bar p {
   color: #000;
@@ -277,8 +283,13 @@ nav{
 }
 
 .leads>p {
+  width: 30%;
   color: white;
   font-size: 1.2vw;
+}
+
+.leads form{
+  width: 70%;
 }
 
 
@@ -302,8 +313,9 @@ nav{
 
 
 
+
 .form-field input:last-child {
-  /* width: 90px; */
+
   background-color: #C4C800;
   font-size: 1vw;
 
@@ -430,7 +442,7 @@ nav{
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 2vw;
   flex-wrap: wrap;
 }
@@ -551,25 +563,6 @@ nav{
 
 }
 
-/* .search-container .form-field input{
-  font-size: 2vw;
-  padding: 2vw 3vw;
-  border: none;
-} */
- 
-
-.search-container .form-field input:first-child {
- /* width: 170px; */
-  background-color: #dedede;
-
-}
-.search-container .form-field .sfaqb{
-  /* width: 90px; */
-  background-color: #C4C800;
-  /* font-size: 2vw; */
-
-}
-
 
 
 
@@ -683,7 +676,7 @@ nav{
   gap: 1vw;
 }
 .founder-container-left{
-  height: 40vw;
+  /* height: 40vw; */
   width: 50%;
   overflow: hidden;
 }
@@ -701,8 +694,9 @@ nav{
   gap: 2vw;
 }
 .founder-container-right button{
+  text-align: center;
   font-size: 1.5vw;
-  height: 3vw;
+  padding: .3rem 1.5rem;
   width: 25vw;
   background: #C4C800;
   border: none;
@@ -736,6 +730,10 @@ nav{
   gap: 2vw;
 }
 .blog-card{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   background-color: #F2F2F2;
   width: 24%;
 }
@@ -748,11 +746,12 @@ nav{
 .blog-cont .mar-img{
   
   width:100%;
-  overflow: hidden;
+  
+  /* overflow: hidden; */
 }
 .blog-cont .mar-img img{
   width: 100%;
-  
+
   display: block;
 }
 .blog-cont .mar-desc{

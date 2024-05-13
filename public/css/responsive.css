@@ -54,7 +54,7 @@
 
   .first-part, .last-part{
     flex-direction: column;
-    width: 25%;
+    width: 30%;
   }
 
   .first-part{
@@ -65,7 +65,7 @@
 }
 
 .main-view{
-    width: 50%;
+    width: 40%;
 }
 
 .all-heading{
@@ -80,7 +80,7 @@
 }
 
 .faq-question, .faq-answer{
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 
 h3{
@@ -143,31 +143,52 @@ h3{
 
 
 
-  .search-container{
-    background: #fff;
-    margin-bottom: 1rem;
   
+
+  .founder-container-right button{
+    width: 100%;
+    font-size: 3vw;
+    padding: .2rem 1.5rem;
   }
+
+  .blog-cont .mar-img{
   
-  .search-container .form-field input{
+    width:100%;
+    height: 150px;
+  }
+  .blog-cont .mar-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .text{
+    padding: none !important;
+  }
+  .text h2{
+    font-size: 2.7vw;
+  }
+  .text p{
+    color: #dcdcdc;
     font-size: 2vw;
-    padding: 2vw 3vw;
-    border: none;
   }
+  
+  .form-field input:first-child {
+    width: 60%;
+    padding: 2vw 2vw;
+  
+  }
+  .form-field input::placeholder {
+    font-size: 2.5vw;
    
-  
-  .search-container .form-field input:first-child {
-   width: 170px;
-    background-color: #dedede;
-  
   }
-  .search-container .form-field .sfaqb{
-    width: 90px;
+  .form-field input:last-child {
+    width: 40%;
+    /* width: 90px; */
     background-color: #C4C800;
-    font-size: 2vw;
+    font-size: 2.5vw;
   
   }
-    
   
   }
   
@@ -224,6 +245,8 @@ h3{
     .blog-cont{
         margin-bottom: 3rem;
     }
+
+
   }
   
   

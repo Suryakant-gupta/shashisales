@@ -512,10 +512,13 @@ footer{
     align-items: center;
     border-top-right-radius: 2vw;
 }
+
+
 .mob-ele{
     width: 25vw;
     text-align: center;
     position: relative;
+    color: #000;
 }
 .up{
     width: 25vw;
