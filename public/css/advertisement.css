@@ -43,43 +43,7 @@
     width: 100%;
 }
 
-/* Section Page2 */
-.page2 {
-    width: 100%;
-    margin-top: 4vw;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo-box1 {
-    width: 54%;
-    height: 16vw;
-    /* background-color: #C4C800; */
-    clip-path: polygon(95.5% 0%, 78.2% 100%, 0% 100%, 0% 0%);
-    position: relative;
-  }
-  
-  .logo-box2 {
-    width: 46%;
-    height: 16vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 2vw;
-  }
-  
-  .logo-box2 .img {
-    width: 30%;
-  
-  }
-  
-  .logo-box2 .img img {
-    width: 70%;
-  }
-  
-  
+
   
   .bar {
     width: 100%;
