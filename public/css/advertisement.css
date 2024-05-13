@@ -1,16 +1,22 @@
+/* //////////////////////////////////////////// */
+
+/* //////////////////////////////////////// */
 .nav2{
+    padding-top: 4rem;
     background: black;
     color: white;
     display: flex;
 }
+
 .nav2-left{
     width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* change width  */
 .nav2-left-in{
-    width: 57%;
+    width: 63%;
 }
 .nav2-left-in div:nth-child(1){
     font-size: 4vw;
@@ -43,9 +49,45 @@
     width: 100%;
 }
 
-
+/* Section Page2 */
+.logo-divi {
+    width: 100%;
+    margin-top: 4vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
-  .bar {
+  .logo-divi .logo-box1 {
+    width: 54%;
+    height: 16vw;
+    /* background-color: #C4C800; */
+    clip-path: polygon(95.5% 0%, 78.2% 100%, 0% 100%, 0% 0%);
+    position: relative;
+  }
+  
+  .logo-divi  .logo-box2 {
+    width: 46%;
+    height: 16vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2vw;
+  }
+  
+  .logo-divi  .logo-box2 .img {
+    width: 30%;
+  
+  }
+  
+  .logo-divi .logo-box2 .img img {
+    width: 70%;
+  }
+  
+  
+  
+  .logo-divi .bar {
     width: 100%;
     /* height: 70px; */
     overflow: hidden;
@@ -56,7 +98,7 @@
     bottom: -2vw;
   }
   
-  .bar img {
+  .logo-divi .bar img {
     width: 5vw;
     display: inline-block;
     margin-right: 4vw;
@@ -77,26 +119,27 @@
     /* End position */
   }
   
-  .divider {
+  .logo-divi  .divider {
     width: 100%;
     position: absolute;
     top: 0;
     z-index: -1;
   }
   
-  .divider img {
+  .logo-divi  .divider img {
     width: 100%;
   }
 
 /* Marketing We Do */
 h1{
+    margin-top: 2rem;
     font-size: 2.5vw;
-    padding: 4vw;
+    padding: 4vw !important;
     display: flex;
     justify-content: center;
 }
 .marketing-cont{
-    padding: 0 4vw;
+    padding:1rem 4vw;
     display: grid;
     gap: 3vw;
 }
@@ -190,7 +233,7 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 4vw;
+    padding: 0vw 4vw;
     /* margin-bottom: 4vw; */
   }
   
@@ -280,81 +323,6 @@ h1{
     border-color: transparent transparent #333 transparent;
   }
   
-/* .testimonial-container{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: grid;
-    padding: 0 3vw;
-    gap: 2rem;
-}
-.testimonial-card-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.testimonial-card{
-    width: 20rem;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    position: relative;
-}
-.testimonial-card::before,
-.testimonial-card::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    background-color: #DEDEDE;
-}
-
-.testimonial-card::before {
-    top: 0;
-}
-
-.testimonial-card::after {
-    bottom: 50%;
-    z-index: -1;
-}
-
-
-
-.testimonial-card button{
-    height: 3rem;
-    width: 20rem;
-    border: none;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-}
-.testimonial-card button:hover{
-    color: #C4C800;
-    cursor: pointer;
-}
-.tci{
-    height: 7rem;
-    width: 20rem;
-    background: #DEDEDE;
-    color: #636363;
-    z-index: 0;
-    transition: transform 0.3s ease;
-}
-.abs{
-    position: absolute;
-}
-.abs img{
-    width: 6rem;
-    height: 6rem;
-}
-.cen{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-.m-3{
-    margin: 2rem;
-} */
 
 
 /* Call section */
@@ -476,8 +444,6 @@ footer{
     align-items: center;
     border-top-right-radius: 2vw;
 }
-
-
 .mob-ele{
     width: 25vw;
     text-align: center;

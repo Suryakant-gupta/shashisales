@@ -1,5 +1,12 @@
+
+
+h1{
+    padding: 0 !important;
+}
+/* first component */
 .first-component{
     padding: 3vw;
+    padding-top: 8rem;
     display: flex;
     background-color: black;
     color: white;
@@ -291,7 +298,7 @@
 }
 .con-1 div{
     border-bottom: 1px solid grey;
-    height: 1.3vw;
+    /* height: 1.3vw; */ 
 }
 .con-1 div:hover{
     cursor: pointer;
@@ -454,15 +461,17 @@
 }
 
 .testimonial-section{
-    padding: 4vw;
+    padding: 0vw 4vw;
 }
 .web-gap{
     padding: 2vw;
 }
 
+
 @media only screen and (max-width: 600px){
     .premium-end-r-mobview{
         display: block;
+        padding: 2rem 3vw;
     }
     .premium-end-r {
         display: none;
@@ -492,3 +501,5 @@
         line-height: 2;
     }
 }
+
+
