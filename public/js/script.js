@@ -55,30 +55,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 // menu options
-// const serviceDiv = document.querySelector('.service');
-// const serviceMenu = document.querySelector('.service-menu');
-// let hideMenuTimer;
-
-// serviceDiv.addEventListener('mouseenter', () => {
-//   serviceMenu.style.display = 'block';
-//   clearTimeout(hideMenuTimer); // Clear the timer if the mouse re-enters
-// });
-
-// serviceDiv.addEventListener('mouseleave', () => {
-//   hideMenuTimer = setTimeout(() => {
-//     serviceMenu.style.display = 'none';
-//   }, 500); // Delay hiding the menu for 500 milliseconds (0.5 seconds)
-// });
-
-// serviceMenu.addEventListener('mouseenter', () => {
-//   clearTimeout(hideMenuTimer); // Clear the timer if the mouse enters the menu
-// });
-
-// serviceMenu.addEventListener('mouseleave', () => {
-//   hideMenuTimer = setTimeout(() => {
-//     serviceMenu.style.display = 'none';
-//   }, 500); // Delay hiding the menu for 500 milliseconds (0.5 seconds)
-// });
 
 
 

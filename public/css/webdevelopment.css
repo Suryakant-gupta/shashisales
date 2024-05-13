@@ -68,7 +68,7 @@
 /* Second Component */
 .wheel-animation {
     width: 100%;
-    /* margin-left: 4vw; */
+    margin-left: 4vw;
     height: 45vw;
     position: relative;
     overflow: hidden;

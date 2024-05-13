@@ -78,41 +78,41 @@ showName(testimonialCenter);
 // wheel animation
 
 
-// const wheels = document.querySelectorAll('.wheel');
-// let currentWheelIndex = 0;
-// const wheelAnimation = document.querySelector('.wheel-animation');
+const wheels = document.querySelectorAll('.wheel');
+let currentWheelIndex = 0;
+const wheelAnimation = document.querySelector('.wheel-animation');
 
-// function showWheel(index, direction) {
-//   wheels.forEach((wheel, i) => {
-//     if (i === index) {
-//       wheel.classList.add('active');
-//     } else {
-//       wheel.classList.remove('active');
-//     }
-//   });
-// }
+function showWheel(index, direction) {
+  wheels.forEach((wheel, i) => {
+    if (i === index) {
+      wheel.classList.add('active');
+    } else {
+      wheel.classList.remove('active');
+    }
+  });
+}
 
-// // Show the first wheel initially
-// showWheel(currentWheelIndex, 'forward');
+// Show the first wheel initially
+showWheel(currentWheelIndex, 'forward');
 
-// // Add event listener for scroll
-// wheelAnimation.addEventListener('wheel', (event) => {
-//   const delta = event.deltaY;
-//   const maxIndex = wheels.length - 1;
+// Add event listener for scroll
+wheelAnimation.addEventListener('wheel', (event) => {
+  const delta = event.deltaY;
+  const maxIndex = wheels.length - 1;
 
-//   if (delta > 0) {
-//     // Scroll down
-//     if (currentWheelIndex < maxIndex) {
-//       currentWheelIndex++;
-//       showWheel(currentWheelIndex, 'forward');
-//     }
-//   } else {
-//     // Scroll up
-//     if (currentWheelIndex > 0) {
-//       currentWheelIndex--;
-//       showWheel(currentWheelIndex, 'reverse');
-//     }
-//   }
-// }, { passive: true });
+  if (delta > 0) {
+    // Scroll down
+    if (currentWheelIndex < maxIndex) {
+      currentWheelIndex++;
+      showWheel(currentWheelIndex, 'forward');
+    }
+  } else {
+    // Scroll up
+    if (currentWheelIndex > 0) {
+      currentWheelIndex--;
+      showWheel(currentWheelIndex, 'reverse');
+    }
+  }
+}, { passive: true });
 
 
