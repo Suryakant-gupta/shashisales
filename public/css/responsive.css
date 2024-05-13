@@ -1,230 +1,268 @@
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
 
     .text {
-      width: 100%;
-      color: white;
-      position: absolute;
-      bottom: 5.5%;
-      background-color: #0d0c0c53;
-      padding: 0.5vw;
+        width: 100%;
+        color: white;
+        position: absolute;
+        bottom: 5.5%;
+        background-color: #0d0c0c53;
+        padding: 0.5vw;
     }
-  
-    .clients-bar{
-      
-      bottom: 40%;
-    }
-    .human-img{
-      bottom: 8%;
-    }
- 
 
- 
+    .clients-bar {
+
+        bottom: 40%;
+    }
+
+    .human-img {
+        bottom: 8%;
+    }
+
+
+
 
 
 
 }
 
-  
-  @media only screen and (max-width: 768px){
-  
+
+@media only screen and (max-width: 768px) {
+
     .text {
-      width: 100%;
-      color: white;
-      position: absolute;
-      bottom: 5.5%;
-      background-color: #0d0c0c53;
-      padding: 0.5vw;
+        width: 100%;
+        color: white;
+        position: absolute;
+        bottom: 5.5%;
+        background-color: #0d0c0c53;
+        padding: 0.5vw;
     }
-  .testimonial-buttons{
-    padding-top: 4vw;
-  }
 
-  .leads{
-    width: 95%;
-    /* margin-inline: 1rem; */
-  }
+    .testimonial-buttons {
+        padding-top: 4vw;
+    }
 
-  .leads>p{
-    font-size: 2.2vw ;
-  }
+    .leads {
+        width: 95%;
+        /* margin-inline: 1rem; */
+    }
 
-  .container{
-    align-items: center;
-  }
+    .leads>p {
+        font-size: 2.2vw;
+    }
 
-  .first-part, .last-part{
-    flex-direction: column;
-    width: 30%;
-  }
+    .container {
+        align-items: center;
+    }
 
-  .first-part{
-    align-items: flex-end;
-  }
-  .first-part .tile, .last-part .tile {
-    width: 75%;
+    .first-part,
+    .last-part {
+        flex-direction: column;
+        width: 30%;
+    }
+
+    .first-part {
+        align-items: flex-end;
+    }
+
+    .first-part .tile,
+    .last-part .tile {
+        width: 75%;
+    }
+
+    .main-view {
+        width: 40%;
+    }
+
+    .all-heading {
+        font-size: 4vw;
+    }
+
+    .faq-container {
+        flex-direction: column;
+    }
+
+    .faq-column {
+        width: 100%;
+    }
+
+    .faq-question,
+    .faq-answer {
+        font-size: 3vw;
+    }
+
+    h3 {
+        font-size: 3vw !important;
+    }
+
+    .sec-text:first-child span {
+        font-size: 1.2vw;
+    }
+
+    .sec-text p {
+        font-size: 2.2vw;
+    }
+
+    .page3 div:first-child,
+    .page4 div:first-child {
+        width: 50%;
+    }
+
+    .page3 div:last-child,
+    .page4 div:last-child {
+        width: 50%;
+    }
+
+    .testimonial {
+        font-size: 2vw;
+    }
+
+    .testimonial-buttons button {
+        font-size: 2.2vw;
+    }
+
+    .founder-container-right p {
+        font-size: 2.2vw;
+    }
+
+    .page2 {
+        margin-top: -17vw;
+    }
+
+
+
+    .blog-cont .mar-section {
+        /* flex-wrap: wrap; Allow the blog cards to wrap onto multiple lines */
+        overflow-x: scroll;
+        /* Enable horizontal scrolling for the slider */
+        scroll-snap-type: x mandatory;
+        /* Enable scroll snapping for smooth scrolling */
+    }
+
+    .blog-card {
+        width: 48%;
+        /* Adjust the width to display two cards per row */
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        /* Align the cards to the start of the scroll container */
+    }
+
+    .blog-cont .mar-desc div:nth-child(2) {
+        font-size: 2vw;
+    }
+
+    .blog-cont .mar-desc {
+
+        padding: 0 .4rem;
+    }
+
+
+
+
+
+
+    .founder-container-right button {
+        width: 100%;
+        font-size: 3vw;
+        padding: .2rem 1.5rem;
+    }
+
+    .blog-cont .mar-img {
+
+        width: 100%;
+        height: 150px;
+    }
+
+    .blog-cont .mar-img img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .text {
+        padding: none !important;
+    }
+
+    .text h2 {
+        font-size: 2.7vw;
+    }
+
+    .text p {
+        color: #dcdcdc;
+        font-size: 2vw;
+    }
+
+    .form-field input:first-child {
+        width: 60%;
+        padding: 2vw 2vw;
+
+    }
+
+    .form-field input::placeholder {
+
+        font-size: 2.5vw;
+
+    }
+
+    .form-field input:last-child {
+        width: 40%;
+        /* width: 90px; */
+        background-color: #C4C800;
+        font-size: 2.5vw;
+
+    }
+
+    .main-view button {
+
+        font-size: 2.5vw;
+
+
+
+        padding: 0.5vw 1.5vw;
+
+
+    }
+
+    .logo-box2 .img img {
+        width: 110%;
+    }
+
+    .logo-box2 {
+        margin-top: 4vw;
+    }
+
+    .fou-img img {
+        width: 20vw;
+    }
+
+
+    .hamburger-menu {
+       
+        width: 100%;
+        text-align: center;
+        position: absolute;
+  right: 0;
+       
+    }
+
+    .hamburger-menu a{
+        font-size: 3vw;
+    }
+
+    .service-menu ul li a{
+        font-size: 3vw;
+    }
 }
 
-.main-view{
-    width: 40%;
-}
-
-.all-heading{
-    font-size: 4vw;
-}
-
-.faq-container{
-    flex-direction: column;
-}
-.faq-column{
-    width: 100%;
-}
-
-.faq-question, .faq-answer{
-    font-size: 3vw;
-}
-
-h3{
-    font-size: 3vw !important;
-}
-
-.sec-text:first-child span{
-    font-size: 1.2vw;
-  }
-  
-  .sec-text p{
-    font-size: 2.2vw;
-  }
-
-  .page3 div:first-child, .page4 div:first-child{
-    width: 50%; 
-  }
-  .page3 div:last-child, .page4 div:last-child{
-      width: 50%;
-  }
-  
-  .testimonial{
-    font-size: 2vw;
-  }
-  .testimonial-buttons button{
-    font-size: 2.2vw;
-  }
-
-  .founder-container-right p{
-    font-size: 2.2vw;
-  }
-
-  .page2{
-    margin-top: -17vw;
-  }
 
 
 
-  .blog-cont .mar-section {
-    /* flex-wrap: wrap; Allow the blog cards to wrap onto multiple lines */
-    overflow-x: scroll; /* Enable horizontal scrolling for the slider */
-    scroll-snap-type: x mandatory; /* Enable scroll snapping for smooth scrolling */
-  }
+@media only screen and (max-width: 600px) {
 
-  .blog-card {
-    width: 48%; /* Adjust the width to display two cards per row */
-    flex: 0 0 auto;
-    scroll-snap-align: start; /* Align the cards to the start of the scroll container */
-  }
-
-  .blog-cont .mar-desc div:nth-child(2){
-    font-size: 2vw;
-  }
-
-  .blog-cont .mar-desc {
-   
-    padding: 0 .4rem;
-}
-
-
-
-
-  
-
-  .founder-container-right button{
-    width: 100%;
-    font-size: 3vw;
-    padding: .2rem 1.5rem;
-  }
-
-  .blog-cont .mar-img{
-  
-    width:100%;
-    height: 150px;
-  }
-  .blog-cont .mar-img img{
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  .text{
-    padding: none !important;
-  }
-  .text h2{
-    font-size: 2.7vw;
-  }
-  .text p{
-    color: #dcdcdc;
-    font-size: 2vw;
-  }
-  
-  .form-field input:first-child {
-    width: 60%;
-    padding: 2vw 2vw;
-  
-  }
-  .form-field input::placeholder {
- 
-    font-size: 2.5vw;
-   
-  }
-  .form-field input:last-child {
-    width: 40%;
-    /* width: 90px; */
-    background-color: #C4C800;
-    font-size: 2.5vw;
-  
-  }
-
-  .main-view button {
-  
-    font-size: 2.5vw;
-   
-    
-   
-    padding: 0.5vw 1.5vw;
-   
-   
-  }
-
-  .logo-box2 .img img {
-    width: 110%;
-  }
-
-  .logo-box2{
-    margin-top: 4vw;
-  }
-
-  .fou-img img {
-    width: 20vw;
-}
-  
-  }
-  
-  
-  
-  
-  @media only screen and (max-width: 600px){
     /* Footer */
-    footer{
+    footer {
         display: none;
     }
-  
+
     /* Mob Call Container */
     .mob-call-container {
         /* height: 3vw; */
@@ -238,108 +276,120 @@ h3{
         position: fixed;
         bottom: 0;
     }
-  .mob-ele{
-    width: 25vw;
-    text-align: center;
-    position: relative;
-  }
-  .up{
-    width: 25vw;
-    position: absolute;
-    bottom: 70%;
-  }
-  .up img{
-    width: 10vw;
-    
-  }
-  .down{
-    font-size: 3vw;
-    width: 25vw;
-    text-align: center;
-    position: absolute;
-    top: 0px;
-    font-weight: bold;
-  }
-  
+
+    .mob-ele {
+        width: 25vw;
+        text-align: center;
+        position: relative;
+    }
+
+    .up {
+        width: 25vw;
+        position: absolute;
+        bottom: 70%;
+    }
+
+    .up img {
+        width: 10vw;
+
+    }
+
+    .down {
+        font-size: 3vw;
+        width: 25vw;
+        text-align: center;
+        position: absolute;
+        top: 0px;
+        font-weight: bold;
+    }
+
     /* Call Container */
     .call-container {
         display: none;
     }
 
-    .blog-cont{
+    .blog-cont {
         margin-bottom: 3rem;
     }
 
 
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  @media screen and (max-width : 430px) {
-    .page1{
-      height: 38vmax;
-    }
-    .clients-bar{
-      bottom: 43%;
-      /* transform: matrix(1, -0.1, 0, 1, 0, 9); */
-    }
-    .human-img{
-      bottom: 9%;
-    }
-  }
-  
-  
-  
-  @media screen and (max-width : 412px) {
-    .clients-bar{
-      bottom: 44%;
-    }
-  }
-  @media screen and (max-width : 375px) {
-    .page1{
-      height: 38vmax;
-    }
-    .clients-bar{
-      bottom: 31%;
-      transform: matrix(1, -0.1, 0, 1, 0, 9);
-    }
-    .human-img{
-      bottom: 6%;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width : 430px) {
+    .page1 {
+        height: 38vmax;
     }
 
-    .page2{
+    .clients-bar {
+        bottom: 43%;
+        /* transform: matrix(1, -0.1, 0, 1, 0, 9); */
+    }
+
+    .human-img {
+        bottom: 9%;
+    }
+}
+
+
+
+@media screen and (max-width : 412px) {
+    .clients-bar {
+        bottom: 44%;
+    }
+}
+
+@media screen and (max-width : 375px) {
+    .page1 {
+        height: 38vmax;
+    }
+
+    .clients-bar {
+        bottom: 31%;
+        transform: matrix(1, -0.1, 0, 1, 0, 9);
+    }
+
+    .human-img {
+        bottom: 6%;
+    }
+
+    .page2 {
         margin-top: -6vw;
     }
-  }
-  @media screen and (max-width : 360px) {
-    .page1{
-      height: 38vmax;
+}
+
+@media screen and (max-width : 360px) {
+    .page1 {
+        height: 38vmax;
     }
-    .clients-bar{
-      bottom: 40%;
+
+    .clients-bar {
+        bottom: 40%;
     }
-    .human-img{
-      bottom: 8%;
+
+    .human-img {
+        bottom: 8%;
     }
-  }
-  
-  @media screen and (max-width : 344px) {
-    .clients-bar{
-      bottom: 52%;
+}
+
+@media screen and (max-width : 344px) {
+    .clients-bar {
+        bottom: 52%;
     }
-    .human-img{
-      bottom: 10%;
+
+    .human-img {
+        bottom: 10%;
     }
-    .page2{
+
+    .page2 {
         margin-top: -32vw;
     }
-  }
-  
-  
+}
