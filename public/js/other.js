@@ -37,10 +37,10 @@ document.getElementById("basic").addEventListener("click", function() {
         "Portfolios, blogs, or personal interests.",
         "Nonprofit or NGO Websites",
         "Promoting the mission, goals, and activities of nonprofit organizations.",
-        "./images/w-img-3.png",
-        "./images/ii1.png",
-        "./images/i2.png",
-        "./images/i3.png"
+        "/assets/images/w-img-3.png",
+        "/assets/images/ii1.png",
+        "/assets/images/i2.png",
+        "/assets/images/i3.png"
     );
 });
 
@@ -52,10 +52,10 @@ document.getElementById("standard").addEventListener("click", function() {
         "Onlines Stores Facilitating The Buying Ans Selling Of Products Of Services",
         "Blogs",
         "Promoting Products Servicces, And Information About A Company",
-        "./images/w-img-32.jpeg",
-        "./images/i1.png",
-        "./images/ii2.png",
-        "./images/i3.png"
+        "/assets/images/w-img-32.jpeg",
+        "/assets/images/i1.png",
+        "/assets/images/ii2.png",
+        "/assets/images/i3.png"
     );
 });
 
@@ -67,10 +67,10 @@ document.getElementById("premium").addEventListener("click", function() {
         "Featuring Property Listings, Real Estate Information, And Services",
         "Job Board",
         "Job Listings Connect Job Services With Employers",
-        "./images/w-img-33.png",
-        "./images/i1.png",
-        "./images/i2.png",
-        "./images/ii3.png"
+        "/assets/images/w-img-33.png",
+        "/assets/images/i1.png",
+        "/assets/images/i2.png",
+        "/assets/images/ii3.png"
     );
 });
 
@@ -80,7 +80,7 @@ document.getElementById("basic").addEventListener("click", function() {
     document.getElementById("basic").style.color = "#C4C800";
     document.getElementById("standard").style.color = "";
     document.getElementById("premium").style.color = "";
-    document.getElementById("bor1").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("bor1").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("bor2").style.borderBottom = ""
     document.getElementById("bor3").style.borderBottom = ""
 });
@@ -90,7 +90,7 @@ document.getElementById("standard").addEventListener("click", function() {
     document.getElementById("standard").style.color = "#C4C800";
     document.getElementById("premium").style.color = "";
     document.getElementById("bor1").style.borderBottom = ""
-    document.getElementById("bor2").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("bor2").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("bor3").style.borderBottom = ""
 });
 
@@ -100,7 +100,7 @@ document.getElementById("premium").addEventListener("click", function() {
     document.getElementById("premium").style.color = "#C4C800";
     document.getElementById("bor1").style.borderBottom = ""
     document.getElementById("bor2").style.borderBottom = ""
-    document.getElementById("bor3").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("bor3").style.borderBottom = "0.3vw solid #C4C800"
 });
 
 // ===============================================================================================================
@@ -109,17 +109,17 @@ document.getElementById("premium").addEventListener("click", function() {
 
 // When the page loads
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("im1").src = "./images/ii1.png";
+    document.getElementById("im1").src = "/assets/images/ii1.png";
     document.getElementById("basic").style.color = "#C4C800";
-    document.getElementById("bor1").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("bor1").style.borderBottom = "0.3vw solid #C4C800"
     
     handleIdr1Click();
     document.getElementById("idr1").click();
-    document.getElementById("idr1").style.borderBottom = "3px solid #C4C800";
+    document.getElementById("idr1").style.borderBottom = "0.3vw solid #C4C800";
     document.getElementById("idr1").style.color = "#C4C800";
 
     document.getElementById("idc1").style.color = "#C4C800";
-    document.getElementById("idc1").style.borderBottom = "3px solid #C4C800";
+    document.getElementById("idc1").style.borderBottom = "0.3vw solid #C4C800";
 });
 
 
@@ -132,7 +132,7 @@ function handleIdc1Click() {
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
-    document.getElementById("idc1").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc1").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc2").style.borderBottom = ""
     document.getElementById("idc3").style.borderBottom = ""
 
@@ -147,7 +147,7 @@ function handleIdc2Click() {
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
     document.getElementById("idc1").style.borderBottom = ""
-    document.getElementById("idc2").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc2").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc3").style.borderBottom = ""
 }
 
@@ -161,7 +161,7 @@ function handleIdc3Click() {
     document.getElementById("idc3").style.color = "#C4C800"
     document.getElementById("idc1").style.borderBottom = ""
     document.getElementById("idc2").style.borderBottom = ""
-    document.getElementById("idc3").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc3").style.borderBottom = "0.3vw solid #C4C800"
 }
 
 
@@ -174,7 +174,7 @@ function handleIdcc1Click() {
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
-    document.getElementById("idc1").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc1").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc2").style.borderBottom = ""
     document.getElementById("idc3").style.borderBottom = ""
 }
@@ -188,7 +188,7 @@ function handleIdcc2Click() {
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
     document.getElementById("idc1").style.borderBottom = ""
-    document.getElementById("idc2").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc2").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc3").style.borderBottom = ""
 }
 
@@ -202,7 +202,7 @@ function handleIdcc3Click() {
     document.getElementById("idc3").style.color = "#C4C800"
     document.getElementById("idc1").style.borderBottom = ""
     document.getElementById("idc2").style.borderBottom = ""
-    document.getElementById("idc3").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc3").style.borderBottom = "0.3vw solid #C4C800"
 }
 
 
@@ -216,7 +216,7 @@ function handleIdccc1Click() {
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
-    document.getElementById("idc1").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc1").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc2").style.borderBottom = ""
     document.getElementById("idc3").style.borderBottom = ""
 }
@@ -230,7 +230,7 @@ function handleIdccc2Click() {
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
     document.getElementById("idc1").style.borderBottom = ""
-    document.getElementById("idc2").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc2").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc3").style.borderBottom = ""
 }
 
@@ -244,7 +244,7 @@ function handleIdccc3Click() {
     document.getElementById("idc3").style.color = "#C4C800"
     document.getElementById("idc1").style.borderBottom = ""
     document.getElementById("idc2").style.borderBottom = ""
-    document.getElementById("idc3").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc3").style.borderBottom = "0.3vw solid #C4C800"
 }
 
 
@@ -259,7 +259,7 @@ function handleIdcccc1Click() {
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
-    document.getElementById("idc1").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc1").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc2").style.borderBottom = ""
     document.getElementById("idc3").style.borderBottom = ""
 }
@@ -273,7 +273,7 @@ function handleIdcccc2Click() {
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
     document.getElementById("idc1").style.borderBottom = ""
-    document.getElementById("idc2").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc2").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc3").style.borderBottom = ""
 }
 
@@ -287,7 +287,7 @@ function handleIdcccc3Click() {
     document.getElementById("idc3").style.color = "#C4C800"
     document.getElementById("idc1").style.borderBottom = ""
     document.getElementById("idc2").style.borderBottom = ""
-    document.getElementById("idc3").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc3").style.borderBottom = "0.3vw solid #C4C800"
 }
 
 
@@ -302,7 +302,7 @@ function handleIdccccc1Click() {
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
-    document.getElementById("idc1").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc1").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc2").style.borderBottom = ""
     document.getElementById("idc3").style.borderBottom = ""
 }
@@ -316,7 +316,7 @@ function handleIdccccc2Click() {
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
     document.getElementById("idc1").style.borderBottom = ""
-    document.getElementById("idc2").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc2").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idc3").style.borderBottom = ""
 }
 
@@ -330,7 +330,7 @@ function handleIdccccc3Click() {
     document.getElementById("idc3").style.color = "#C4C800"
     document.getElementById("idc1").style.borderBottom = ""
     document.getElementById("idc2").style.borderBottom = ""
-    document.getElementById("idc3").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idc3").style.borderBottom = "0.3vw solid #C4C800"
 }
 
 
