@@ -1,3 +1,65 @@
+// Hide And Display Container
+document.addEventListener("DOMContentLoaded", function() {
+    var hideCont = document.querySelector('.hide-cont');
+    var displayCont = document.getElementById('display-cont');
+  
+    hideCont.style.display = 'none';
+  
+    displayCont.addEventListener("click", function(event) {
+        event.stopPropagation();
+        hideCont.style.display = hideCont.style.display === 'none' ? 'block' : 'none';
+    });
+  
+    document.addEventListener("click", function(event) {
+        if (!displayCont.contains(event.target)) {
+            hideCont.style.display = 'none';
+        }
+    });
+  });
+  
+  
+  
+  // Copy text
+  document.addEventListener("DOMContentLoaded", function() {
+    var copyButton1 = document.getElementById("copyButton1");
+    var copyButton2 = document.getElementById("copyButton2");
+  
+    copyButton1.addEventListener("click", function() {
+        copyTextFromParagraphs(this);
+    });
+  
+    copyButton2.addEventListener("click", function() {
+        copyTextFromParagraphs(this);
+    });
+  });
+  
+  function copyTextFromParagraphs(button) {
+    var textToCopy = "";
+    var parentDiv = button.parentNode;
+  
+    var paragraphs = parentDiv.querySelectorAll("p");
+  
+    paragraphs.forEach(function(paragraph) {
+        var trimmedText = paragraph.textContent.trim();
+        textToCopy += trimmedText + "\n";
+    });
+  
+    copyToDashboard(textToCopy);
+  }
+  
+  function copyToDashboard(text) {
+    var tempTextarea = document.createElement('textarea');
+    tempTextarea.value = text;
+    document.body.appendChild(tempTextarea);
+    tempTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextarea);
+    console.log("Text copied to dashboard:", text);
+  }
+
+
+
+
 var previousImagePath = "";
 var previousIconPath1 = "";
 var previousIconPath2 = "";
