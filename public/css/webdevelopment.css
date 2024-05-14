@@ -342,7 +342,7 @@ h1{
 
 /* Basic Standard Premium */
 .premium-out-cont{
-    padding: 0 3vw 3vw 3vw;
+    padding: 3vw;
 }
 .premium-in-cont{
     display: flex;
