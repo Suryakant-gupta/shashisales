@@ -83,15 +83,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
 
-  const forms = document.querySelectorAll("form");
+  // const forms = document.querySelectorAll("form");
 
-  forms.forEach(function(form) {
-      form.addEventListener("submit", function(event) {
-          event.preventDefault();
+  // forms.forEach(function(form) {
+  //     form.addEventListener("submit", function(event) {
+  //         event.preventDefault();
           
-          alert("Your message has been sent successfully!");
+  //         alert("Your message has been sent successfully!");
   
-          form.reset();
-      });
-  });
+  //         form.reset();
+  //     });
+  // });
 });

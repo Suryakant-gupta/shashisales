@@ -424,3 +424,17 @@ h1{
 .mar-bot{
     margin-bottom: 4vw;
 }
+
+@media only screen and (max-width: 600px){
+    .pill h3 {
+        font-size: 0.4rem !important;
+    }
+    .pill p {
+        color: #404040;
+        font-size: 0.3rem;
+    }
+    .bri-card-t h3 {
+        text-align: center;
+        font-size: 0.4rem !important;
+    }
+}

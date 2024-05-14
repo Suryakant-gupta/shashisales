@@ -39,11 +39,11 @@
 .nav2-right{
     width: 45%;
 }
-.nav2-right div{
+/* .nav2-right div{
     height: 100%;
     width: 100%;
     overflow: hidden;
-}
+} */
 .nav2-right img{
     height: 100%;
     width: 100%;

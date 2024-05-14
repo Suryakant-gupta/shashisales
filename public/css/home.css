@@ -962,7 +962,8 @@ nav:hover > .service-menu {
 
 .get-quote-menu{
   display: none;
-  float: right;
+  position: absolute;
+  right: 0;
   width: 35%;
   padding: 3vw;
   background-color:#d9d9d9c2 ;

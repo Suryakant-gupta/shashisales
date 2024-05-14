@@ -273,7 +273,7 @@
         padding-bottom: 4rem;
     }
     .nav2 {
-        padding-top: 1rem;
+        padding-top: 2rem;
        
     }
 
@@ -337,6 +337,44 @@
 
     .blog-cont {
         margin-bottom: 3rem;
+    }
+
+    header .get-quote-menu {
+        display: none;
+        position: absolute;
+        /* float: right; */
+        left: 10%;
+        width: 80%;
+        padding: 3vw;
+        background-color: #d9d9d9c2;
+      }
+      header .get-quote-menu .contact-left-in input, textarea {
+        border-radius: 5px;
+        font-size: 0.6rem;
+        border: none;
+        outline: none;
+        padding: 0 8px;
+        height: 6vw;
+      }
+    header .contact-left-in{
+      padding: 0vw 0vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header .contact-left {
+      background-color: transparent;
+      width: 100%;
+    }
+    header .get-quote-menu .ser-h textarea {
+      height: 15vw;
+      padding: 1vw;
+      font-size: 0.6rem;
+    }
+    header .get-quote-menu .iti {
+      overflow: hidden;
+      width: 100%;
+      color: black;
     }
 
 

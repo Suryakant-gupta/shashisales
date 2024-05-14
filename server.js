@@ -5,10 +5,11 @@ const bodyParser = require('body-parser');
 const ejsMate = require("ejs-mate");
 const cors = require("cors");
 const axios = require("axios");
-const sha256 = require("sha256");
-const uniqid = require("uniqid");
+// const sha256 = require("sha256");
+// const uniqid = require("uniqid");
 const crypto = require("crypto-js");
 const dotenv = require('dotenv'); // If using .env file
+const mailsender = require("./utils/mailsender");
 
 
 
@@ -54,6 +55,21 @@ app.get("/fusion-marketing" , (req, res)=>{
     res.render("advertisement")
 })
 
+
+
+app.post('/submit-form', (req, res) => {
+  // Extract form data from the request body
+  const formData = req.body;
+
+  // Define the recipient email address
+  const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
+
+  // Send email with form data
+  mailsender(formData, recipients);
+
+  // Respond to the client
+  res.redirect("/contact-us");
+});
 
 
 

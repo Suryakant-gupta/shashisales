@@ -1,20 +1,29 @@
 const nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
+
+
+// Load environment variables if using .env
+dotenv.config();
+
+const fromUser = process.env.FROM_EMAIL;
+const password = process.env.EMAIL_PASS;
+
 
 // Create a reusable transporter object
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'bgmilelomujhse@gmail.com', // Replace with your Gmail email
-    pass: 'zxyt vaqy qqqt loze' // Replace with your Gmail password
+    user: fromUser, 
+    pass: password
   }
 });
 
 // Function to send email notification
 const sendEmail = (formData, recipient) => {
   const mailOptions = {
-    from: 'bgmilelomujhse@gmail.com', // Replace with your Gmail email
+    from: fromUser, // Replace with your Gmail email
     to: recipient,
-    subject: 'New Form Submission',
+    subject: 'New Lead generated',
     text: `Form Data: ${JSON.stringify(formData)}`
   };
 
