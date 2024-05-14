@@ -1,16 +1,14 @@
-.bcb{
+/* .bcb{
+    background-color: black;
+} */
+.contact-main{
     background-color: black;
 }
+
 .nav2{
     position: relative;
 }
-/* .nav2 img{
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 20rem;
-    height: 20rem;
-} */
+
 .sh{
     position: absolute;
     bottom: 0%;
@@ -19,21 +17,24 @@
     height: 5rem;
 }
 .nav2-left-inside{
-    width: 37rem;
+    width: 75%;
 }
 .nav2-right{
     position: relative;
 }
 .imgr{
+    width: 10vw;
+    overflow: hidden;
     position: absolute;
     top: 8%;
     left: 5%;
 }
 .imgr img{
-    width: 10vw;
+    width: 100%;
+    height: 100%;
 }
 .fon-s-4{
-    font-size: 4rem;
+    font-size: 4vw;
     line-height: 1.5;
 }
 .contact-container{
@@ -41,7 +42,7 @@
     display: flex;
     background-color: black;
     justify-content: center;
-    gap: 1rem;
+    gap: 1vw;
     align-items: center;
     color: white;
 }
@@ -65,12 +66,16 @@
 /* .contact-right p:last-child{
     color: #C4C800;
 } */
+.contact-right h2{
+    font-size: 2vw;
+}
 .contact-right p:nth-child(2) {
     color: #909090;
-    font-size: 1.3rem;
+    font-size: 1.5vw;
 }
 
 .contact-right p:nth-child(3) {
+    font-size: 1.3vw;
     color: #C4C800;
 }
 
@@ -86,23 +91,23 @@
 .contact-left-in form{
     width: 100%;
     display: grid;
-    gap: 1rem;
+    gap: 1vw;
 }
 .contact-left-in input, textarea{
+    font-size: 1vw;
     border-radius: 5px;
     border: none;
     outline: none;
-    padding: 0 8px;
+    padding: 1.3vw 0.8vw;
     width: 100%;
-    height: 2.5rem;
 }
 .fila{
     overflow: hidden;
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
 }
 .fila div{
-    width: 45.8%;
+    width: 48.8%;
 }
 .ph-num{
     display: flex;
@@ -117,8 +122,7 @@
     align-items: center;
 }
 .form-submit input{
-    height: 2rem;
-    width: 15rem;
+    width: 20vw;
     font-weight: bold;
     background-color: #C4C800;
     border: none;
@@ -135,8 +139,8 @@
     overflow: hidden;
 }
 .ser-h textarea{
-    height: 5rem;
-    padding: 8px;
+    height: 8vw;
+    padding: 0.8vw;
 }
 
 /* Pay Us section */
@@ -146,6 +150,7 @@
     text-align: center;
 }
 .pay-end{
+    font-size: 1.5vw;
     padding: 3vw;
     text-align: center;
     color: #425FAB;
@@ -154,30 +159,121 @@
     padding: 3vw 0 0 0;
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 10vw;
 }
 .pay-card{
     display: grid;
-    gap: 1rem;
+    gap: 2vw;
     justify-content: center;
+}
+.pay-card h3{
+    font-size: 1.5vw
 }
 .pay-card p:nth-child(2) {
     color: #909090;
+    font-size: 1.3vw;
 }
 .pay-card div:nth-child(3) {
     display: flex;
     justify-content: center;
 }
 .pay-card button{
-    height: 2rem;
-    width: 8rem;
+    font-size: 1.3vw;
+    padding: 0.8vw;
+    width: 13vw;
     border: 1px solid #C4C800;
     color: #C4C800;
     border-radius: 5px;
-    background: none;
+    background: transparent;
 }
 .pay-card button:hover{
     cursor: pointer;
     background: #C4C800;
     color: black;
+}
+
+@media only screen and (max-width: 600px){
+    .pay-container-in {
+        padding: 3vw 0 0 0;
+        display: grid;
+        justify-content: center;
+        gap: 10vw;
+    }
+    .contact-right h2 {
+        font-size: 1rem;
+    }
+    .pay-container h1{
+        font-size: 1rem;
+    }
+    .pay-card h3 {
+        font-size: 0.7rem !important;
+    }
+    .pay-card p:nth-child(2) {
+        color: #909090;
+        font-size: 0.6rem;
+    }
+    .pay-card button {
+        font-size: 0.5rem;
+        width: 13rem;
+        border: 1px solid #C4C800;
+        color: #C4C800;
+        border-radius: 5px;
+        background: transparent;
+    }
+    .contact-container {
+        padding: 6vw;
+        display: grid;
+        background-color: black;
+        justify-content: center;
+        gap: 1vw;
+        align-items: center;
+        color: white;
+    }
+    .contact-left {
+        background-color: #d9d9d9c2;
+        width: 100%;
+    }
+    .contact-left-in {
+        padding: 10vw 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-right {
+        width: 100%;
+        text-align: center;
+        line-height: 2;
+        display: flex;
+        justify-content: center;
+    }
+    .contact-right p:nth-child(2) {
+        color: #909090;
+        font-size: 0.7rem;
+    }
+    .contact-right p:nth-child(3) {
+        font-size: 0.5rem;
+        color: #C4C800;
+    }
+    .contact-left-in input, textarea {
+        font-size: 0.7rem;
+        border-radius: 0.2rem;
+        border: none;
+        outline: none;
+        padding: 3.3vw 0.8vw;
+        width: 100%;
+    }
+    .form-submit input {
+        width: 50%;
+        font-weight: bold;
+        padding: 2vw;
+        background-color: #C4C800;
+        border: none;
+        border-radius: 2rem;
+    }
+    .pay-end {
+        font-size: 1.5vw;
+        padding: 3vw 0 20vw 0;
+        text-align: center;
+        color: #425FAB;
+    }
 }

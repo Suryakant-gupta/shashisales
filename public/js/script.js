@@ -31,28 +31,6 @@ const faqAnswers = document.querySelectorAll('.faq-answer');
 // });
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    const input = document.querySelector("#phone");
-    const iti = window.intlTelInput(input, {
-        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/utils.js",
-        initialCountry: "in",
-    });
-    const countryCode = iti.getSelectedCountryData().dialCode;
-    input.value = "+" + countryCode;
-
-            const form = document.querySelector("form");
-        
-            form.addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent the default form submission behavior
-                
-                // Display success message
-                alert("Your message has been sent successfully!");
-        
-                // Reset the form
-                form.reset();
-            });
-        });
-
 
 // menu options
 
@@ -91,3 +69,29 @@ popupTriggers.forEach((trigger, index) => {
 
 
 
+document.addEventListener("DOMContentLoaded", function(event) {
+
+  const phones = document.querySelectorAll("[id*=phone]");
+  
+  phones.forEach(function(phone) {
+      const iti = window.intlTelInput(phone, {
+          utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/utils.js",
+          initialCountry: "in",
+      });
+      const countryCode = iti.getSelectedCountryData().dialCode;
+      phone.value = "+" + countryCode;
+  });
+
+
+  const forms = document.querySelectorAll("form");
+
+  forms.forEach(function(form) {
+      form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          
+          alert("Your message has been sent successfully!");
+  
+          form.reset();
+      });
+  });
+});
