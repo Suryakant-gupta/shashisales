@@ -33,7 +33,7 @@
     }
 
     .imbm{
-        margin-bottom: 2.5rem;
+        margin-bottom: 3.5rem;
     }
 
     .text {
@@ -51,6 +51,8 @@
 
     .leads {
         width: 95%;
+        margin-bottom: 1.5rem;
+        margin-top: 8vw;
         /* margin-inline: 1rem; */
     }
 
@@ -132,6 +134,9 @@
         font-size: 2.2vw;
     }
 
+    .founder-container{
+        margin-bottom: 1.5rem;
+    }
     .page2 {
         margin-top: -17vw;
     }
@@ -199,23 +204,28 @@
         font-size: 2vw;
     }
 
-    .form-field input:first-child {
+    .form-container input {
+        width: 60%;
+        padding: 3.2vw 2vw;
+
+    }
+    .form-container button {
         width: 60%;
         padding: 2vw 2vw;
 
     }
 
-    .form-field input::placeholder {
-
-        font-size: 2.5vw;
+    .form-container input::placeholder {
+       
+        font-size: 3vw;
 
     }
 
-    .form-field input:last-child {
+    .form-container button {
         width: 40%;
         /* width: 90px; */
         background-color: #C4C800;
-        font-size: 2.5vw;
+        font-size: 3vw;
 
     }
 
