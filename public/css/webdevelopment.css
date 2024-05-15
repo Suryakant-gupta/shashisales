@@ -75,14 +75,14 @@ h1{
 /* Second Component */
 .wheel-animation {
     width: 100%;
-    margin-left: 4vw;
+    /* margin-left: 4vw; */
     height: 45vw;
     position: relative;
     overflow: hidden;
   }
   
   .wheel {
-    padding-left: 1vw;
+    padding-left: 4vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -106,7 +106,7 @@ h1{
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 1.5vw;
+    gap: 1vw;
     opacity: 0;
     transform: scale(0.8);
     transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.5s;
@@ -123,7 +123,7 @@ h1{
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 1.5vw;
+    gap: 1vw;
   }
   .iwt h3, .iwt p{
     font-size: 1.5vw;

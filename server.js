@@ -59,18 +59,39 @@ app.get("/fusion-marketing" , (req, res)=>{
 
 app.post('/submit-form', (req, res) => {
   // Extract form data from the request body
+  
   const formData = req.body;
 
   // Define the recipient email address
-  const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com', "bgmilelomujhse@gmail.com"];
+//   const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
+  const recipients = ["bgmilelomujhse@gmail.com"];
 
   // Send email with form data
   mailsender(formData, recipients);
 
-  // Respond to the client
-  res.redirect("/contact-us");
+  // Get the referer URL from the request headers
+  const referer = req.headers.referer;
+
+  // Redirect to the referer URL
+  res.redirect(referer);
 });
 
+app.post('/submit-forms', (req, res) => {
+    // Extract form data from the request body
+    const formData = req.body;
+  
+    // Define the recipient email address
+    const recipients = ["bgmilelomujhse@gmail.com"];
+  
+    // Send email with form data
+    mailsender(formData, recipients);
+  
+    // Respond with a success status (no content needs to be sent back)
+    res.status(200).end();
+  });
+
+
+  
 
 
 

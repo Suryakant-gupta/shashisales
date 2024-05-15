@@ -3,37 +3,49 @@ document.addEventListener("DOMContentLoaded", function() {
     var hideCont = document.querySelector('.hide-cont');
     var displayCont = document.getElementById('display-cont');
   
-    hideCont.style.display = 'none';
+    // Check if hideCont exists before accessing its properties
+    if (hideCont) {
+        hideCont.style.display = 'none';
+    }
   
-    displayCont.addEventListener("click", function(event) {
-        event.stopPropagation();
-        hideCont.style.display = hideCont.style.display === 'none' ? 'block' : 'none';
-    });
+    if (displayCont) {
+        displayCont.addEventListener("click", function(event) {
+            event.stopPropagation();
+            if (hideCont) {
+                hideCont.style.display = hideCont.style.display === 'none' ? 'block' : 'none';
+            }
+        });
+    }
   
     document.addEventListener("click", function(event) {
-        if (!displayCont.contains(event.target)) {
+        if (displayCont && !displayCont.contains(event.target) && hideCont) {
             hideCont.style.display = 'none';
         }
     });
-  });
+});
+
   
   
   
   // Copy text
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     var copyButton1 = document.getElementById("copyButton1");
     var copyButton2 = document.getElementById("copyButton2");
   
-    copyButton1.addEventListener("click", function() {
-        copyTextFromParagraphs(this);
-    });
+    if (copyButton1) {
+        copyButton1.addEventListener("click", function() {
+            copyTextFromParagraphs(this);
+        });
+    }
   
-    copyButton2.addEventListener("click", function() {
-        copyTextFromParagraphs(this);
-    });
-  });
-  
-  function copyTextFromParagraphs(button) {
+    if (copyButton2) {
+        copyButton2.addEventListener("click", function() {
+            copyTextFromParagraphs(this);
+        });
+    }
+});
+
+function copyTextFromParagraphs(button) {
     var textToCopy = "";
     var parentDiv = button.parentNode;
   
@@ -45,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   
     copyToDashboard(textToCopy);
-  }
-  
-  function copyToDashboard(text) {
+}
+
+function copyToDashboard(text) {
     var tempTextarea = document.createElement('textarea');
     tempTextarea.value = text;
     document.body.appendChild(tempTextarea);
@@ -55,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.execCommand('copy');
     document.body.removeChild(tempTextarea);
     console.log("Text copied to dashboard:", text);
-  }
+}
 
 
 
@@ -524,6 +536,4 @@ document.getElementById("idr5").addEventListener("click", function() {
     document.getElementById("idr4").style.color = ""
     document.getElementById("idr5").style.color = "#C4C800"
 });
-
-
 

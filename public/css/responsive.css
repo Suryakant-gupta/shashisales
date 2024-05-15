@@ -277,6 +277,17 @@
        
     }
 
+    .himv{
+        display: none;
+    }
+
+    .wheel-text, .wheel-image{
+        width: 50%;
+    }
+    .soson{
+        font-size: 2.5vw;
+    }
+
     
 }
 

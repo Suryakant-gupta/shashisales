@@ -1,4 +1,51 @@
+const heroVideo = document.getElementById('heroVideo');
+const videoContainer = document.querySelector('.middle-vedio');
+const fullWidthVideo = document.createElement('div');
+fullWidthVideo.classList.add('full-width-video');
+const body = document.querySelector('body');
+let isVideoFullWidth = false;
+const cursor = document.createElement('div');
+cursor.classList.add('custom-cursor');
+cursor.textContent = 'Show Reel';
+body.appendChild(cursor);
 
+videoContainer.addEventListener('click', toggleVideoSize);
+document.addEventListener('click', closeFullWidthVideo);
+
+function toggleVideoSize() {
+  if (!isVideoFullWidth) {
+    isVideoFullWidth = true;
+    heroVideo.muted = false;
+    fullWidthVideo.appendChild(heroVideo);
+    body.appendChild(fullWidthVideo);
+    cursor.textContent = 'Close Video';
+  } else {
+    closeFullWidthVideo();
+  }
+}
+
+function closeFullWidthVideo(event) {
+  if (!event || event.target === fullWidthVideo) {
+    isVideoFullWidth = false;
+    heroVideo.muted = true;
+    videoContainer.appendChild(heroVideo);
+    body.removeChild(fullWidthVideo);
+    cursor.textContent = 'Show Reel';
+  }
+}
+
+videoContainer.addEventListener('mouseenter', () => {
+  cursor.style.opacity = '1';
+});
+
+videoContainer.addEventListener('mouseleave', () => {
+  cursor.style.opacity = '0';
+});
+
+window.addEventListener('mousemove', (e) => {
+  cursor.style.left = `${e.clientX - cursor.offsetWidth / 2}px`;
+  cursor.style.top = `${e.clientY - cursor.offsetHeight / 2}px`;
+});
 
 
 
@@ -35,6 +82,7 @@ const faqAnswers = document.querySelectorAll('.faq-answer');
 
 
 
+// Contact Form
 document.addEventListener("DOMContentLoaded", function(event) {
 
   const phones = document.querySelectorAll("[id*=phone]");
@@ -49,5 +97,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
 
+  
 
+  
 });
+
+
+
+
+
+// menu options
+
+
+
+const popupTriggers = document.querySelectorAll('.b');
+const popups = document.querySelectorAll('.a');
+
+popupTriggers.forEach((trigger, index) => {
+  const popup = popups[index];
+  let hideMenuTimer;
+
+  trigger.addEventListener('mouseenter', () => {
+    popup.style.display = 'block';
+    clearTimeout(hideMenuTimer);
+  });
+
+  trigger.addEventListener('mouseleave', () => {
+    hideMenuTimer = setTimeout(() => {
+      popup.style.display = 'none';
+    }, 500);
+  });
+
+  popup.addEventListener('mouseenter', () => {
+    clearTimeout(hideMenuTimer);
+  });
+
+  popup.addEventListener('mouseleave', () => {
+    hideMenuTimer = setTimeout(() => {
+      popup.style.display = 'none';
+    }, 500);
+  });
+});
+
+
+
