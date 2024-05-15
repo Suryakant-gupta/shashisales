@@ -63,8 +63,8 @@ app.post('/submit-form', (req, res) => {
   const formData = req.body;
 
   // Define the recipient email address
-//   const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
-  const recipients = ["bgmilelomujhse@gmail.com"];
+  const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
+//   const recipients = ["bgmilelomujhse@gmail.com"];
 
   // Send email with form data
   mailsender(formData, recipients);
@@ -81,7 +81,9 @@ app.post('/submit-forms', (req, res) => {
     const formData = req.body;
   
     // Define the recipient email address
-    const recipients = ["bgmilelomujhse@gmail.com"];
+    // const recipients = ["bgmilelomujhse@gmail.com"];
+    const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
+
   
     // Send email with form data
     mailsender(formData, recipients);
