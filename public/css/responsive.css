@@ -28,6 +28,10 @@
 
 @media only screen and (max-width: 768px) {
 
+    .contact-bar{
+        display: none;
+    }
+
     .imbm{
         margin-bottom: 2.5rem;
     }
