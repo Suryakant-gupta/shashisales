@@ -23,6 +23,9 @@ body {
 a {
   text-decoration: none;
 }
+.mobile-header{
+  display: none;
+}
 
 header {
   width: 100%;
@@ -136,7 +139,7 @@ nav{
   width: 28%;
 }
 
-.middle-vedio img {
+.middle-vedio video {
   width: 100%;
 }
 
@@ -682,7 +685,7 @@ font-weight: bold;
   width: 50%;
   overflow: hidden;
 }
-.founder-container-left img{
+.founder-container-left video{
   height: 100%;
   width: 100%;
 }

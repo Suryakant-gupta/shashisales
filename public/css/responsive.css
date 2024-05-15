@@ -257,7 +257,7 @@
     }
 
     .who-cont{
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 
     .brilliant-cont {
@@ -265,7 +265,7 @@
     }
 
     .first-component{
-        padding-top: 3.5rem;
+        padding-top: 4rem;
     }
 
     .out-cont {
@@ -273,13 +273,17 @@
         padding-bottom: 4rem;
     }
     .nav2 {
-        padding-top: 2rem;
+        padding-top: 3rem;
        
     }
 
     
 }
 
+/* @media (max-width: 767px) {
+    .middle-vedio video::-webkit-media-controls {
+        width: fit-content; }
+} */
 
 
 
@@ -338,11 +342,11 @@
     .blog-cont {
         margin-bottom: 3rem;
     }
-
+/* 
     header .get-quote-menu {
         display: none;
         position: absolute;
-        /* float: right; */
+      
         left: 10%;
         width: 80%;
         padding: 3vw;
@@ -375,7 +379,70 @@
       overflow: hidden;
       width: 100%;
       color: black;
+    } */
+
+    .mobile-header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .mobile-header .hamburger{
+        display: flex;
+        align-items: center;
+      }
+      .mobile-header .hamburger img{
+        width: 1.2rem;
+      }
+      nav {
+        
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        /* height: 6vw; */
+        padding: 6vw 4vw;
+      }
+      .nav-cont{
+        display: none;
+      }
+      .logo img {
+        margin-right: 5px;
+        width: 25vw;
+      }
+    
+      .mobile-header-popup {
+        background: #d9d9d9f0;
+        width: 80%;
+        position: absolute;
+        top: 100%;
+        right: 10%;
+      }
+      .mobile-header-popup-in {
+        /* display: none; */
+        position: relative;
+        padding: 3vw;
+        width: 100%;
+        height: 100%;
+        font-size: 0.8rem;
+        color: black;
+        font-weight: bold;
+      }
+      .mobile-service {
+        position: absolute;
+        top: 6%;
+        right: 10%;
     }
+    #service-back img {
+      transform: rotate(180deg);
+    }
+      .mobile-header-popup-in p{
+        padding: 0.8rem 0px;
+        border-bottom: 1px solid;
+      }
+      .mobile-header-popup-in a{
+        color: black;
+      }
 
 
 }

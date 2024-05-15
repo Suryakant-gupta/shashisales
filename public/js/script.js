@@ -32,40 +32,6 @@ const faqAnswers = document.querySelectorAll('.faq-answer');
 
 
 
-// menu options
-
-
-
-const popupTriggers = document.querySelectorAll('.b');
-const popups = document.querySelectorAll('.a');
-
-popupTriggers.forEach((trigger, index) => {
-  const popup = popups[index];
-  let hideMenuTimer;
-
-  trigger.addEventListener('mouseenter', () => {
-    popup.style.display = 'block';
-    clearTimeout(hideMenuTimer);
-  });
-
-  trigger.addEventListener('mouseleave', () => {
-    hideMenuTimer = setTimeout(() => {
-      popup.style.display = 'none';
-    }, 500);
-  });
-
-  popup.addEventListener('mouseenter', () => {
-    clearTimeout(hideMenuTimer);
-  });
-
-  popup.addEventListener('mouseleave', () => {
-    hideMenuTimer = setTimeout(() => {
-      popup.style.display = 'none';
-    }, 500);
-  });
-});
-
-      
 
 
 
@@ -83,15 +49,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
 
-  // const forms = document.querySelectorAll("form");
 
-  // forms.forEach(function(form) {
-  //     form.addEventListener("submit", function(event) {
-  //         event.preventDefault();
-          
-  //         alert("Your message has been sent successfully!");
-  
-  //         form.reset();
-  //     });
-  // });
 });

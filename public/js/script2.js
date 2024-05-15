@@ -78,6 +78,50 @@ showName(testimonialCenter);
 // wheel animation
 
 
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var mobileHeader = document.querySelector('.hide-mobile-header-cont');
+  var mobileHeaderPopup = document.getElementById('display-mobile-header-cont');
+  var serviceHeader = document.querySelector('.hide-service-header-cont');
+  var serviceHeaderPopup = document.getElementById('display-service-header-cont');
+  var hideMobileHeaderCont = document.querySelector('.hide-mobile-header-cont');
+  var hideServiceHeaderCont = document.querySelector('.hide-service-header-cont');
+  var serviceBack = document.getElementById('service-back');
+
+  mobileHeader.style.display = 'none';
+  serviceHeader.style.display = 'none';
+
+  mobileHeaderPopup.addEventListener("click", function(event) {
+      event.stopPropagation();
+      mobileHeader.style.display = mobileHeader.style.display === 'none' ? 'block' : 'none';
+  });
+
+  serviceHeaderPopup.addEventListener("click", function(event) {
+      hideMobileHeaderCont.style.display = "none";
+      event.stopPropagation();
+      serviceHeader.style.display = serviceHeader.style.display === 'none' ? 'block' : 'none';
+  });
+
+  serviceBack.addEventListener("click", function(event) {
+      hideServiceHeaderCont.style.display = 'none';
+      hideMobileHeaderCont.style.display = 'block';
+      event.stopPropagation(); // Prevent the click event from bubbling up to document
+  });
+
+  // Close mobile header popup when clicking outside
+  document.addEventListener("click", function(event) {
+      if (!serviceHeaderPopup.contains(event.target)) {
+          serviceHeader.style.display = 'none';
+      }
+      if (!mobileHeaderPopup.contains(event.target)) {
+          mobileHeader.style.display = 'none';
+      }
+  });
+});
+
+
 const wheels = document.querySelectorAll('.wheel');
 let currentWheelIndex = 0;
 const wheelAnimation = document.querySelector('.wheel-animation');
@@ -114,5 +158,4 @@ wheelAnimation.addEventListener('wheel', (event) => {
     }
   }
 }, { passive: true });
-
 
