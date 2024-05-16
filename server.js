@@ -78,8 +78,8 @@ app.get("/fusion-marketing" , (req, res)=>{
 })
 
 
-  // const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
-  const recipients = "bgmilelomujhse@gmail.com";
+  const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
+//   const recipients = "bgmilelomujhse@gmail.com";
 
 
 
