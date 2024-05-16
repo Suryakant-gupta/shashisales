@@ -52,14 +52,13 @@ dotenv.config();
 
 
 app.get("/", (req, res) => {
-    const successMessage = req.session.successMessage;
-    const errorMessage = req.session.errorMessage;
-    console.log('successMessage:', successMessage); // Add this line
-    console.log('errorMessage:', errorMessage); // Add this line
+    const successMessage = req.session.successMessage || null;
+    const errorMessage = req.session.errorMessage || null;
     req.session.successMessage = null; // Clear the success message after displaying it
     req.session.errorMessage = null; // Clear the error message after displaying it
     res.render("home", { successMessage, errorMessage });
 });
+
 
 
 app.get("/about-us" , (req, res)=>{
