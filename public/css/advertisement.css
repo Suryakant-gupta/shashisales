@@ -505,16 +505,16 @@ footer{
 
     .marketing-card{
         background-color: #F2F2F2;
-        width: 30%;
+        width: 48%;
     }
     .mar-img{
-        height: 20vw;
+        height: 30vw;
         width: 100%;
         overflow: hidden;
     }
     .mar-img img{
         width: 100%;
-        height: 20vw;
+        height: 30vw;
         display: block;
     }
     .mar-desc{
@@ -524,29 +524,38 @@ footer{
     .mar-desc div:nth-child(1){
         display: flex;
         justify-content: center;
-        font-size: 1.88vw;
+        font-size: 2.88vw;
         font-weight: bold;
+        padding-top: 2vw;
     }
     .mar-desc div:nth-child(2){
-        font-size: 2vw;
+        font-size: 3vw;
         color: grey;
         text-align: center;
-        padding: 1vw 0;
+        padding: 2vw 0;
     }
 
-    .marketing-cont div:nth-child(5){
-        clip-path: polygon(0px 0%, 100% 0%, 100% 100%, 0px 100%);
+    
+    
+    .marketing-cont div:nth-child(3){
+        clip-path: polygon(0px 14%, 100% -55%, 100% 100%, 0px 100%);
     }
-    .marketing-cont div:nth-child(4){
+    .marketing-cont div:nth-child(5){
         clip-path: polygon(0px 14%, 100% -55%, 100% 100%, 0px 100%);
     }
     .marketing-cont div:nth-child(7){
         clip-path: polygon(0px 14%, 100% -55%, 100% 100%, 0px 100%);
     }
-    .marketing-cont div:nth-child(3){
+    .marketing-cont div:nth-child(2){
+        clip-path: polygon(0px 0px, 80% 0%, 200% 84%, 0px 127%, 0px 0px);
+    }
+    .marketing-cont div:nth-child(4){
         clip-path: polygon(0px 0px, 80% 0%, 200% 84%, 0px 127%, 0px 0px);
     }
     .marketing-cont div:nth-child(6){
+        clip-path: polygon(0px 0px, 80% 0%, 200% 84%, 0px 127%, 0px 0px);
+    }
+    .marketing-cont div:nth-child(8){
         clip-path: polygon(0px 0px, 80% 0%, 200% 84%, 0px 127%, 0px 0px);
     }
 

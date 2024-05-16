@@ -523,6 +523,9 @@
 }
 
 @media screen and (max-width : 360px) {
+    .page2 {
+        margin-top: -13vw;
+    }
     .page1 {
         height: 38vmax;
     }
