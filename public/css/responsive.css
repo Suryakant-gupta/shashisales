@@ -364,7 +364,7 @@
     }
 
     .blog-cont {
-        margin-bottom: 3rem;
+        padding-bottom: 5rem !important;
     }
 /* 
     header .get-quote-menu {

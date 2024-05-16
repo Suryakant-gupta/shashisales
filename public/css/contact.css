@@ -201,8 +201,8 @@
     text-align: center;
     color: #425FAB;
 }
-.pay-container-in{
-    padding: 3vw 0 0 0;
+.pay-container-in {
+    padding: 3vw;
     display: flex;
     justify-content: center;
     gap: 10vw;
