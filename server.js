@@ -76,16 +76,16 @@ app.get("/contact-us" , (req, res)=>{
 app.get("/fusion-marketing" , (req, res)=>{
     res.render("advertisement")
 })
-app.get("/contact-us/terms-of-use" , (req, res)=>{
+app.get("/terms-of-use" , (req, res)=>{
     res.render("terms")
 })
-app.get("/contact-us/cookie-policy" , (req, res)=>{
+app.get("/cookie-policy" , (req, res)=>{
     res.render("cookiePolicy")
 })
-app.get("/contact-us/refund-policy" , (req, res)=>{
+app.get("/refund-policy" , (req, res)=>{
     res.render("refundPolicy")
 })
-app.get("/contact-us/privacy-policy" , (req, res)=>{
+app.get("/privacy-policy" , (req, res)=>{
     res.render("privacyPolicy")
 })
 
