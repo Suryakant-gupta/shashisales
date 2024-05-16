@@ -332,18 +332,17 @@ h1{
     gap: 8vw;
     justify-content: center;
 }
-.wi2 div{
-    height: 2.5vw;
-}
+
 .wi2 div:hover{
     cursor: pointer;
 }
 
 
 /* Basic Standard Premium */
-.premium-out-cont{
-    padding: 3vw !important;
+.premium-out-cont {
+    padding: 0vw 4vw 4vw 4vw !important;
 }
+
 .premium-in-cont{
     display: flex;
     gap: 2.5vw;
@@ -419,10 +418,9 @@ h1{
     text-align: end;
     line-height: 1.5;
 }
-.premium-end-r-mobview{
-    display: none;
-    padding: 2vw 4vw;
-    line-height: 1.5;
+.premium-end-r-mobview {
+    display: block;
+    padding: 3vw 4vw;
 }
 .premium-end-r-mobview div:nth-child(2){
     display: flex;
@@ -499,6 +497,107 @@ h1{
     .premium-end-l-r div {
         margin: 2vw;
         line-height: 2;
+    }
+
+    .premium-end-r-mobview{
+        display: block;
+        padding: 2vw 3vw;
+    }
+    .premium-end-r {
+        display: none;
+    }
+    .premium-end-l {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #DEDEDE;
+    }
+    .premium-cont-top-right {
+        display: none;
+    }
+    .premium-cont-top-left {
+        width: 100%;
+        display: flex;
+        gap: 20vw;
+        justify-content: center;
+    }
+    .premium-cont-top-left img {
+        height: 6vw;
+        width: 6vw;
+    }
+    .bor div:nth-child(2) {
+        font-size: 0.4rem;
+    }
+    .premium-cont-top-left div {
+        height: 8vw;
+        display: flex;
+        gap: 1vw;
+        align-items: center;
+    }
+    .premium-end {
+        display: flex;
+        height: 36vw;
+        gap: 2vw;
+    }
+    .premium-end-l-r div {
+        margin: 2vw;
+        line-height: 1.6;
+    }
+    .premium-end-l-r h3, .premium-end-l-r p {
+        font-size: 2vw !important;
+    }
+
+
+    /* What makes us different */
+    .w-cont {
+        /* padding: 3vw 0; */
+        display: flex;
+        height: 35vw;
+    }
+    .sd {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30vw;
+        background-color: #D9D9D9;
+    }
+    .sd ul {
+        color: #404040;
+        line-height: 1.5;
+        margin-left: 2.2vw;
+        font-size: 1.9vw;
+    }
+    .ad {
+        width: 100%;
+        height: 30vw;
+    }
+
+
+    .wi {
+        width: 30%;
+    }
+    .wi2 {
+        font-size: 1.6vw;
+        width: 70%;
+        display: flex;
+        gap: 8vw;
+        justify-content: center;
+    }
+    .con-1 {
+        font-weight: bold;
+        font-size: 1.6vw;
+        width: 25%;
+        display: grid;
+        justify-content: space-between;
+        gap: 4vw;
+        color: #666666;
+    }
+    .con-2-in p {
+        font-size: 2vw;
+        color: #4B4A4A;
     }
 }
 

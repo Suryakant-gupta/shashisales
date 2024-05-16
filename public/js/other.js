@@ -199,7 +199,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // When Web design is selected
 function handleIdc1Click() {
-    document.getElementById("idp1").innerHTML = "Tailored website designs reflecting individual brand identities and visions—our team ensures a unique, client-eccentric approach.";
+    document.getElementById("idp1").innerHTML = "Our website design services are tailored to meet the unique needs and branding requirements of each client. We understand that a one-size-fits-all approach doesn't work in the dynamic digital landscape. Our team of skilled designers collaborates closely with clients to create custom designs that reflect their brand identity, values, and vision.";
+    document.getElementById("idh").innerHTML = "Key Features";
     document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
     document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
     document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
@@ -213,10 +214,11 @@ function handleIdc1Click() {
 }
 
 function handleIdc2Click() {
-    document.getElementById("idp1").innerHTML = "Idr1 Idc2";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "In today's multi-device world, having a website that adapts to various screen sizes is paramount. Our responsive design services ensure that your website looks and functions seamlessly on desktops, laptops, tablets, and smartphones.";
+    document.getElementById("idh").innerHTML = "Key Features";
+    document.getElementById("idp2").innerHTML = "Cross-Device Compatibility: Optimize your website for a consistent and user-friendly experience across all devices.";
+    document.getElementById("idp3").innerHTML = "Fluid Grid Layouts: Utilize fluid grid layouts to adjust the content dynamically based on screen size.";
+    document.getElementById("idp4").innerHTML = "Mobile-First Approach: Prioritize mobile users by adopting a mobile-first design strategy.";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
@@ -226,10 +228,11 @@ function handleIdc2Click() {
 }
 
 function handleIdc3Click() {
-    document.getElementById("idp1").innerHTML = "Idr1 Idc3";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "User experience (UX) is at the core of our website design philosophy. We go beyond creating visually appealing designs; we focus on crafting an intuitive and enjoyable user journey.";
+    document.getElementById("idh").innerHTML = "Key Features";
+    document.getElementById("idp2").innerHTML = "User-Centric Navigation: Design easy-to-navigate websites with a focus on user flow and accessibility.";
+    document.getElementById("idp3").innerHTML = "Intuitive Interfaces: Create interfaces that guide users seamlessly through your website, enhancing engagement.";
+    document.getElementById("idp4").innerHTML = "A/B Testing: Employ A/B testing methodologies to refine the user experience based on real user interactions and feedback.";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = "#C4C800"
@@ -241,10 +244,11 @@ function handleIdc3Click() {
 
 // When Technologies We Use is selected
 function handleIdcc1Click() {
-    document.getElementById("idp1").innerHTML = "Idr2 Idcc1";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "";
+    document.getElementById("idh").innerHTML = "Key Features";
+    document.getElementById("idp2").innerHTML = "HTML5, CSS3, JavaScript: Standard technologies for building responsive and interactive user interfaces.";
+    document.getElementById("idp3").innerHTML = "React, Node, Vue.js, Angular: Frameworks for creating dynamic and modern front-end experiences.";
+    document.getElementById("idp4").innerHTML = "";
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
@@ -254,10 +258,11 @@ function handleIdcc1Click() {
 }
 
 function handleIdcc2Click() {
-    document.getElementById("idp1").innerHTML = "Idr2 Idcc2";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "";
+    document.getElementById("idh").innerHTML = "Key Features";
+    document.getElementById("idp2").innerHTML = "Node.js, Drupal, Django, Ruby on Rails: Robust server-side frameworks for scalable and efficient back-end development.";
+    document.getElementById("idp3").innerHTML = "PHP, Python, Java: Versatile programming languages for building powerful server-side applications.";
+    document.getElementById("idp4").innerHTML = "";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
@@ -267,10 +272,11 @@ function handleIdcc2Click() {
 }
 
 function handleIdcc3Click() {
-    document.getElementById("idp1").innerHTML = "Idr2 Idcc3";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "Database Management:MySQL, PostgreSQL, MongoDB: Databases tailored to the specific needs of the project, ensuring data integrity and performance.";
+    document.getElementById("idh").innerHTML = "Key Features";
+    document.getElementById("idp2").innerHTML = "Cloud Integration: Utilize cloud platforms for scalable infrastructure and resources.";
+    document.getElementById("idp3").innerHTML = "Load Balancing: Implement load balancing strategies to distribute traffic evenly and enhance performance.";
+    document.getElementById("idp4").innerHTML = "";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = "#C4C800"
@@ -283,10 +289,11 @@ function handleIdcc3Click() {
 
 // E-Commerce Solutions is selected
 function handleIdccc1Click() {
-    document.getElementById("idp1").innerHTML = "Idr3 Idccc1";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "";
+    document.getElementById("idh").innerHTML = "Key Features";
+    document.getElementById("idp2").innerHTML = "Customized E-Commerce Solutions: We excel in creating tailor-made online stores, similar to the user-friendly and visually appealing interfaces of upposh.co and bhartiyabazzar.com.";
+    document.getElementById("idp3").innerHTML = "Responsive Design: Our e-commerce websites are designed to provide an optimal shopping experience across various devices, ensuring accessibility for a broad audience.";
+    document.getElementById("idp4").innerHTML = "";
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
@@ -296,10 +303,11 @@ function handleIdccc1Click() {
 }
 
 function handleIdccc2Click() {
-    document.getElementById("idp1").innerHTML = "Idr3 Idccc2";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "";
+    document.getElementById("idh").innerHTML = "Key Features";
+    document.getElementById("idp2").innerHTML = "PhonePe Integration: Seamlessly integrate PhonePe, allowing users to make secure and convenient transactions using their preferred payment method.";
+    document.getElementById("idp3").innerHTML = "Razorpay Integration: Implement Razorpay to facilitate smooth and efficient payment processing, enhancing the overall user experience.";
+    document.getElementById("idp4").innerHTML = "Stripe Integration: Enable secure transactions with Stripe, offering flexibility in payment options and ensuring the highest standards of online payment security.";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
@@ -309,10 +317,11 @@ function handleIdccc2Click() {
 }
 
 function handleIdccc3Click() {
-    document.getElementById("idp1").innerHTML = "Idr3 Idccc3";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "";
+    document.getElementById("idh").innerHTML = "Key Features";
+    document.getElementById("idp2").innerHTML = "Dynamic Inventory Systems: Develop sophisticated inventory management systems that dynamically track product availability, preventing overselling and ensuring accurate stock levels.";
+    document.getElementById("idp3").innerHTML = "Automated Updates: Implement automated inventory updates to synchronize product availability in real-time, reducing manual intervention and potential errors.";
+    document.getElementById("idp4").innerHTML = "";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = "#C4C800"
@@ -326,10 +335,11 @@ function handleIdccc3Click() {
 
 // Maintainance & Support is selected
 function handleIdcccc1Click() {
-    document.getElementById("idp1").innerHTML = "Idr4 Idcccc1";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "Regular Updates: We offer continuous updates to keep your website or e-commerce platform in line with the latest industry trends, security standards, and technological advancements.";
+    document.getElementById("idh").innerHTML = "";
+    document.getElementById("idp2").innerHTML = "Bug Fixes: Our team is proactive in identifying and resolving any bugs or issues that may arise post-launch, ensuring a seamless user experience.";
+    document.getElementById("idp3").innerHTML = "Regular Security Audits: Conduct periodic security audits to identify vulnerabilities and implement measures to safeguard your website or e-commerce store from potential threats.";
+    document.getElementById("idp4").innerHTML = "Security Patch Updates: Stay ahead of security threats by promptly applying patch updates to fortify your online presence against evolving risks.";
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
@@ -339,10 +349,11 @@ function handleIdcccc1Click() {
 }
 
 function handleIdcccc2Click() {
-    document.getElementById("idp1").innerHTML = "Idr4 Idcccc2";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "Content Management: Assist in updating and managing content to keep your website or e-commerce platform relevant and engaging.";
+    document.getElementById("idh").innerHTML = "";
+    document.getElementById("idp2").innerHTML = "SEO Optimization: Continuously optimize content for search engines to enhance your online visibility and reach a wider audience.";
+    document.getElementById("idp3").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
+    document.getElementById("idp4").innerHTML = "Performance Optimization: Implement optimizations based on performance monitoring results, enhancing loading times and overall responsiveness.";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
@@ -352,10 +363,11 @@ function handleIdcccc2Click() {
 }
 
 function handleIdcccc3Click() {
-    document.getElementById("idp1").innerHTML = "Idr4 Idcccc3";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "Dedicated Support Team: Access our skilled and responsive support team for prompt assistance with technical issues, inquiries, or troubleshooting.";
+    document.getElementById("idh").innerHTML = "";
+    document.getElementById("idp2").innerHTML = "User Training: Provide ongoing training and support for your team to maximize the utilization of website features and functionalities.";
+    document.getElementById("idp3").innerHTML = "Continuous Improvement: Collaborate on identifying opportunities for feature enhancements and upgrades to meet evolving business requirements.";
+    document.getElementById("idp4").innerHTML = "Regular Backups: Conduct regular backups of your website or e-commerce store to prevent data loss in the event of unexpected issues. Disaster Recovery Planning: Develop and implement a comprehensive disaster recovery plan to minimize downtime and data loss.";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = "#C4C800"
@@ -369,10 +381,11 @@ function handleIdcccc3Click() {
 
 // When Website Development is selected
 function handleIdccccc1Click() {
-    document.getElementById("idp1").innerHTML = "Idr5 Idccccc1";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "Discovery and Planning: Client Consultation: We initiate every project with a comprehensive consultation to understand your business, goals, and specific requirements.";
+    document.getElementById("idh").innerHTML = "";
+    document.getElementById("idp2").innerHTML = "Project Scope Definition: Clearly outline the project scope, objectives, and deliverables to establish a solid foundation.";
+    document.getElementById("idp3").innerHTML = "Design and Prototyping: Wireframing and Mockups: Develop wireframes and design mockups to visualize the website's structure, layout, and user interface.";
+    document.getElementById("idp4").innerHTML = "Client Feedback: Seek client input and feedback at every design iteration to ensure alignment with expectations.";
     document.getElementById("idc1").style.color = "#C4C800"
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = ""
@@ -382,10 +395,11 @@ function handleIdccccc1Click() {
 }
 
 function handleIdccccc2Click() {
-    document.getElementById("idp1").innerHTML = "Idr5 Idccccc2";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "Front-End Development: Implement the design using the latest front-end technologies, ensuring a seamless and visually appealing user interface.";
+    document.getElementById("idh").innerHTML = "";
+    document.getElementById("idp2").innerHTML = "Back-End Development: Leverage robust back-end technologies to build the core functionality and logic of the website. Database Integration: Implement secure and efficient database structures to manage data seamlessly.";
+    document.getElementById("idp3").innerHTML = "Functionality Testing: Quality Assurance: Conduct rigorous testing to identify and rectify any bugs or issues.";
+    document.getElementById("idp4").innerHTML = "User Acceptance Testing (UAT): Engage clients in UAT to ensure that the website meets their expectations and performs as intended.";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = "#C4C800"
     document.getElementById("idc3").style.color = ""
@@ -395,10 +409,11 @@ function handleIdccccc2Click() {
 }
 
 function handleIdccccc3Click() {
-    document.getElementById("idp1").innerHTML = "Idr5 Idccccc3";
-    document.getElementById("idp2").innerHTML = "Personalized Design Concepts: We present multiple design concepts based on your brand guidelines and preferences.";
-    document.getElementById("idp3").innerHTML = "Brand Consistency: Ensure that the design aligns seamlessly with your existing brand elements for a cohesive online presence.";
-    document.getElementById("idp4").innerHTML = "Visual Appeal: Craft visually stunning and engaging designs that leave a lasting impression on your website visitors.";
+    document.getElementById("idp1").innerHTML = "Server Configuration: Optimize server settings for performance and security.";
+    document.getElementById("idh").innerHTML = "";
+    document.getElementById("idp2").innerHTML = "Deployment Strategy: Implement a strategic deployment plan to minimize downtime and ensure a smooth transition to the live environment.";
+    document.getElementById("idp3").innerHTML = "Post-Launch Support: Monitoring and Maintenance: Implement monitoring tools to track website performance and address any potential issues promptly.";
+    document.getElementById("idp4").innerHTML = "Technical Support: Provide ongoing technical support to address client queries and troubleshoot any post-launch issues.";
     document.getElementById("idc1").style.color = ""
     document.getElementById("idc2").style.color = ""
     document.getElementById("idc3").style.color = "#C4C800"
@@ -415,6 +430,9 @@ document.getElementById("idc3").addEventListener("click", handleIdc3Click);
 
 function handleIdr1Click() {
     removeIdcEventListeners();
+    document.getElementById("idc1").innerHTML = "CUSTOM";
+    document.getElementById("idc2").innerHTML = "RESPONSIVE";
+    document.getElementById("idc3").innerHTML = "USER EXPERIENCE";
     document.getElementById("idc1").addEventListener("click", handleIdc1Click);
     document.getElementById("idc2").addEventListener("click", handleIdc2Click);
     document.getElementById("idc3").addEventListener("click", handleIdc3Click);
@@ -422,6 +440,9 @@ function handleIdr1Click() {
 
 function handleIdr2Click() {
     removeIdcEventListeners();
+    document.getElementById("idc1").innerHTML = "FRONT-END";
+    document.getElementById("idc2").innerHTML = "BACK-END";
+    document.getElementById("idc3").innerHTML = "DBMS";
     document.getElementById("idc1").addEventListener("click", handleIdcc1Click);
     document.getElementById("idc2").addEventListener("click", handleIdcc2Click);
     document.getElementById("idc3").addEventListener("click", handleIdcc3Click);
@@ -429,6 +450,9 @@ function handleIdr2Click() {
 
 function handleIdr3Click() {
     removeIdcEventListeners();
+    document.getElementById("idc1").innerHTML = "ONLINE STORES";
+    document.getElementById("idc2").innerHTML = "PAYMENT GATEWAYS INTEGRATION";
+    document.getElementById("idc3").innerHTML = "INVENTORY MANAGEMENT";
     document.getElementById("idc1").addEventListener("click", handleIdccc1Click);
     document.getElementById("idc2").addEventListener("click", handleIdccc2Click);
     document.getElementById("idc3").addEventListener("click", handleIdccc3Click);
@@ -436,6 +460,9 @@ function handleIdr3Click() {
 
 function handleIdr4Click() {
     removeIdcEventListeners();
+    document.getElementById("idc1").innerHTML = "AUDIT & MAINTAINANCE";
+    document.getElementById("idc2").innerHTML = "MONITORING & OPTIMIZATION";
+    document.getElementById("idc3").innerHTML = "SUPPORT & RECOVERY";
     document.getElementById("idc1").addEventListener("click", handleIdcccc1Click);
     document.getElementById("idc2").addEventListener("click", handleIdcccc2Click);
     document.getElementById("idc3").addEventListener("click", handleIdcccc3Click);
@@ -443,6 +470,9 @@ function handleIdr4Click() {
 
 function handleIdr5Click() {
     removeIdcEventListeners();
+    document.getElementById("idc1").innerHTML = "PROTOTYPING";
+    document.getElementById("idc2").innerHTML = "DEVELOPMENT";
+    document.getElementById("idc3").innerHTML = "DEPLOYMENT";
     document.getElementById("idc1").addEventListener("click", handleIdccccc1Click);
     document.getElementById("idc2").addEventListener("click", handleIdccccc2Click);
     document.getElementById("idc3").addEventListener("click", handleIdccccc3Click);
@@ -469,7 +499,7 @@ function removeIdcEventListeners() {
 document.getElementById("idr1").addEventListener("click", function() {
     handleIdr1Click();
     document.getElementById("idc1").click();
-    document.getElementById("idr1").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idr1").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idr2").style.borderBottom = ""
     document.getElementById("idr3").style.borderBottom = ""
     document.getElementById("idr4").style.borderBottom = ""
@@ -484,7 +514,7 @@ document.getElementById("idr2").addEventListener("click", function() {
     handleIdr2Click();
     document.getElementById("idc1").click();
     document.getElementById("idr1").style.borderBottom = ""
-    document.getElementById("idr2").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idr2").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idr3").style.borderBottom = ""
     document.getElementById("idr4").style.borderBottom = ""
     document.getElementById("idr5").style.borderBottom = ""
@@ -499,7 +529,7 @@ document.getElementById("idr3").addEventListener("click", function() {
     document.getElementById("idc1").click();
     document.getElementById("idr1").style.borderBottom = ""
     document.getElementById("idr2").style.borderBottom = ""
-    document.getElementById("idr3").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idr3").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idr4").style.borderBottom = ""
     document.getElementById("idr5").style.borderBottom = ""
     document.getElementById("idr1").style.color = ""
@@ -514,7 +544,7 @@ document.getElementById("idr4").addEventListener("click", function() {
     document.getElementById("idr1").style.borderBottom = ""
     document.getElementById("idr2").style.borderBottom = ""
     document.getElementById("idr3").style.borderBottom = ""
-    document.getElementById("idr4").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idr4").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idr5").style.borderBottom = ""
     document.getElementById("idr1").style.color = ""
     document.getElementById("idr2").style.color = ""
@@ -529,11 +559,15 @@ document.getElementById("idr5").addEventListener("click", function() {
     document.getElementById("idr2").style.borderBottom = ""
     document.getElementById("idr3").style.borderBottom = ""
     document.getElementById("idr4").style.borderBottom = ""
-    document.getElementById("idr5").style.borderBottom = "3px solid #C4C800"
+    document.getElementById("idr5").style.borderBottom = "0.3vw solid #C4C800"
     document.getElementById("idr1").style.color = ""
     document.getElementById("idr2").style.color = ""
     document.getElementById("idr3").style.color = ""
     document.getElementById("idr4").style.color = ""
     document.getElementById("idr5").style.color = "#C4C800"
 });
+
+
+
+
 

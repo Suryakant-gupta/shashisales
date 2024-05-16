@@ -344,35 +344,34 @@ nav{
 
 .bar {
   width: 100%;
-  /* height: 70px; */
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 5vw;
-  /* z-index: 999; */
-  position: absolute;
-  bottom: -2vw;
+  position: relative;
 }
 
 .bar img {
   width: 5vw;
   display: inline-block;
   margin-right: 4vw;
-  animation: slideinfinite 10s linear infinite;
+  animation: slideinfinite 5s linear infinite;
+  position: relative;
+}
+
+.bar img:last-child {
+  margin-right: 0;
 }
 
 @keyframes slideinfinite {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
-
-  /* Start position */
   100% {
-    transform: translateX(-100%);
-
+    transform: translateX(-50%);
   }
-
-  /* End position */
 }
+
+
 
 .divider {
   width: 100%;
