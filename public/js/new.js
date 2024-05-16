@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('founderVideo');
     const videoContainer = document.querySelector('.video-container');
     const customPointer = document.createElement('div');
@@ -51,5 +51,3 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-  
