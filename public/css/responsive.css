@@ -207,11 +207,16 @@
     .form-container input {
         width: 60%;
         padding: 3.2vw 2vw;
+        font-size:3vw ;
 
     }
     .form-container button {
         width: 60%;
         padding: 2vw 2vw;
+        width: 40%;
+        /* width: 90px; */
+        background-color: #C4C800;
+        font-size: 3vw;
 
     }
 
@@ -221,13 +226,7 @@
 
     }
 
-    .form-container button {
-        width: 40%;
-        /* width: 90px; */
-        background-color: #C4C800;
-        font-size: 3vw;
-
-    }
+   
 
     .main-view button {
 

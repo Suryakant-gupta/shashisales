@@ -10,12 +10,22 @@ const axios = require("axios");
 const crypto = require("crypto-js");
 const dotenv = require('dotenv'); // If using .env file
 const mailsender = require("./utils/mailsender");
+const session = require('express-session');
+const flash = require('connect-flash');
+
 
 
 
 
 
 const app = express();
+
+
+app.use(session({
+    secret: 'hellotatabyeye',
+    resave: false,
+    saveUninitialized: true
+  }));
 
 
 
@@ -34,14 +44,24 @@ app.use(
     extended: false,
   })
 );
+
+app.use(flash());
 // Load environment variables if using .env
 dotenv.config();
 
 
 
-app.get("/" , (req, res)=>{
-    res.render("home")
-})
+app.get("/", (req, res) => {
+    const successMessage = req.session.successMessage;
+    const errorMessage = req.session.errorMessage;
+    console.log('successMessage:', successMessage); // Add this line
+    console.log('errorMessage:', errorMessage); // Add this line
+    req.session.successMessage = null; // Clear the success message after displaying it
+    req.session.errorMessage = null; // Clear the error message after displaying it
+    res.render("home", { successMessage, errorMessage });
+});
+
+
 app.get("/about-us" , (req, res)=>{
     res.render("aboutUs")
 })
@@ -56,63 +76,43 @@ app.get("/fusion-marketing" , (req, res)=>{
 })
 
 
-
-app.post('/submit-form', (req, res) => {
-  // Extract form data from the request body
-  
-  const formData = req.body;
-
-  // Define the recipient email address
-  const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
-//   const recipients = ["bgmilelomujhse@gmail.com"];
-
-  // Send email with form data
-  mailsender(formData, recipients);
-
-  
- 
-
-  // Redirect to the referer URL
-  res.redirect("/contact-us");
-});
-
-app.post('/submit-quote-form', (req, res) => {
-  // Extract form data from the request body
-  
-  const formData = req.body;
-
-  // Define the recipient email address
-  const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
-//   const recipients = ["bgmilelomujhse@gmail.com"];
-
-  // Send email with form data
-  mailsender(formData, recipients);
-
-  // Get the referer URL from the request headers
-//   const referer = req.headers.referer;
-
-  // Redirect to the referer URL
-  res.redirect("/");
-});
+  // const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
+  const recipients = "bgmilelomujhse@gmail.com";
 
 
 
-app.post('/submit-forms', (req, res) => {
-    // Extract form data from the request body
+
+
+app.post('/submit-quote', (req, res) => {
     const formData = req.body;
-  
-    // Define the recipient email address
-    // const recipients = ["bgmilelomujhse@gmail.com"];
-    const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
 
-  
-    // Send email with form data
-    mailsender(formData, recipients);
-  
-    // Respond with a success status (no content needs to be sent back)
-    res.status(200).end();
-  });
+    try {
+        console.log('Received form data:', formData);
+        mailsender(formData, recipients);
+        req.session.successMessage = 'Thank you for your interest in Shashi sales and marketing, we will get back to you soom';
+        res.redirect('/');
+    } catch (error) {
+        console.error('Failed to send email:', error);
+        req.session.errorMessage = 'An error occurred while submitting your form. Please try again later.';
+        res.redirect('/');
+    }
+});
 
+
+//   app.post('/submit-quote-form', (req, res) => {
+//     // Extract form data from the request body
+//     const formData = req.body;
+  
+//     // Define the recipient email addresses
+//     const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
+  
+//     // Send email with form data
+//     mailsender(formData, recipients);
+  
+//     // Respond with a success status (no content needs to be sent back)
+//     res.status(200).end();
+//   });
+  
 
   
 

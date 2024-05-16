@@ -1,53 +1,51 @@
-const heroVideo = document.getElementById('heroVideo');
-const videoContainer = document.querySelector('.middle-vedio');
-const fullWidthVideo = document.createElement('div');
-fullWidthVideo.classList.add('full-width-video');
-const body = document.querySelector('body');
-let isVideoFullWidth = false;
-const cursor = document.createElement('div');
-cursor.classList.add('custom-cursor');
-cursor.textContent = 'Show Reel';
-body.appendChild(cursor);
+window.addEventListener('DOMContentLoaded', function() {
+  const heroVideo = document.getElementById('heroVideo');
+  const videoContainer = document.querySelector('.middle-vedio');
+  const customPointer = document.createElement('div');
+  customPointer.classList.add('custom-cursor');
+  document.body.appendChild(customPointer);
+  let isFullWidth = false;
 
-videoContainer.addEventListener('click', toggleVideoSize);
-document.addEventListener('click', closeFullWidthVideo);
+  videoContainer.addEventListener('click', toggleVideoSize);
+  videoContainer.addEventListener('mouseenter', showPointer);
+  videoContainer.addEventListener('mouseleave', hidePointer);
+  window.addEventListener('mousemove', movePointer);
 
-function toggleVideoSize() {
-  if (!isVideoFullWidth) {
-    isVideoFullWidth = true;
-    heroVideo.muted = false;
-    fullWidthVideo.appendChild(heroVideo);
-    body.appendChild(fullWidthVideo);
-    cursor.textContent = 'Close Video';
-  } else {
-    closeFullWidthVideo();
+  function toggleVideoSize() {
+    if (!isFullWidth) {
+      heroVideo.classList.add('video-full-width');
+      heroVideo.muted = false;
+      document.body.style.cursor = 'none';
+      customPointer.textContent = 'Close Video';
+      customPointer.classList.add('show-pointer');
+      isFullWidth = true;
+    } else {
+      heroVideo.classList.remove('video-full-width');
+      heroVideo.muted = true;
+      document.body.style.cursor = 'auto';
+      customPointer.classList.remove('show-pointer');
+      isFullWidth = false;
+    }
   }
-}
 
-function closeFullWidthVideo(event) {
-  if (!event || event.target === fullWidthVideo) {
-    isVideoFullWidth = false;
-    heroVideo.muted = true;
-    videoContainer.appendChild(heroVideo);
-    body.removeChild(fullWidthVideo);
-    cursor.textContent = 'Show Reel';
+  function showPointer() {
+    if (!isFullWidth) {
+      customPointer.textContent = 'Show Reel';
+      customPointer.classList.add('show-pointer');
+    }
   }
-}
 
-videoContainer.addEventListener('mouseenter', () => {
-  cursor.style.opacity = '1';
+  function hidePointer() {
+    if (!isFullWidth) {
+      customPointer.classList.remove('show-pointer');
+    }
+  }
+
+  function movePointer(e) {
+    customPointer.style.left = `${e.clientX - 35}px`;
+    customPointer.style.top = `${e.clientY - 35}px`;
+  }
 });
-
-videoContainer.addEventListener('mouseleave', () => {
-  cursor.style.opacity = '0';
-});
-
-window.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.clientX - cursor.offsetWidth / 2}px`;
-  cursor.style.top = `${e.clientY - cursor.offsetHeight / 2}px`;
-});
-
-
 
 
 
