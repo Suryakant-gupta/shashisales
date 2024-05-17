@@ -1,3 +1,4 @@
+
 h1{
     padding: 4vw 0;
 }
@@ -9,15 +10,28 @@ h1{
 .who-cont{
     margin-top: 4rem;
     padding: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 2vw;
 }
 .who-cont-l{
     width: 55%;
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.who-cont-l a{
+    color: #000000;
 }
 .who-cont-l div{
     line-height: 1.6;
@@ -55,8 +69,12 @@ h1{
 /* We're are all about relationships and results */
 .rel-cont{
     padding: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 2vw;
 }
 .rel-cont-l{
@@ -71,25 +89,41 @@ h1{
 .rel-cont-r{
     width: 50%;
     line-height: 1.6;
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .rel-cont-r-in{
     margin-top: 1vw;
     background-color: #D9D9D9;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 6vw;
     width: 100%;
     border-radius: 1vw;
 }
 .rel-cont-r-in div{
     padding: 0 1vw;
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 .bol{
@@ -109,14 +143,20 @@ h1{
     background-color: #D9D9D9;
     height: 13vw;
     border-radius: 7vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .hist-cont-l{
     width: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: white;
     border-radius: 7vw;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-weight: bold;
 }
 .hist-cont-l-in{
@@ -124,9 +164,15 @@ h1{
     width: 80%;
     height: 85%;
     border-radius: 7vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 2.3vw;
     text-align: center;
 }
@@ -137,33 +183,49 @@ h1{
 .hist-cont-r-t{
     height: 50%;
     width: 70%;
+    display: -ms-grid;
     display: grid;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     position: absolute;
     right: 10vw;
 }
 .hist-cont-r-t-in{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 12vw;
 }
 .hist-box{
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 .hist-cont-r-b{
     height: 50%;
     width: 70%;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     position: absolute;
     left: 4vw;
     bottom: 0;
 }
 .hist-cont-r-b-in{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 12vw;
 }
 .smg2{
@@ -180,8 +242,12 @@ h1{
 /* Why Choose Us */
 .why-cont{
     padding: 0 3vw 0vw 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 2vw;
 }
 .why-cont-l{
@@ -211,17 +277,30 @@ h1{
     padding: 0 0 3vw 0;
 }
 .prob-cont-s1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .b-cen{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .s1-card{
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 1vw;
     height: 30vw;
     width: 26vw;
@@ -230,9 +309,15 @@ h1{
 .headi{
     font-weight: bold;
     font-size: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     border-radius: 4vw;
     background-color: #D9D9D9;
@@ -248,13 +333,22 @@ h1{
     /* height: 15vw; */
 }
 .prob-cont-s2{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .s2-card{
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 1vw;
     height: 30vw;
     width: 26vw;
@@ -263,9 +357,15 @@ h1{
 .s2-card .headi{
     font-weight: bold;
     font-size: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     border-radius: 4vw;
     background-color: #000000;
@@ -297,20 +397,31 @@ h1{
 }
 .mission-cont-in{
     padding: 3vw 0vw 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 12vw;
 }
 .mission-card{
     height: 20vw;
     width: 20vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     background-color: #ECECEC;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 10vw;
-    box-shadow: 10px 12px 16px #cbbaba;
+    -webkit-box-shadow: 10px 12px 16px #cbbaba;
+            box-shadow: 10px 12px 16px #cbbaba;
 }
 .mission-card-in{
     height: 50%;
@@ -342,11 +453,18 @@ h1{
 .pillars-cont-in{
     width: 100%;
     padding: 0vw 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 6vw;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .pill{
     /* width: 29%; */
@@ -374,15 +492,29 @@ h1{
 }
 .bri-card-out{
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .bri-card{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: .5rem;
     position: relative;
     height: 26vw;
@@ -402,9 +534,14 @@ h1{
     height: 50%;
     width: 100%;
     background-color: #DEDEDE;
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .bri-card-t h3{
     text-align: center;
@@ -417,9 +554,15 @@ h1{
 .bri-card-b{
     height: 50%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 .bri-card-b p{
@@ -474,9 +617,14 @@ h1{
         color: #404040;
     }
     .s1-card{
+        display: -ms-grid;
         display: grid;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         border-radius: 1vw;
         height: 40vw;
         width: 30vw;
@@ -493,9 +641,14 @@ h1{
     }
     
     .s2-card{
+        display: -ms-grid;
         display: grid;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         border-radius: 1vw;
         height: 40vw;
         width: 30vw;
@@ -524,20 +677,30 @@ h1{
 
     .mission-cont-in {
         padding: 3vw 0vw 0 0;
+        display: -ms-grid;
         display: grid;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 6vw;
     }
     .mission-card {
         height: 60vw;
         width: 60vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: relative;
         background-color: #ECECEC;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         border-radius: 50%;
-        box-shadow: 10px 12px 16px #cbbaba;
+        -webkit-box-shadow: 10px 12px 16px #cbbaba;
+                box-shadow: 10px 12px 16px #cbbaba;
     }
     .a1 {
         font-size: 25vw;
@@ -548,10 +711,19 @@ h1{
     }
     .mission-card-in{
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: .5rem;
         padding-inline: 1rem;
     }
@@ -564,11 +736,18 @@ h1{
 
     .pillars-cont-in {
         padding: 0vw 3vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         row-gap: 6vw;
-        justify-content: flex-start;
-        align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .pill{
         width: 45%;
@@ -602,9 +781,14 @@ h1{
 .address-bar{
     padding: 2vw 0 17vw 0;
     border-bottom: 1px solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: #000;
     padding-inline: 5vw;
     
@@ -614,6 +798,7 @@ h1{
     margin-bottom: 2vw;
   }
   .address-bar ul{
+    display: -ms-grid;
     display: grid;
     gap: 1.5vw;
     list-style: none;
@@ -631,10 +816,15 @@ h1{
 
 .prob-cont {
     padding: 0 3vw 0vw 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .prob-cont-s1, .prob-cont-s2 {
+    display: -ms-grid;
     display: grid;
     gap: 5vw;
 }
@@ -646,9 +836,14 @@ h1{
     margin-bottom: 0;
 }
 .s1-card{
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 1vw;
     height: 50vw;
     width: 43vw;
@@ -657,9 +852,15 @@ h1{
 .headi {
     font-weight: bold;
     font-size: 4vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     border-radius: 50%;
     background-color: #D9D9D9;
@@ -677,9 +878,14 @@ h1{
 }
 
 .s2-card{
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 1vw;
     height: 50vw;
     width: 43vw;
@@ -688,9 +894,15 @@ h1{
 .s2-card .headi {
     font-weight: bold;
     font-size: 4vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     border-radius: 50%;
     background-color: #000000;

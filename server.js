@@ -104,7 +104,7 @@ app.post('/submit-quote', (req, res) => {
     try {
         console.log('Received form data:', formData);
         mailsender(formData, recipients);
-        req.session.successMessage = 'Thank you for your interest in Shashi sales and marketing, we will get back to you soom';
+        req.session.successMessage = 'Thank you for your interest in Shashi sales and marketing, we will get back to you soon';
         res.redirect('/');
     } catch (error) {
         console.error('Failed to send email:', error);

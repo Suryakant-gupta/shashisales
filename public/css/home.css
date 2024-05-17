@@ -354,7 +354,7 @@ nav{
 .inner-bar {
   animation: move 30s linear infinite; /* animate the inner bar */
   display: flex; /* display the images in a row */
-  flex-wrap: nowrap; /* prevent the images from wrapping to a new line */
+  flex-wrap: nowrap; 
 }
 
 .inner-bar img {

@@ -312,6 +312,9 @@
 
 
 @media only screen and (max-width: 600px) {
+    .fftfb{
+        display: none;
+    }
     
     .nmtb{
         margin-block: 1.1rem;
