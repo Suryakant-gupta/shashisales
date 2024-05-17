@@ -1,3 +1,5 @@
+
+
 /* 
 ::-webkit-scrollbar {
     width: 4px;
@@ -28,6 +30,8 @@
     margin: 1rem;
     padding: 0 0;
     gap: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -36,9 +40,15 @@
     display: none;
 }
 .button-center{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .pre-btn, .nxt-btn{
@@ -46,15 +56,23 @@
     border-radius: 11px;
     width: 2vw;
     height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: none;
     cursor: pointer;
 }
 .pre-btn{
     left: 0;
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 .nxt-btn{
     right: 0;

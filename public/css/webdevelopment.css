@@ -1,5 +1,6 @@
 
 
+
 h1{
     padding: 0 !important;
 }
@@ -7,6 +8,8 @@ h1{
 .first-component{
     padding: 3vw;
     padding-top: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: black;
     color: white;
@@ -15,15 +18,24 @@ h1{
 }
 .comp1{
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .in{
     height: 26vw;
     width: 42vw;
+    display: -ms-grid;
     display: grid;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .in1{
     line-height: 1.5;
@@ -44,9 +56,15 @@ h1{
 }
 .comp2{
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
 }
 .comp2 .imgr{
@@ -56,7 +74,9 @@ h1{
 }
 .web-dev{
     z-index: 0;
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
     position: absolute;
     top: 25%;
     left: 40%;
@@ -88,11 +108,19 @@ h1{
     left: 0;
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 1.5vw;
     opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
   }
   
@@ -102,27 +130,53 @@ h1{
   
   .wheel-text {
     width: 59%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 1vw;
     opacity: 0;
-    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: opacity 1s ease-in-out 0.5s, -webkit-transform 1s ease-in-out 0.5s;
+    transition: opacity 1s ease-in-out 0.5s, -webkit-transform 1s ease-in-out 0.5s;
+    -o-transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.5s;
     transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.5s;
+    transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.5s, -webkit-transform 1s ease-in-out 0.5s;
   }
   
   .wheel.active .wheel-text {
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   
   .wheel-text .iwt {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 1vw;
   }
   .iwt h3, .iwt p{
@@ -134,10 +188,18 @@ h1{
   
   .wheel-image {
     width: 39%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
   }
   
@@ -147,12 +209,20 @@ h1{
   
   .wheel-image img {
     width: 85%;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: -webkit-transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out;
     transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
   }
   
   .wheel.active .wheel-image img {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 /* .sec-com{
     padding: 0 0 0 3vw;
@@ -196,6 +266,8 @@ h1{
 /* What makes us different section  */
 .w-cont{
     /* padding: 3vw 0; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 33vw;
 }
@@ -204,9 +276,15 @@ h1{
     position: relative;
 }
 .sd{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -238,14 +316,24 @@ h1{
 /* Require website development */
 .require-cont{
     padding: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .require-cont-in{
     font-size: 1.3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 3vw;
     height: 5vw;
     width: 60vw;
@@ -254,6 +342,8 @@ h1{
     border-radius: 10px;
 }
 .require-cont div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border: 1px solid #C4C800;
     border-radius: 0.5vw;
@@ -286,13 +376,18 @@ h1{
 }
 .main-con{
     /* padding: 3vw; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .con-1{
     font-size: 1.3vw;
     width: 20%;
+    display: -ms-grid;
     display: grid;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 4vw;
     color: #666666;
 }
@@ -309,6 +404,7 @@ h1{
 }
 .con-2-in{
     padding: 4vw 1vw 4vw 1vw;
+    display: -ms-grid;
     display: grid;
     gap: 1.5vw;
 }
@@ -320,6 +416,8 @@ h1{
     font-size: 1.8vw;
 }
 .fl{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .wi{
@@ -328,9 +426,13 @@ h1{
 .wi2{
     font-size: 1.3vw;
     width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 8vw;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .wi2 div:hover{
@@ -344,6 +446,8 @@ h1{
 }
 
 .premium-in-cont{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 2.5vw;
 }
@@ -352,15 +456,23 @@ h1{
 } */
 .premium-cont-top-left{
     width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 10vw;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .premium-cont-top-left div{
     height: 4.5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1vw;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .premium-cont-top-left div:hover{
     cursor: pointer;
@@ -373,6 +485,8 @@ h1{
     width: 30%;
 }
 .premium-end{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 25vw;
     gap: 2vw;
@@ -385,6 +499,8 @@ h1{
 }
 .premium-end-l-in{
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .premium-end-l-l{
@@ -396,9 +512,14 @@ h1{
 }
 .premium-end-l-r{
     width: 50%;
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .premium-end-l-r div{
     margin: 2vw;
@@ -423,12 +544,18 @@ h1{
     padding: 3vw 4vw;
 }
 .premium-end-r-mobview div:nth-child(2){
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
 }
 .premium-end-r-mobview div:nth-child(2) div:nth-child(2){
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 40%;
 }
 .premium-end-r-mobview h1{
@@ -488,11 +615,17 @@ h1{
     }
     .premium-cont-top-left {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 20vw;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .premium-end {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         height: 30vw;
         gap: 2vw;
@@ -520,9 +653,13 @@ h1{
     }
     .premium-cont-top-left {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 18vw;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .premium-cont-top-left img {
         height: 7vw;
@@ -533,11 +670,17 @@ h1{
     }
     .premium-cont-top-left div {
         height: 8vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 1vw;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .premium-end {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         height: 36vw;
         gap: 2vw;
@@ -554,13 +697,21 @@ h1{
     /* What makes us different */
     .w-cont {
         /* padding: 3vw 0; */
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         height: 35vw;
     }
     .sd {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -585,16 +736,23 @@ h1{
     .wi2 {
         font-size: 1.6vw;
         width: 70%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 8vw;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .con-1 {
         font-weight: bold;
         font-size: 1.6vw;
         width: 25%;
+        display: -ms-grid;
         display: grid;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         gap: 4vw;
         color: #666666;
     }
@@ -603,5 +761,4 @@ h1{
         color: #4B4A4A;
     }
 }
-
 

@@ -1,3 +1,5 @@
+
+
 @media only screen and (max-width: 1024px) {
 
     .text {
@@ -61,17 +63,24 @@
     }
 
     .container {
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .first-part,
     .last-part {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width: 30%;
     }
 
     .first-part {
-        align-items: flex-end;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
     }
 
     .first-part .tile,
@@ -88,7 +97,10 @@
     }
 
     .faq-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .faq-column {
@@ -147,14 +159,17 @@
         /* flex-wrap: wrap; Allow the blog cards to wrap onto multiple lines */
         overflow-x: scroll;
         /* Enable horizontal scrolling for the slider */
-        scroll-snap-type: x mandatory;
+        -ms-scroll-snap-type: x mandatory;
+            scroll-snap-type: x mandatory;
         /* Enable scroll snapping for smooth scrolling */
     }
 
     .blog-card {
         width: 48%;
         /* Adjust the width to display two cards per row */
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
         scroll-snap-align: start;
         /* Align the cards to the start of the scroll container */
     }
@@ -216,6 +231,30 @@
         width: 40%;
         /* width: 90px; */
         background-color: #C4C800;
+        font-size: 3vw;
+
+    }
+
+    .form-container input::-webkit-input-placeholder {
+       
+        font-size: 3vw;
+
+    }
+
+    .form-container input::-moz-placeholder {
+       
+        font-size: 3vw;
+
+    }
+
+    .form-container input:-ms-input-placeholder {
+       
+        font-size: 3vw;
+
+    }
+
+    .form-container input::-ms-input-placeholder {
+       
         font-size: 3vw;
 
     }
@@ -333,11 +372,17 @@
     .mob-call-container {
         /* height: 3vw; */
         padding: 5vw 0vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         background: #c4C800;
         border-top-left-radius: 2vw;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         border-top-right-radius: 2vw;
         position: fixed;
         bottom: 0;
@@ -417,13 +462,21 @@
     } */
 
     .mobile-header{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         width: 100%;
       }
       .mobile-header .hamburger{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
       }
       .mobile-header .hamburger img{
         width: 1.2rem;
@@ -431,9 +484,15 @@
       nav {
         
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         color: white;
         /* height: 6vw; */
         padding: 6vw 4vw;
@@ -469,7 +528,9 @@
         right: 10%;
     }
     #service-back img {
-      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
     }
       .mobile-header-popup-in p{
         padding: 0.8rem 0px;
@@ -526,7 +587,9 @@
 
     .clients-bar {
         bottom: 31%;
-        transform: matrix(1, -0.1, 0, 1, 0, 9);
+        -webkit-transform: matrix(1, -0.1, 0, 1, 0, 9);
+            -ms-transform: matrix(1, -0.1, 0, 1, 0, 9);
+                transform: matrix(1, -0.1, 0, 1, 0, 9);
     }
 
     .human-img {
