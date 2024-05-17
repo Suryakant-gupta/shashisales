@@ -1041,7 +1041,7 @@ font-weight: bold;
 .founder-container-right-in{
   display: -ms-grid;
   display: grid;
-  gap: 2vw;
+  gap: 1vw;
 }
 .founder-container-right button{
   font-weight: bold;
