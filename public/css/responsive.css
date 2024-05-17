@@ -50,7 +50,7 @@
     }
 
     .leads {
-        width: 95%;
+        width: 97%;
         margin-bottom: 1.5rem;
         margin-top: 8vw;
         /* margin-inline: 1rem; */
@@ -312,8 +312,13 @@
 
 
 @media only screen and (max-width: 600px) {
+    
     .nmtb{
-        margin-block: 1rem;
+        margin-block: 1.1rem;
+    }
+
+    .oim{
+        margin-top: 2rem;
     }
 
     /* Footer */
@@ -471,7 +476,12 @@
         color: black;
       }
 
-
+      .fap{
+        padding-bottom: 14vw !important;
+    }
+      .fadp{
+        padding-bottom: 18vw !important;
+    }
 }
 
 

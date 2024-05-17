@@ -467,6 +467,9 @@ h1{
 
 
 @media only screen and (max-width: 600px){
+    .wheel-text{
+        gap: 5vw;
+    }
     .premium-end-r-mobview{
         display: block;
         padding: 2rem 3vw;
@@ -501,7 +504,7 @@ h1{
 
     .premium-end-r-mobview{
         display: block;
-        padding: 2vw 3vw;
+        padding: 6vw 3vw;
     }
     .premium-end-r {
         display: none;
@@ -518,15 +521,15 @@ h1{
     .premium-cont-top-left {
         width: 100%;
         display: flex;
-        gap: 20vw;
+        gap: 18vw;
         justify-content: center;
     }
     .premium-cont-top-left img {
-        height: 6vw;
-        width: 6vw;
+        height: 7vw;
+        width: 7vw;
     }
     .bor div:nth-child(2) {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
     }
     .premium-cont-top-left div {
         height: 8vw;

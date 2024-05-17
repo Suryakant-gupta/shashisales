@@ -244,6 +244,10 @@
 }
 
 @media only screen and (max-width: 600px){
+    .rfmv{
+        display: none;
+    }
+    .imm
     .pay-container-in {
         padding: 3vw 0 5rem 0;
         display: grid;
