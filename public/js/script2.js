@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var mobileHeader = document.querySelector('.hide-mobile-header-cont');
   var mobileHeaderPopup = document.getElementById('display-mobile-header-cont');
   var serviceHeader = document.querySelector('.hide-service-header-cont');
-  var serviceHeaderPopup = document.getElementById('display-service-header-cont');
+  var serviceHeaderPopup = document.querySelectorAll('.display-service-header-cont');
   var hideMobileHeaderCont = document.querySelector('.hide-mobile-header-cont');
   var hideServiceHeaderCont = document.querySelector('.hide-service-header-cont');
   var serviceBack = document.getElementById('service-back');
@@ -95,11 +95,13 @@ document.addEventListener("DOMContentLoaded", function() {
       mobileHeader.style.display = mobileHeader.style.display === 'none' ? 'block' : 'none';
   });
 
-  serviceHeaderPopup.addEventListener("click", function(event) {
-      hideMobileHeaderCont.style.display = "none";
-      event.stopPropagation();
-      serviceHeader.style.display = serviceHeader.style.display === 'none' ? 'block' : 'none';
-  });
+  serviceHeaderPopup.forEach(function(serviceHeaderPopup) {
+    serviceHeaderPopup.addEventListener("click", function(event) {
+        hideMobileHeaderCont.style.display = "none";
+        event.stopPropagation();
+        serviceHeader.style.display = serviceHeader.style.display === 'none' ? 'block' : 'none';
+    });
+});
 
   serviceBack.addEventListener("click", function(event) {
       hideServiceHeaderCont.style.display = 'none';

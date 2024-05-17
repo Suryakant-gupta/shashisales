@@ -103,7 +103,7 @@ function updateContentAndImage(h1Text, p1Text, h2Text, p2Text, h3Text, p3Text, i
     previousIconPath3 = iconPath3;
 }
 
-document.getElementById("basic").addEventListener("click", function() {
+document.getElementById("bor1").addEventListener("click", function() {
     updateContentAndImage(
         "Project Websites",
         "Showcasing an individual's portfolio, blog, or personal interests.",
@@ -118,7 +118,7 @@ document.getElementById("basic").addEventListener("click", function() {
     );
 });
 
-document.getElementById("standard").addEventListener("click", function() {
+document.getElementById("bor2").addEventListener("click", function() {
     updateContentAndImage(
         "Educational Websites",
         "Promoting Products Servicces, And Information About A Company",
@@ -133,7 +133,7 @@ document.getElementById("standard").addEventListener("click", function() {
     );
 });
 
-document.getElementById("premium").addEventListener("click", function() {
+document.getElementById("bor3").addEventListener("click", function() {
     updateContentAndImage(
         "Business Websites",
         "Providing Information, Courses, And Resources For Educational Purposes",
@@ -150,7 +150,7 @@ document.getElementById("premium").addEventListener("click", function() {
 
 
 // ==============================================================================================================
-document.getElementById("basic").addEventListener("click", function() {
+document.getElementById("bor1").addEventListener("click", function() {
     document.getElementById("basic").style.color = "#C4C800";
     document.getElementById("standard").style.color = "";
     document.getElementById("premium").style.color = "";
@@ -159,7 +159,7 @@ document.getElementById("basic").addEventListener("click", function() {
     document.getElementById("bor3").style.borderBottom = ""
 });
 
-document.getElementById("standard").addEventListener("click", function() {
+document.getElementById("bor2").addEventListener("click", function() {
     document.getElementById("basic").style.color = "";
     document.getElementById("standard").style.color = "#C4C800";
     document.getElementById("premium").style.color = "";
@@ -168,7 +168,7 @@ document.getElementById("standard").addEventListener("click", function() {
     document.getElementById("bor3").style.borderBottom = ""
 });
 
-document.getElementById("premium").addEventListener("click", function() {
+document.getElementById("bor3").addEventListener("click", function() {
     document.getElementById("basic").style.color = "";
     document.getElementById("standard").style.color = "";
     document.getElementById("premium").style.color = "#C4C800";
