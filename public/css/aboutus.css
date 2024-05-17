@@ -590,7 +590,15 @@ h1{
     
 }
 
+.address-bar{
+    display: none;
+}
 
+
+  @media screen and (max-width:600px) {
+    /* problem and solution updated css */
+
+    
 .address-bar{
     padding: 2vw 0 17vw 0;
     border-bottom: 1px solid;
@@ -620,9 +628,6 @@ h1{
   }
 
 
-
-  @media screen and (max-width:600px) {
-    /* problem and solution updated css */
 
 .prob-cont {
     padding: 0 3vw 0vw 3vw;
