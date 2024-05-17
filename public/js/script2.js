@@ -8,23 +8,22 @@ const tiles = document.querySelectorAll('.tile');
 const mainView = document.querySelector('.main-view');
 
 tiles.forEach(tile => {
-    tile.addEventListener('click', () => {
-        const tileImage = tile.querySelector('img').src;
-        const tileHeading = tile.querySelector('h2').textContent;
-        const tileDescription = tile.querySelector('p').textContent;
+  tile.addEventListener('click', () => {
+    const tileImage = tile.querySelector('img').src;
+    const tileHeading = tile.querySelector('h2').textContent;
+    const tileDescription = tile.querySelector('p').textContent;
+    const pageLink = tile.querySelector('.tile-link').href;
 
-        mainView.innerHTML = `
-           
-            <img src="${tileImage}" alt="${tileHeading}">
-            <div class="text">
-            <h2>${tileHeading}</h2>
-            <p>${tileDescription}</p>
-            <button>READ MORE</button>
-            </div>
-        `;
-    });
+    mainView.innerHTML = `
+      <img src="${tileImage}" alt="${tileHeading}">
+      <div class="text">
+        <h2>${tileHeading}</h2>
+        <p>${tileDescription}</p>
+        <a href="${pageLink}" class="tile-link">Read More</a>
+      </div>
+    `;
+  });
 });
-
 
 
 // Change

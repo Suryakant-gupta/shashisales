@@ -713,6 +713,25 @@ font-weight: bold;
   height: auto;
 }
 
+.tile-link {
+  font-size: 1vw;
+  background-color: #d9d9d9;
+  color: #473EDA;
+  border: none;
+  padding: 0.5vw 1.5vw;
+  border-radius: 2vw;
+  cursor: pointer;
+  margin-top: 0.4vw;
+}
+
+.tile .tile-link.hidden {
+  display: none;
+}
+
+/* .tile:hover .tile-link.hidden {
+  display: inline-block;
+} */
+
 .first-part,
 .last-part {
   width: 30%;
