@@ -46,13 +46,21 @@ h1{
     width: 25vw;
     font-size: 1.5vw;
     background: none;
-    color: #C4C800;
+   
     border: 1px solid #C4C800;
     border-radius: 2vw;
 }
+
+.in2 button a{
+    color: #C4C800;
+}
 .in2 button:hover{
     background-color: #C4C800;
+    
+}
+.in2 button:hover a{
     color: black;
+    
 }
 .comp2{
     width: 50%;
