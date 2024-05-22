@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&family=Rampart+One&display=swap');
+
+/* Design Section One */
+.design-section-one{
+    position: relative;
+    padding-top: 6vw;
+    display: flex;
+    background: black;
+    color: white;
+}
+.blur-img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.back-desi{
+    position: absolute;
+    bottom: 0;
+    background-image: url("/assets/images/backg-desi.png");
+    width: 100%;
+    height: 21vw;
+    background-size: cover;
+    background-position: center
+}
+.design-section-one-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.design-section-one-left div:nth-child(1){
+    width: 81%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+.design-section-one-left div:nth-child(1) p:nth-child(1){
+    font-family: "Roboto Serif";
+    font-size: 3.55vw;
+    line-height: 2;
+}
+
+.design-section-one-left button a, .design-section-two button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C4C800;
+    width: 40%;
+    background: transparent;
+    border: 1px solid #C4C800;
+    padding: 1vw;
+    border-radius: 4vw;
+    color: #C4C800;
+    font-size: 1vw;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.design-section-one-left button a:hover, .design-section-two button a:hover{
+    background: #C4C800;
+    color: black;
+    transform: scale(1.1);
+}
+
+.design-section-one-left button, .design-section-two button{
+    z-index: 1;
+    background: none;
+    border: none;
+}
+
+.design-section-one-right{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.blur-img {
+    height: 10vw !important;
+    width: 10vw !important;
+    position: absolute;
+    top: 3%;
+    left: 0%;
+}
+.blur-img img{
+    width: 100%;
+    height: 100%;
+}
+.design-section-one-right div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.design-section-one-right img{
+    height: 93%;
+    width: 87%;
+}
+
+/* Design Section Two  */
+.design-section-two{
+    background: none;
+    color: grey;
+}
+.design-section-two:hover{
+    background: black;
+}
+
+.design-section-two p img{
+    width: 100%;
+
+}
+.design-section-two div:nth-child(1) div:nth-child(1){
+    width: 33.33%;
+    display: grid;
+    gap: 2vw;
+}
+.design-section-two p{
+    width: 33.33%;
+    font-size: 1.1vw;
+}
+.design-section-two div:nth-child(1) div:nth-child(3){
+    width: 33.33%;
+    display: grid;
+    gap: 2vw;
+}
+.design-section-two div:nth-child(1) div:nth-child(1) p{
+    width: 100%;
+}
+.design-section-two div div:nth-child(3) p{
+    width: 100%;
+    font-size: 1.6vw;
+}
+.design-section-two:hover .change-color {
+    color: white;
+}
+
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+.animate-on-scroll.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+.design-section-two:hover .animate-on-scroll {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+
+
+.mabt{
+    margin-bottom: 8vw;
+}
+.df-jc-ac{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pdlr{
+    padding: 0 4vw;
+}
+
+
+
+/* Design Section Three */
+.design-section-three{
+    padding: 3vw 4vw;
+    font-size: 1.3vw;
+    font-family: "Roboto Serif";
+    background: black;
+    color: white;
+}
+.design-section-three-in{
+    border-top: 1px solid grey;
+    padding: 3vw 0vw;
+    display: flex;
+    gap: 2vw;
+}
+.design-section-three-in div:nth-child(1){
+    width: 30%;
+    gap: 0.3vw;
+}
+.design-section-three-in div:nth-child(1) div, .design-section-three-in div:nth-child(2) div, .design-section-three-in div:nth-child(3) div{
+    display: grid;
+    text-align: center;
+}
+.design-section-three-in div:nth-child(2){
+    width: 35%;
+}
+.design-section-three-in div:nth-child(3){
+    width: 35%;
+}
+.h-pd{
+    padding: 3vw 0vw !important;
+}
+.design-section-three-in p:nth-child(2){
+    margin-top: 0.5vw;
+    color: grey;
+}
+
+.design-section-three-end{
+    position: relative;
+    padding-top: 3vw;
+    display: flex;
+    gap: 2vw;
+}
+.design-section-three-end div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    border: 1px solid #05D5D5;
+}
+.design-section-three-end-left{
+    width: 50%;
+    position: relative;
+}
+.design-section-three-end-right{
+    width: 50%;
+}
+.design-section-three-end-left div:nth-child(1){
+    width: 100%;
+}
+
+.design-section-three-end-left div:nth-child(2){
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+.design-section-three-end-right div:nth-child(1){
+    margin-top: 4.9vw;
+    width: 80%;
+}
+.ar p:nth-child(1){
+    color: #05D5D5;
+    font-size: 1vw;
+    font-weight: bold;
+    font-family: "Kumar One", serif;
+}
+.ar p:nth-child(2){
+    font-family: "Roboto Serif";
+    font-size: 0.7vw;
+    color: #FFFFFF;
+}
+.ar1 {
+    z-index: 1;
+    position: absolute;
+    top: 41%;
+    left: 40%;
+}
+.ar2 {
+    z-index: 1;
+    position: absolute;
+    top: 48%;
+    left: 40%;
+}
+.ar3 {
+    z-index: 1;
+    position: absolute;
+    top: 60%;
+    left: 52%;
+}
+.ar4 {
+    z-index: 1;
+    position: absolute;
+    top: 67%;
+    left: 52%;
+}
+
+
+
+/* Design Section Four */
+.design-section-four{
+    padding: 0 4vw;
+}
+.hed{
+    font-size: 2.5vw;
+    font-family: "Roboto Serif";
+    font-weight: bold;
+    text-align: center;
+    padding: 3vw 4vw !important;
+}
+.design-section-four-in{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: space-between;
+}
+.design-section-card{
+    border-radius: 5px;
+    width: 31%;
+    background: #F2F2F2;
+    color: #868686;
+}
+.design-section-card p:nth-child(1){
+    font-size: 1.3vw;
+    font-weight: bold;
+    padding-top: 1vw;
+    color: black;
+    text-align: center;
+}
+.design-section-card p:nth-child(2){
+    font-size: 1.1vw;
+    padding: 1vw;
+    color: #868686;
+    text-align: center;
+}
+
+.bm{
+    border-bottom: 1px solid grey;
+}
+.fsani{
+    color: #C4C800;
+    font-size: 6vw !important;
+    font-family: "Rampart One", sans-serif;
+}
+.ffrs{
+    font-family: "Roboto Serif";
+}
+.txt-ali{
+    text-align: end;
+}
+.for-mob{
+    display: none;
+}
+
+
+/* for mobile devices */
+@media screen and (max-width: 600px){
+    .design-section-one{
+        position: relative;
+        padding-top: 15vw;
+        display: flex;
+        background: black;
+        color: white;
+    }
+    .pdbm{
+        padding-bottom: 20vw;
+    }
+
+
+    /* design section three */
+    .design-section-three {
+        padding: 3vw 4vw;
+        font-size: 2.6vw;
+        background: black;
+        color: white;
+    }
+    .design-section-three-in {
+        border-top: 1px solid grey;
+        padding: 3vw 0vw;
+        display: grid;
+        gap: 2vw;
+    }
+    .design-section-three-in div:nth-child(1) {
+        width: 100%;
+        gap: 0.3vw;
+    }
+    .design-section-three-in div:nth-child(2) {
+        width: 100%;
+    }
+    .design-section-three-in div:nth-child(3) {
+        width: 100%;
+    }
+    .hidde{
+        display: none !important;
+    }
+    .for-mob {
+        display: grid;
+        text-align: center;
+        gap: 3vw;
+        padding: 3vw 8vw;
+    }
+    .for-mob p {
+        width: 100%;
+        font-size: 2.5vw;
+    }
+    .for-mob p:nth-child(1){
+        font-size: 3.5vw !important;
+        font-weight: bold !important;
+    }
+    .for-mob p:nth-child(3){
+        display: flex;
+        justify-content: center;
+    }
+    .design-section-two button a{
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #C4C800;
+        background: transparent;
+        border: 1px solid #C4C800;
+        padding: 1.5vw 8vw;
+        border-radius: 4vw;
+        color: #C4C800;
+        font-size: 2vw;
+    }
+
+    .design-section-card p:nth-child(1) {
+        font-size: 2vw;
+        font-weight: bold;
+        padding-top: 2vw;
+        color: black;
+        text-align: center;
+    }
+    .design-section-card p:nth-child(2) {
+        font-size: 2vw;
+        padding: 2vw;
+        color: #868686;
+        text-align: center;
+    }
+}
+
+

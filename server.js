@@ -89,6 +89,9 @@ app.get("/privacy-policy" , (req, res)=>{
     res.render("privacyPolicy")
 })
 
+app.get("/graphic-design" , (req, res)=>{
+    res.render("design")
+})
 
 //   const recipients = ['suryakantgupta678@gmail.com', 'bgmilelomujhse@gmail.com'];
   const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
