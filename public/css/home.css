@@ -343,11 +343,14 @@ nav{
   font-weight: bold;
   font-size: 1.6vw;
 
-  -webkit-animation: slideinfinite 5s linear infinite;
+  -webkit-animation: slideinfinite 60s linear infinite;
 
-          animation: slideinfinite 5s linear infinite;
+          animation: slideinfinite 60s linear infinite;
 
   padding: 0.5vw 0;
+  padding-right: 2rem; /* Adjust this value to control the spacing between text */
+  white-space: nowrap;
+
 }
 
 @-webkit-keyframes slideinfinite {
