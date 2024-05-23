@@ -496,6 +496,10 @@ h1{
         -ms-flex-align: center;
             align-items: center;
 }
+.mmtb {
+    margin-top: 6.8rem;
+    margin-bottom: 1.2rem;
+}
 /* Footer */
 footer{
     display: block;
