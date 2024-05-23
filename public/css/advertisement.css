@@ -232,6 +232,11 @@ h1{
     display: -ms-grid;
     display: grid;
 }
+.mar-desc a{
+    color: black;
+}
+
+
 .mar-desc div:nth-child(1){
     display: -webkit-box;
     display: -ms-flexbox;

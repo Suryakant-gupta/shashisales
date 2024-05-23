@@ -93,6 +93,13 @@ app.get("/graphic-design" , (req, res)=>{
     res.render("design")
 })
 
+
+app.get("/email-marketing" , (req, res)=>{
+    res.render("emailMarketing")
+})
+
+
+
 //   const recipients = ['suryakantgupta678@gmail.com', 'bgmilelomujhse@gmail.com'];
   const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
 
@@ -117,19 +124,7 @@ app.post('/submit-quote', (req, res) => {
 });
 
 
-//   app.post('/submit-quote-form', (req, res) => {
-//     // Extract form data from the request body
-//     const formData = req.body;
-  
-//     // Define the recipient email addresses
-//     const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
-  
-//     // Send email with form data
-//     mailsender(formData, recipients);
-  
-//     // Respond with a success status (no content needs to be sent back)
-//     res.status(200).end();
-//   });
+
   
 
   
