@@ -207,11 +207,11 @@
 
  Email Marketing Section one */
  .em-sec-one{
-     padding: 10vw 4vw 0vw 4vw;
-     display: flex;
-     align-items: center;
-     gap: 2vw;
- }
+    padding: 10vw 4vw 0vw 4vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
  .em-sec-one-left{
      width: 60%;
      display: flex;
