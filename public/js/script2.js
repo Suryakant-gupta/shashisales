@@ -94,30 +94,32 @@ document.addEventListener("DOMContentLoaded", function() {
       mobileHeader.style.display = mobileHeader.style.display === 'none' ? 'block' : 'none';
   });
 
-  serviceHeaderPopup.forEach(function(serviceHeaderPopup) {
-    serviceHeaderPopup.addEventListener("click", function(event) {
+  serviceHeaderPopup.forEach(function(serviceHeaderPopupItem) {
+    serviceHeaderPopupItem.addEventListener("click", function(event) {
         hideMobileHeaderCont.style.display = "none";
         event.stopPropagation();
         serviceHeader.style.display = serviceHeader.style.display === 'none' ? 'block' : 'none';
     });
-});
+  });
 
   serviceBack.addEventListener("click", function(event) {
       hideServiceHeaderCont.style.display = 'none';
       hideMobileHeaderCont.style.display = 'block';
-      event.stopPropagation(); // Prevent the click event from bubbling up to document
+      event.stopPropagation();
   });
 
-  // Close mobile header popup when clicking outside
+  // Close mobile header and service header popup when clicking outside
   document.addEventListener("click", function(event) {
-      if (!serviceHeaderPopup.contains(event.target)) {
-          serviceHeader.style.display = 'none';
-      }
-      if (!mobileHeaderPopup.contains(event.target)) {
+      if (!hideMobileHeaderCont.contains(event.target) && !mobileHeaderPopup.contains(event.target)) {
           mobileHeader.style.display = 'none';
+      }
+      if (!hideServiceHeaderCont.contains(event.target) && !Array.from(serviceHeaderPopup).some(item => item.contains(event.target))) {
+          serviceHeader.style.display = 'none';
       }
   });
 });
+
+
 
 
 

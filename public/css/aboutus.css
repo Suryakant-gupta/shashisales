@@ -492,80 +492,82 @@ h1{
 .brilliant-cont h1{
     text-align: center;
 }
-.bri-card-out{
-    width: 100%;
+.bri-card-out {
     display: flex;
     justify-content: space-between;
+    gap: 2vw;
+    overflow-x: auto;
 }
-.bri-card{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: .5rem;
+.bri-card-out::-webkit-scrollbar {
+    height: 0.5vw;
+}
+.bri-card-out::-webkit-scrollbar-thumb {
+    background: #d6cfcf; 
+    border-radius: 0;
+}
+.bri-card-out::-webkit-scrollbar-thumb:hover {
+    background: #b6abab; 
+}
+.bri-card-out::-webkit-scrollbar-track {
+    background: #f8f6f6; 
+    border-radius: 0;
+}
+.bri-card {
     position: relative;
     height: 26vw;
-    width: 24%;
+    width: 23.3%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    overflow: hidden;
+    border: 1px solid #ccc;
 }
-.img-cont{
+
+.img-cont {
     position: absolute;
     top: 35%;
-    /* left: 25%; */
-    height: 9vw;
+    left: 30%;
+    height: 31%;
+    width: 39%;
 }
-.img-cont img{
+
+.img-cont img {
     height: 100%;
     width: 100%;
 }
-.bri-card-t{
+
+.bri-card-t {
     height: 50%;
     width: 100%;
     background-color: #DEDEDE;
-    display: -ms-grid;
     display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
 }
-.bri-card-t h3{
+
+.bri-card-t h3 {
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.5vw !important;
 }
-.bri-card-t p{
+
+.bri-card-t p {
     text-align: center;
     font-size: 1.2vw;
 }
-.bri-card-b{
+
+.bri-card-b {
     height: 50%;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
-.bri-card-b p{
+
+.bri-card-b p {
     padding: 4vw 2vw 2vw 2vw;
-    /* line-height: 1.4; */
     font-size: 1.3vw;
 }
+
 
 .mtb{
     margin-bottom: 1.2rem;
@@ -589,36 +591,21 @@ h1{
         color: #404040;
         font-size: 0.3rem;
     }
-    .bri-card-out {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 3vw;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-    }
-    .bri-card-out::-webkit-scrollbar {
-        height: 1vw;
-    }
-    .bri-card-out::-webkit-scrollbar-thumb {
-        background: #c3b3b3; 
-        border-radius: 0;
-    }
-    .bri-card-out::-webkit-scrollbar-thumb:hover {
-        background: #b6abab; 
-    }
-    .bri-card-out::-webkit-scrollbar-track {
-        background: #d7d3d3; 
-        border-radius: 0;
-    }
-    .bri-card{
-        width: 48%;
+    .bri-card {
+        width: 31%;
         height: 34vw;
         flex: 0 0 auto;
     }
+    .img-cont {
+        position: absolute;
+        top: 35%;
+        left: 31%;
+        height: 31%;
+        width: 40%;
+    }
     .bri-card-t h3 {
         text-align: center;
-        font-size: 0.7rem !important;
+        font-size: 3vw !important;
     }
     .bri-card-t p, .bri-card-b p {
        
@@ -830,10 +817,10 @@ h1{
     color: #fff;
     font-size: 2.5vw;
   }
-  .address-bar .sg {
+  .address-bar .sg{
     font-size: 1.2vw;
-    color: white;
- }
+    color: #fff;
+  }
 
 
 
@@ -949,4 +936,3 @@ h1{
 }
 
   }
-
