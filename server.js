@@ -99,6 +99,11 @@ app.get("/email-marketing" , (req, res)=>{
 })
 
 
+app.get("/hidden-img" , (req, res)=>{
+    res.render("hidden")
+})
+
+
 
 //   const recipients = ['suryakantgupta678@gmail.com', 'bgmilelomujhse@gmail.com'];
   const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
