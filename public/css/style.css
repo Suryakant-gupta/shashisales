@@ -206,169 +206,169 @@
 
 
  
- .em-sec-one{
+ /* Email Marketing Section one */
+.em-sec-one{
     padding: 10vw 4vw 0vw 4vw;
     display: flex;
     align-items: center;
     gap: 2vw;
 }
- .em-sec-one-left{
-     width: 60%;
-     display: flex;
-     align-items: center;
- }
- .em-sec-one-left span, .em-sec-two-right span{
-     display: grid;
-     gap: 2vw;
- }
- .em-sec-one-left button{
-     background: transparent;
-     border: none;
-     display: flex;
- }
- .em-sec-one-left button a {
-     font-size: 1.2vw;
-     font-weight: bold;
-     background: transparent;
-     color: black;
-     padding: 0.8vw 5vw;
-     border: 1px solid black;
-     border-radius: 2vw;
- }
- .em-sec-one-left p:nth-child(1), .em-sec-two-right p:nth-child(1){
-     font-size: 3vw;
-     font-family: "Roboto Serif";
- }
- .em-sec-one-left p:nth-child(2), .em-sec-two-right p:nth-child(2){
-     font-size: 1.5vw;
-     line-height: 1.5;
-     font-family: "Roboto";
-     color: #868686;
-     font-family: "Roboto Serif";
- }
- .em-sec-one-right{
-     width: 40%;
-     height: 100%;
- }
- .em-sec-one-right img{
-     height: 100%;
-     width: 100%;
- }
- 
- /* Email Marketing Section two */
- .em-sec-two{
-     display: flex;
-     align-items: center;
-     gap: 2vw;
-     padding: 0vw 4vw;
- }
- .em-sec-two-left{
-     width: 40%;
-     height: 100%;
- }
- .em-sec-two-left img{
-     height: 100%;
-     width: 100%;
- } 
- .em-sec-two-right{
-     width: 60%;
-     display: flex;
-     align-items: center;
- }
- 
- 
- /* Email Marketing Section Six */
- .em-sec-six{
-     padding: 3vw 4vw 0vw 4vw;
- }
- table {
-     border-collapse: collapse;
-     width: 100%;
-     font-size: 1.3vw;
-   }
- td, th {
-     border: 1px solid black;
-     text-align: center;
-     padding: 1vw;
-   }
- th {
-     background-color: #f2f2f2;
- }
- .full-width {
-     text-align: center;
- }
- .equal-width th, .equal-width td {
-     width: 33.33%;
- }
- .table-bg{
-     background: #C4C800;
- }
- 
- @media only screen and (max-width: 600px){
-     .em-sec-one {
-         padding: 20vw 4vw 0vw 4vw;
-         display: flex;
-         gap: 2vw;
-     }
- .em-sec-one-left button a {
-     font-size: 1.8vw;
-     font-weight: bold;
-     background: transparent;
-     color: black;
-     padding: 0.8vw 6vw;
-     border: 1px solid black;
-     border-radius: 2vw;
- }
-     .em-sec-one-left span, .em-sec-two-right span {
-         display: grid;
-         gap: 2vw;
-     }
-     .em-sec-one-left p:nth-child(1), .em-sec-two-right p:nth-child(1) {
-         font-size: 3vw;
-         font-weight: bold;
-         font-family: "Roboto Serif";
-     }
-     .em-sec-one-left p:nth-child(2), .em-sec-two-right p:nth-child(2) {
-         font-size: 2.3vw;
-         font-family: "Roboto";
-         color: #868686;
-         font-family: "Roboto Serif";
-     }
-     .em-sec-one-left{
-         width: 50%;
-         display: flex;
-         align-items: center;
-     }
-     .em-sec-one-right{
-         width: 50%;
-         height: 100%;
-         display: flex;
-         align-items: center;
-     }
-     .em-sec-two-left{
-         width: 50%;
-         height: 100%;
-     } 
-     .em-sec-two-right{
-         width: 50%;
-         display: flex;
-         align-items: center;
-     }
-     .em-sec-six {
-         padding: 3vw 4vw 20vw 4vw;
-     }
-     .em-sec-six table{
-         border-collapse: collapse;
-         width: 100%;
-         font-size: 2.3vw;
-     }
-     .em-sec-six td, .em-sec-six th {
-         border: 1px solid black;
-         text-align: center;
-         padding: 3vw;
-     }
- }
- 
- 
- 
- 
+.em-sec-one-left{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+.em-sec-one-left span, .em-sec-two-right span{
+    display: grid;
+    gap: 2vw;
+}
+.em-sec-one-left button{
+    background: transparent;
+    border: none;
+    display: flex;
+}
+.em-sec-one-left button a {
+    font-size: 1.2vw;
+    font-weight: bold;
+    background: transparent;
+    color: black;
+    padding: 0.8vw 5vw;
+    border: 1px solid black;
+    border-radius: 2vw;
+}
+.em-sec-one-left p:nth-child(1), .em-sec-two-right p:nth-child(1){
+    font-size: 3vw;
+    font-family: "Roboto Serif";
+}
+.em-sec-one-left p:nth-child(2), .em-sec-two-right p:nth-child(2){
+    font-size: 1.5vw;
+    line-height: 1.5;
+    font-family: "Roboto";
+    color: #868686;
+    font-family: "Roboto Serif";
+}
+.em-sec-one-right{
+    width: 40%;
+    height: 100%;
+}
+.em-sec-one-right img{
+    height: 100%;
+    width: 100%;
+}
+
+/* Email Marketing Section two */
+.em-sec-two{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding: 0vw 4vw 3vw 4vw;
+}
+.em-sec-two-left{
+    width: 40%;
+    height: 100%;
+}
+.em-sec-two-left img{
+    height: 100%;
+    width: 100%;
+} 
+.em-sec-two-right{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Email Marketing Section Six */
+.em-sec-six{
+    padding: 3vw 4vw 0vw 4vw;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.3vw;
+  }
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 1vw;
+  }
+th {
+    background-color: #f2f2f2;
+}
+.full-width {
+    text-align: center;
+}
+.equal-width th, .equal-width td {
+    width: 33.33%;
+}
+.table-bg{
+    background: #C4C800;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    .em-sec-one {
+        padding: 20vw 4vw 0vw 4vw;
+        display: flex;
+        gap: 2vw;
+    }
+    .em-sec-one-left button a {
+        font-size: 1.8vw;
+        font-weight: bold;
+        background: transparent;
+        color: black;
+        padding: 0.8vw 6vw;
+        border: 1px solid black;
+        border-radius: 2vw;
+    }
+    .em-sec-one-left span, .em-sec-two-right span {
+        display: grid;
+        gap: 2vw;
+    }
+    .em-sec-one-left p:nth-child(1), .em-sec-two-right p:nth-child(1) {
+        font-size: 3vw;
+        font-weight: bold;
+        font-family: "Roboto Serif";
+    }
+    .em-sec-one-left p:nth-child(2), .em-sec-two-right p:nth-child(2) {
+        font-size: 2.3vw;
+        font-family: "Roboto";
+        color: #868686;
+        font-family: "Roboto Serif";
+    }
+    .em-sec-one-left{
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    .em-sec-one-right{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .em-sec-two-left{
+        width: 50%;
+        height: 100%;
+    } 
+    .em-sec-two-right{
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    .em-sec-six {
+        padding: 3vw 4vw 20vw 4vw;
+    }
+    .em-sec-six table{
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 2.3vw;
+    }
+    .em-sec-six td, .em-sec-six th {
+        border: 1px solid black;
+        text-align: center;
+        padding: 3vw;
+    }
+}
+
