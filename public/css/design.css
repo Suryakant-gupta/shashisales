@@ -111,11 +111,12 @@
 
 .rocket {
     height: 19vw;
+    width: 13vw;
     z-index: 0;
     position: absolute;
     bottom: 0;
     right: 0;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
 
 .rocket img {
@@ -127,7 +128,7 @@
 .roc-sec-3 {
     display: none;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .roc-sec:hover .rocket,
@@ -139,15 +140,15 @@
 .roc-sec.active .roc-sec-2 {
     display: flex;
     justify-content: center;
-    animation: showSection 0.5s forwards;
-    animation-delay: 0.5s;
+    animation: showSection 1s forwards;
+    animation-delay: 0.7s;
 }
 
 .roc-sec:hover .roc-sec-3,
 .roc-sec.active .roc-sec-3 {
     display: block;
-    animation: showSection 0.5s forwards;
-    animation-delay: 1s;
+    animation: showSection 1s forwards;
+    animation-delay: 1.4s;
 }
 
 .roc-sec:hover.reset .rocket,
@@ -568,7 +569,7 @@
     }
     
     .roc-sec.active .rocket {
-        animation: moveRocket 2s forwards;
+        animation: moveRocket 3s forwards;
     }
     
 }
