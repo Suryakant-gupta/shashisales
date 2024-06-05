@@ -103,6 +103,10 @@ app.get("/hidden-img" , (req, res)=>{
     res.render("hidden")
 })
 
+app.get("/hidden-img2" , (req, res)=>{
+    res.render("hidden2")
+})
+
 
 
 //   const recipients = ['suryakantgupta678@gmail.com', 'bgmilelomujhse@gmail.com'];
