@@ -5,49 +5,115 @@ const bodyParser = require('body-parser');
 const ejsMate = require("ejs-mate");
 const cors = require("cors");
 const axios = require("axios");
-// const sha256 = require("sha256");
-// const uniqid = require("uniqid");
 const crypto = require("crypto-js");
-const dotenv = require('dotenv'); // If using .env file
+const dotenv = require('dotenv');
 const mailsender = require("./utils/mailsender");
 const session = require('express-session');
 const flash = require('connect-flash');
-
-
-
-
-
+const mongoose = require("mongoose");
+const MongoStore = require('connect-mongo');
+const multer = require('multer');
+const fs = require('fs');
+const User = require("./models/User");
+const Blog = require('./models/Blog');
+const bcrypt = require('bcrypt');
+const passport = require('./config/passport');
+const LocalStrategy = require('passport-local').Strategy;
 
 const app = express();
 
+main().then(() => {
+    console.log("connected to the DB");
+}).catch((err) => {
+    console.log(err);
+});
 
-app.use(session({
-    secret: 'hellotatabyeye',
-    resave: false,
-    saveUninitialized: true
-  }));
+async function main() {
+    await mongoose.connect("mongodb://shashisales:SS%40sales2604@213.210.21.176:27017/shashisales");
+}
 
 
+
+
+app.use(
+    session({
+        secret: 'shashisalesandmarketing',
+        resave: false,
+        saveUninitialized: true,
+        store: MongoStore.create({
+            mongoUrl: 'mongodb://shashisales:SS%40sales2604@213.210.21.176:27017/shashisales',
+            collectionName: 'sessions',
+        }),
+        cookie: {
+            maxAge: 48 * 60 * 60 * 1000,
+        },
+    })
+    );
+    
+    
+    // Passport middleware
+    app.use(passport.initialize());
+    app.use(passport.session());
+
+
+
+// Multer setup (only for file uploads)
+const uploadsDir = path.join(__dirname, 'public', 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, uploadsDir);
+    },
+    filename: (req, file, cb) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+    }
+});
+
+const upload = multer({ storage: storage });
+const uploadFields = upload.fields([
+    { name: 'blogBannerImage', maxCount: 1 },
+    { name: 'images' }
+]);
 
 app.use(bodyParser.urlencoded({ extended: true }));
+// app.use((req, res, next) => {
+//     console.log('Request Method:', req.method);
+//     console.log('Request URL:', req.url);
+//     console.log('Content-Type:', req.headers['content-type']);
+//     console.log('Request Body:', req.body);
+//     console.log('Request Files:', req.files);
+//     next();
+//   });
 app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/public")));
-app.use(bodyParser.json());
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(cors());
-app.use(bodyParser.json());
-app.use(
-  bodyParser.urlencoded({
-    extended: false,
-  })
-);
-
 app.use(flash());
-// Load environment variables if using .env
+
 dotenv.config();
+
+
+
+
+
+
+// Authentication middleware
+const isAdmin = (req, res, next) => {
+    if (req.isAuthenticated() && req.user.role === 'admin') {
+      return next();
+    }
+    res.redirect('/login');
+  };
+
+
+
 
 
 
@@ -106,6 +172,87 @@ app.get("/hidden-img" , (req, res)=>{
 app.get("/hidden-img2" , (req, res)=>{
     res.render("hidden2")
 })
+
+function truncateString(str, length = 200) {
+  if (str.length > length) {
+    return `${str.substring(0, length)}...`;
+  }
+  return str;
+}
+
+app.get("/blogs", async (req, res) => {
+    try {
+        const blogs = await Blog.find().sort({ createdAt: -1 });
+        console.log(blogs.canonical);
+        res.render("blog", { blogs, truncateString });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+
+app.get("/blog-detail/:canonical", async (req, res) => {
+    try {
+        const { canonical } = req.params;
+        const blog = await Blog.findOne({ canonical: canonical});
+
+        if (!blog) {
+            return res.status(404).send("Blog not found");
+        }
+
+        res.render("blogDetails", { blog });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+app.get("/blog-form", isAdmin, (req, res) => {
+    res.render("uploadForm");
+});
+
+// Route for handling blog upload
+app.post('/upload-blog', uploadFields, async (req, res) => {
+    try {
+        const { blogTitle, blogShortDesc, headings, paragraphs, metaTitle, metaDescription, metaKeywords, canonical, contentText } = req.body;
+        const bannerImage = req.files['blogBannerImage'] ? req.files['blogBannerImage'][0] : null;
+        const images = req.files['images'] ? req.files['images'].map(img => `/uploads/${img.filename}`) : [];
+
+        if (!bannerImage) {
+            throw new Error('Blog banner image is required');
+        }
+
+        const content = [];
+        for (let i = 0; i < headings.length; i++) {
+            content.push({
+                heading: headings[i],
+                paragraph: paragraphs[i],
+                image: images[i] || null
+            });
+        }
+
+        const blog = new Blog({
+            title: blogTitle,
+            shortDescription: blogShortDesc,
+            bannerImage: `/uploads/${bannerImage.filename}`,
+            content,
+            metaTitle,
+            canonical,
+            contentText,
+            metaDescription,
+            metaKeywords: metaKeywords.split(',').map(keyword => keyword.trim()),
+        });
+
+        await blog.save();
+        console.log(blog);
+        res.status(200).send('Blog uploaded successfully!');
+    } catch (error) {
+        console.error('Error uploading blog:', error);
+        res.status(500).send('Failed to upload blog. Please try again.');
+    }
+});
+
 
 
 
@@ -268,6 +415,76 @@ app.post('/status/:txnId', async (req, res) => {
   }
 });
 
+
+// admin panel code 
+async function createDefaultAdminUsers() {
+    try {
+      // Check if any admin or manager users exist
+      const existingAdmins = await User.find({ role: 'admin' });
+      
+  
+      if (existingAdmins.length > 0) {
+        console.log('Admin user already exist');
+        return;
+      }
+  
+      // Check if environment variables are set
+      if (!process.env.ADMIN_PASS || !process.env.ADMIN_EMAIL) {
+        throw new Error('Environment variables MANAGER_PASS, ADMIN_PASS, and ADMIN_EMAIL must be set');
+      }
+  
+      
+      
+  
+      const adminUser = new User({
+        name: 'Admin User',
+        email: process.env.ADMIN_EMAIL,
+        password:  process.env.ADMIN_PASS, // await the hashed password
+        role: 'admin'
+      });
+  
+      await adminUser.save();
+  
+      console.log('Default admin created successfully');
+    } catch (err) {
+      console.error('Error creating default admin and manager users:', err);
+    }
+  }
+  // Call the function to create the default admin users
+//   createDefaultAdminUsers();
+
+
+app.get('/login', (req, res) => {
+    const { successMessage, errorMessage } = req.flash();
+    res.render('login', { successMessage, errorMessage });
+  });
+
+  app.post(
+    '/login',
+    passport.authenticate('local', {
+      failureRedirect: '/login',
+      failureFlash: true,
+    }),
+    (req, res) => {
+      const { role } = req.user;
+      if (role === 'admin') {
+        res.redirect('/blog-form'); // Redirect to admin panel
+      } else {
+        res.redirect('/'); // Redirect to home page
+      }
+    }
+  );
+
+
+  app.get('/logout', (req, res) => {
+    req.logout((err) => {
+      if (err) {
+        console.error('Error during logout:', err);
+      }
+      res.redirect('/');
+    });
+  });
+  
 
 
 

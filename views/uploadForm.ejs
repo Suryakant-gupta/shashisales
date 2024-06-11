@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.snow.css" integrity="sha512-ggYQiYwuFFyThzEv6Eo6g/uPLis4oUynsE88ovEde5b2swycOh9SlAI8FL/cL2AkGGNnWADPXcX2UnPIJS2ozw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/blog.css">
+    <style>
+        #editor-container {
+            height: 200px;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .ql-toolbar.ql-snow {
+            width: 100%;
+        }
+        .ql-editor {
+            width: 100% !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-page upformp">
+        <h1>Upload Blog</h1>
+        <form id="blogForm" action="/upload-blog" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="blogTitle">Blog Title:</label>
+                <input type="text" id="blogTitle" name="blogTitle" required>
+            </div>
+            <div>
+                <label for="blogShortDesc">Blog Short Description:</label>
+                <textarea id="blogShortDesc" name="blogShortDesc" required></textarea>
+            </div>
+            <div>
+                <label for="blogBannerImage">Blog Banner Image:</label>
+                <input type="file" id="blogBannerImage" name="blogBannerImage" accept="image/*" required>
+            </div>
+            <div>
+                <label for="heading1">Heading 1:</label>
+                <input type="text" name="headings" required>
+            </div>
+            <div>
+                <label for="paragraph1">Paragraph 1:</label>
+                <textarea name="paragraphs" required></textarea>
+            </div>
+            <div>
+                <label for="image1">Image 1:</label>
+                <input type="file" name="images" accept="image/*">
+            </div>
+            <div>
+                <label for="heading2">Heading 2:</label>
+                <input type="text" name="headings" required>
+            </div>
+            <div>
+                <label for="paragraph2">Paragraph 2:</label>
+                <textarea name="paragraphs" required></textarea>
+            </div>
+            <div>
+                <label for="image2">Image 2:</label>
+                <input type="file" name="images" accept="image/*">
+            </div>
+            <div>
+                <label for="metaTitle">Meta Title:</label>
+                <input type="text" id="metaTitle" name="metaTitle" required>
+            </div>
+            <div>
+                <label for="canonical"> Canonical </label>
+                <input type="text" id="canonical" name="canonical" required>
+            </div>
+            <div>
+                <label for="metaKeywords">Meta Keywords (comma-separated):</label>
+                <input type="text" id="metaKeywords" name="metaKeywords" required>
+            </div> 
+            <div style="width: 90%;">
+                <label for="metaDescription">Meta Description:</label>
+                <textarea id="metaDescription" name="metaDescription" required></textarea>
+            </div>
+            <div id="editor-container"></div>
+            <input type="hidden" name="contentText" id="hidden-input">
+            <div class="btndiv"><button type="submit">Upload Blog</button></div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.js" integrity="sha512-xI6PxAo086hcXuoe6wbMclXWZmpALq7bnMJGt8inaK17s4dyhCrzKvXNq/je7vc5hfmovWZGYlYPxSui6opB1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var quill = new Quill('#editor-container', {
+                theme: 'snow',
+                modules: {
+                    toolbar: [
+                        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                        ['bold', 'italic', 'underline'],
+                        ['blockquote', 'code-block'],
+                        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                        [{ 'script': 'sub'}, { 'script': 'super' }],
+                        [{ 'indent': '-1'}, { 'indent': '+1' }],
+                        [{ 'direction': 'rtl' }],
+                        [{ 'color': [] }, { 'background': [] }],
+                        [{ 'font': [] }],
+                        [{ 'align': [] }],
+                        ['link', 'image', 'video'],
+                        ['clean']
+                    ]
+                }
+            });
+
+            var form = document.getElementById('blogForm');
+            form.onsubmit = function() {
+                var contentText = document.querySelector('input[name=contentText]');
+                contentText.value = quill.root.innerHTML;
+                return true;
+            };
+        });
+    </script>
+</body>
+</html>

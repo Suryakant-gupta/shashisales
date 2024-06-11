@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= blog.metaTitle %></title>
+    <meta name="description" content="<%= blog.metaDescription %>">
+    <meta name="keywords" content="<%= blog.metaKeywords %>">
+    <link rel="canonical" href="https://shashisales.com/blog-detail/<%= blog.canonical %>">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <style>
+        .bl {
+            background-color: black;
+        }
+        h3 {
+            text-transform: uppercase;
+        }
+        h1 {
+            text-transform: capitalize;
+        }
+        
+    </style>
+</head>
+<body>
+    <%- include("./includes/navbar") %>
+    <div class="main-page">
+        <div class="header">
+            <div class="banner">
+                <img src="<%= blog.bannerImage %>" alt="Banner Image">
+                <h1><%= blog.title %></h1>
+            </div>
+        </div>
+        <section class="blog-content">
+            <p><%= blog.shortDescription %></p>
+            <% blog.content.forEach((contentItem, index) => { %>
+                <div class="image-container<%= index % 2 === 0 ? '1' : '2' %> ic <%= !contentItem.image ? 'no-image' : '' %>">
+                    <div class="ic-text">
+                        <h3><%= contentItem.heading %></h3>
+                        <p><%= contentItem.paragraph %></p>
+                    </div>
+                    <% if (contentItem.image) { %>
+                        <div class="ic-img">
+                            <img src="<%= contentItem.image %>" alt="Blog Image">
+                        </div>
+                    <% } %>
+                </div>
+
+               
+                <% }) %>
+                <div class="contentText">
+                    <%- blog.contentText %>
+                </div>
+        </section>
+        <%- include("./includes/footer") %>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

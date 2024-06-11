@@ -1,9 +1,3 @@
-// script.js
-
-
-
-
-
 const tiles = document.querySelectorAll('.tile');
 const mainView = document.querySelector('.main-view');
 
@@ -85,9 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var hideMobileHeaderCont = document.querySelector('.hide-mobile-header-cont');
   var hideServiceHeaderCont = document.querySelector('.hide-service-header-cont');
   var serviceBack = document.getElementById('service-back');
-
-  mobileHeader.style.display = 'none';
-  serviceHeader.style.display = 'none';
 
   mobileHeaderPopup.addEventListener("click", function(event) {
       event.stopPropagation();
