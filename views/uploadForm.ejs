@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.snow.css" integrity="sha512-ggYQiYwuFFyThzEv6Eo6g/uPLis4oUynsE88ovEde5b2swycOh9SlAI8FL/cL2AkGGNnWADPXcX2UnPIJS2ozw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.snow.css"
+        integrity="sha512-ggYQiYwuFFyThzEv6Eo6g/uPLis4oUynsE88ovEde5b2swycOh9SlAI8FL/cL2AkGGNnWADPXcX2UnPIJS2ozw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/blog.css">
     <style>
         #editor-container {
@@ -16,11 +19,13 @@
         .ql-toolbar.ql-snow {
             width: 100%;
         }
+
         .ql-editor {
             width: 100% !important;
         }
     </style>
 </head>
+
 <body>
     <div class="main-page upformp">
         <h1>Upload Blog</h1>
@@ -72,7 +77,7 @@
             <div>
                 <label for="metaKeywords">Meta Keywords (comma-separated):</label>
                 <input type="text" id="metaKeywords" name="metaKeywords" required>
-            </div> 
+            </div>
             <div style="width: 90%;">
                 <label for="metaDescription">Meta Description:</label>
                 <textarea id="metaDescription" name="metaDescription" required></textarea>
@@ -83,9 +88,11 @@
         </form>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.js" integrity="sha512-xI6PxAo086hcXuoe6wbMclXWZmpALq7bnMJGt8inaK17s4dyhCrzKvXNq/je7vc5hfmovWZGYlYPxSui6opB1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.js"
+        integrity="sha512-xI6PxAo086hcXuoe6wbMclXWZmpALq7bnMJGt8inaK17s4dyhCrzKvXNq/je7vc5hfmovWZGYlYPxSui6opB1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var quill = new Quill('#editor-container', {
                 theme: 'snow',
                 modules: {
@@ -93,9 +100,9 @@
                         [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
                         ['bold', 'italic', 'underline'],
                         ['blockquote', 'code-block'],
-                        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                        [{ 'script': 'sub'}, { 'script': 'super' }],
-                        [{ 'indent': '-1'}, { 'indent': '+1' }],
+                        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                        [{ 'script': 'sub' }, { 'script': 'super' }],
+                        [{ 'indent': '-1' }, { 'indent': '+1' }],
                         [{ 'direction': 'rtl' }],
                         [{ 'color': [] }, { 'background': [] }],
                         [{ 'font': [] }],
@@ -107,12 +114,32 @@
             });
 
             var form = document.getElementById('blogForm');
-            form.onsubmit = function() {
+            form.onsubmit = function () {
                 var contentText = document.querySelector('input[name=contentText]');
                 contentText.value = quill.root.innerHTML;
                 return true;
             };
+
+            const paragraphTextareas = document.querySelectorAll('textarea[name="paragraphs"]');
+            const maxWords = 150;
+
+            paragraphTextareas.forEach((textarea) => {
+                textarea.addEventListener('input', () => {
+                    enforceWordLimit(textarea, maxWords);
+                });
+            });
+
+            function enforceWordLimit(textarea, maxWords) {
+                const value = textarea.value.trim().replace(/\s+/g, ' ');
+                const words = value.split(' ').filter(word => word !== '');
+
+                if (words.length > maxWords) {
+                    const allowedWords = words.slice(0, maxWords).join(' ');
+                    textarea.value = allowedWords;
+                }
+            }
         });
     </script>
 </body>
+
 </html>

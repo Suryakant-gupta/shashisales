@@ -15,7 +15,7 @@
             justify-content: flex-start;
     /* gap: 2vw; */
     flex-wrap: wrap;
-    row-gap: 1rem;
+    gap: 1rem;
   }
   .blog-page-card{
   
@@ -178,20 +178,18 @@
     padding-inline: 5vw;
     margin-bottom:1.5rem ;
 }
-.ic-img{
-    width: 50%;
-}
+
 .no-image .ic-text{
   width: 100%;
 }
 
 .ic-img img {
-    width: 100%;
-    height: auto;
+    width: 350px;
+    height: 350px;
 }
 
  .ic-text {
-    width: 50%;
+    width: 70%;
     margin-top: 10px;
     display: flex;
     align-items: flex-start;
