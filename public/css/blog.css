@@ -115,6 +115,12 @@
         height: 100%;
         display: block;
     }
+    .ic, .image-container2{
+      flex-direction: column;
+    }
+    .ic-text{
+      width: 100%;
+    }
   }
 
 
