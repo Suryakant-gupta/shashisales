@@ -301,6 +301,7 @@
     }
     .ic, .image-container2{
       flex-direction: column;
+      padding-inline: 0;
     }
     .ic-text{
       width: 100%;
