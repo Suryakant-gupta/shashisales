@@ -1,4 +1,3 @@
-
 .contact-main{
     background-color: black;
 }
@@ -39,8 +38,10 @@
 }
 .nav2-right{
     position: relative;
+    aspect-ratio: 818 / 915;
 }
 .imgr{
+    aspect-ratio: 121.18 / 124.41;
     width: 10vw;
     overflow: hidden;
     position: absolute;
@@ -50,6 +51,16 @@
 .imgr img{
     width: 100%;
     height: 100%;
+}
+.ad-img-out{
+    aspect-ratio: 818 / 915;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ad-img-out video{
+    height: 100%;
+    width: 100%;
 }
 .fon-s-4{
     font-size: 4vw;

@@ -13,7 +13,7 @@ tiles.forEach(tile => {
       <div class="text">
         <h2>${tileHeading}</h2>
         <p>${tileDescription}</p>
-        <a href="${pageLink}" class="tile-link">Read More</a>
+        <div style="display: flex; justify-content: center;"><a href="${pageLink}" class="tile-link">Read More</a></div>
       </div>
     `;
   });

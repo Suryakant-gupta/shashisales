@@ -284,12 +284,6 @@
     .logo-box2 {
         margin-top: 4vw;
     }
-
-    .fou-img img {
-        width: 20vw;
-    }
-
-
     .hamburger-menu {
        
         width: 100%;
@@ -394,9 +388,12 @@
     }
 
     .up {
-        width: 25vw;
+        aspect-ratio: 62/60;
+        height: auto;
+        width: auto;
         position: absolute;
         bottom: 70%;
+        left: 30%;
     }
 
     .up img {
@@ -419,9 +416,6 @@
     }
 
     .blog-cont {
-        padding-bottom: 5rem !important;
-    }
-    .blog-page-cont {
         padding-bottom: 5rem !important;
     }
 /* 
@@ -473,6 +467,7 @@
         width: 100%;
       }
       .mobile-header .hamburger{
+        width: 1.2rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -481,7 +476,8 @@
                 align-items: center;
       }
       .mobile-header .hamburger img{
-        width: 1.2rem;
+        width: 100%;
+        height: auto;
       }
       nav {
         
