@@ -405,6 +405,67 @@
     </div>
 </div>
 
+<!-- <script>
+    // Flag to track if the script is loaded
+    let kiwiScriptLoaded = false;
+  
+    // Function to load the Kiwi script
+    function loadKiwiScript() {
+      if (!kiwiScriptLoaded) {
+        (function(w,d,s,c,r,a,m){
+          w['KiwiObject']=r;
+          w[r]=w[r] || function () {
+            (w[r].q=w[r].q||[]).push(arguments)};
+          w[r].l=1*new Date();
+          a=d.createElement(s);
+          m=d.getElementsByTagName(s)[0];
+          a.async=1;
+          a.src=c;
+          m.parentNode.insertBefore(a,m)
+        })(window,document,'script',"https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v="+ new Date().getTime(),'kiwi');
+        
+        // Wait for the script to load and then initialize Kiwi
+        window.addEventListener("load", function () {
+          kiwi.init('', '9lrSlS1MR7U46BCXAhqOF508Li1wRCmP', {});
+        });
+        
+        kiwiScriptLoaded = true;
+      }
+    }
+  
+    // Function to unload the Kiwi script
+    function unloadKiwiScript() {
+      if (kiwiScriptLoaded) {
+        // Remove the script element
+        const script = document.querySelector('script[src*="kiwi-sdk"]');
+        if (script) {
+          script.parentNode.removeChild(script);
+        }
+  
+        // Remove the KiwiObject from the window
+        delete window.KiwiObject;
+        
+        kiwiScriptLoaded = false;
+      }
+    }
+  
+    // Function to check window width and load/unload script accordingly
+    function checkWindowWidth() {
+      if (window.innerWidth > 768) {
+        loadKiwiScript();
+      } else {
+        unloadKiwiScript();
+      }
+    }
+  
+    // Initial check
+    checkWindowWidth();
+  
+    // Add event listener for window resize
+    window.addEventListener('resize', checkWindowWidth);
+  </script> -->
+  
+
 
 
 <script>

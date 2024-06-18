@@ -246,7 +246,8 @@ app.post('/upload-blog', uploadFields, async (req, res) => {
 
         await blog.save();
         console.log(blog);
-        res.status(200).send('Blog uploaded successfully!');
+        // res.status(200).send('Blog uploaded successfully!');
+        res.redirect("/blog-form")
     } catch (error) {
         console.error('Error uploading blog:', error);
         res.status(500).send('Failed to upload blog. Please try again.');
