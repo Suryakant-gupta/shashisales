@@ -1207,6 +1207,7 @@ font-weight: bold;
           flex-direction: column;
   background-color: #F2F2F2;
   width: 24%;
+  position: relative;
 }
 .blog-cont .clipp-h{
   -webkit-clip-path: polygon(0px 10%, 100% -50%, 100% 100%, 0px 100%);
@@ -1233,6 +1234,8 @@ font-weight: bold;
   display: grid;
 }
 .blog-cont .mar-desc h3{
+  color: #000;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

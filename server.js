@@ -117,14 +117,15 @@ const isAdmin = (req, res, next) => {
 
 
 
-app.get("/", (req, res) => {
+app.get("/", async(req, res) => {
+    const blogs = await Blog.find().sort({ createdAt: -1 }); 
     const successMessage = req.session.successMessage || null;
     const errorMessage = req.session.errorMessage || null;
     console.log('successMessage:', successMessage); // Log the value of successMessage
     console.log('errorMessage:', errorMessage); // Log the value of errorMessage
     req.session.successMessage = null; // Clear the success message after displaying it
     req.session.errorMessage = null; // Clear the error message after displaying it
-    res.render("home", { successMessage, errorMessage });
+    res.render("home", { successMessage, errorMessage, blogs, truncateString });
 });
 
 
