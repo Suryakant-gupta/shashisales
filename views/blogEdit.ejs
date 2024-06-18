@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.snow.css"
+        integrity="sha512-ggYQiYwuFFyThzEv6Eo6g/uPLis4oUynsE88ovEde5b2swycOh9SlAI8FL/cL2AkGGNnWADPXcX2UnPIJS2ozw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/blog.css">
+    <style>
+        #editor-container {
+            height: 200px;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .ql-toolbar.ql-snow {
+            width: 100%;
+        }
+
+        .ql-editor {
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-page upformp">
+        <h1>Edit Blog</h1>
+        <form id="blogForm" action="/update-blog/<%= blog._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="blogTitle">Blog Title:</label>
+                <input type="text" id="blogTitle" name="blogTitle" required value="<%= blog.title %>">
+            </div>
+            <div>
+                <label for="blogShortDesc">Blog Short Description:</label>
+                <textarea id="blogShortDesc" name="blogShortDesc" required><%= blog.shortDescription %></textarea>
+            </div>
+            <div>
+                <label for="blogBannerImage">Blog Banner Image:</label>
+                <input type="file" id="blogBannerImage" name="blogBannerImage" accept="image/*">
+                <img src="<%= blog.bannerImage %>" alt="Banner Image" width="200">
+            </div>
+            <% blog.content.forEach((content, index) => { %>
+            <div>
+                <label for="heading<%= index + 1 %>">Heading <%= index + 1 %>:</label>
+                <input type="text" name="headings" required value="<%= content.heading %>">
+            </div>
+            <div>
+                <label for="paragraph<%= index + 1 %>">Paragraph <%= index + 1 %>:</label>
+                <textarea name="paragraphs" required><%= content.paragraph %></textarea>
+            </div>
+            <div>
+                <label for="image<%= index + 1 %>">Image <%= index + 1 %>:</label>
+                <input type="file" name="images" accept="image/*">
+                <% if (content.image) { %>
+                <img src="<%= content.image %>" alt="Image <%= index + 1 %>" width="200">
+                <% } %>
+            </div>
+            <% }) %>
+            <div>
+                <label for="metaTitle">Meta Title:</label>
+                <input type="text" id="metaTitle" name="metaTitle" required value="<%= blog.metaTitle %>">
+            </div>
+            <div>
+                <label for="canonical">Canonical</label>
+                <input type="text" id="canonical" name="canonical" required value="<%= blog.canonical %>">
+            </div>
+            <div>
+                <label for="metaKeywords">Meta Keywords (comma-separated):</label>
+                <input type="text" id="metaKeywords" name="metaKeywords" required value="<%= blog.metaKeywords.join(', ') %>">
+            </div>
+            <div style="width: 90%;">
+                <label for="metaDescription">Meta Description:</label>
+                <textarea id="metaDescription" name="metaDescription" required><%= blog.metaDescription %></textarea>
+            </div>
+            <div id="editor-container"></div>
+            <input type="hidden" name="contentText" id="hidden-input" value="<%= blog.contentText %>">
+            <div class="btndiv"><button type="submit">Update Blog</button></div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.js"
+        integrity="sha512-xI6PxAo086hcXuoe6wbMclXWZmpALq7bnMJGt8inaK17s4dyhCrzKvXNq/je7vc5hfmovWZGYlYPxSui6opB1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var quill = new Quill('#editor-container', {
+                theme: 'snow',
+                modules: {
+                    toolbar: [
+                        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                        ['bold', 'italic', 'underline'],
+                        ['blockquote', 'code-block'],
+                        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                        [{ 'script': 'sub' }, { 'script': 'super' }],
+                        [{ 'indent': '-1' }, { 'indent': '+1' }],
+                        [{ 'direction': 'rtl' }],
+                        [{ 'color': [] }, { 'background': [] }],
+                        [{ 'font': [] }],
+                        [{ 'align': [] }],
+                        ['link', 'image', 'video'],
+                        ['clean']
+                    ]
+                }
+            });
+
+            quill.root.innerHTML = '<%= blog.contentText %>';
+
+            var form = document.getElementById('blogForm');
+            form.onsubmit = function () {
+                var contentText = document.querySelector('input[name=contentText]');
+                contentText.value = quill.root.innerHTML;
+                return true;
+            };
+
+            const paragraphTextareas = document.querySelectorAll('textarea[name="paragraphs"]');
+            const maxWords = 150;
+
+            paragraphTextareas.forEach((textarea) => {
+                textarea.addEventListener('input', () => {
+                    enforceWordLimit(textarea, maxWords);
+                });
+            });
+
+            function enforceWordLimit(textarea, maxWords) {
+                const value = textarea.value.trim().replace(/\s+/g, ' ');
+                const words = value.split(' ').filter(word => word !== '');
+
+                if (words.length > maxWords) {
+                    const allowedWords = words.slice(0, maxWords).join(' ');
+                    textarea.value = allowedWords;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

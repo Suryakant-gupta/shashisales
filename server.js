@@ -208,7 +208,7 @@ app.get("/blog-detail/:canonical", async (req, res) => {
     }
 });
 
-app.get("/blog-form", isAdmin, (req, res) => {
+app.get("/blog-form",isAdmin,  (req, res) => {
     res.render("uploadForm");
 });
 
@@ -247,13 +247,96 @@ app.post('/upload-blog', uploadFields, async (req, res) => {
         await blog.save();
         console.log(blog);
         // res.status(200).send('Blog uploaded successfully!');
-        res.redirect("/blog-form")
+        res.redirect("/all-blogs-list")
     } catch (error) {
         console.error('Error uploading blog:', error);
         res.status(500).send('Failed to upload blog. Please try again.');
     }
 });
 
+
+
+
+app.get("/all-blogs-list", isAdmin, async(req, res)=>{
+    const AllBlogs = await Blog.find();
+    // console.log(AllBlogs);
+    res.render("allBlogs" , {AllBlogs})
+})
+
+app.delete('/delete-blog/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deletedBlog = await Blog.findByIdAndDelete(id);
+
+        if (!deletedBlog) {
+            return res.status(404).send('Blog not found');
+        }
+
+        res.redirect("/all-blogs-list");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+
+app.get('/edit-blog/:canonical', isAdmin, async (req, res) => {
+    try {
+        const { canonical } = req.params;
+        const blog = await Blog.findOne({ canonical: canonical });
+
+        if (!blog) {
+            return res.status(404).send('Blog not found');
+        }
+
+        res.render('blogEdit', { blog });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+app.put('/update-blog/:id', uploadFields, async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { blogTitle, blogShortDesc, headings, paragraphs, metaTitle, metaDescription, metaKeywords, canonical, contentText } = req.body;
+
+        const blog = await Blog.findById(id);
+
+        if (!blog) {
+            return res.status(404).send('Blog not found');
+        }
+
+        const bannerImage = req.files['blogBannerImage'] ? req.files['blogBannerImage'][0] : blog.bannerImage;
+        const images = req.files['images'] ? req.files['images'].map(img => `/uploads/${img.filename}`) : blog.content.map(item => item.image);
+
+        const content = [];
+        for (let i = 0; i < headings.length; i++) {
+            content.push({
+                heading: headings[i],
+                paragraph: paragraphs[i],
+                image: images[i] || null
+            });
+        }
+
+        const updatedBlog = await Blog.findByIdAndUpdate(id, {
+            title: blogTitle,
+            shortDescription: blogShortDesc,
+            bannerImage: bannerImage.startsWith('/uploads/') ? bannerImage : `/uploads/${bannerImage.filename}`,
+            content,
+            metaTitle,
+            canonical,
+            contentText,
+            metaDescription,
+            metaKeywords: metaKeywords.split(',').map(keyword => keyword.trim()),
+        }, { new: true });
+
+        res.redirect("/all-blogs-list")
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
 
 
 
@@ -469,9 +552,9 @@ app.get('/login', (req, res) => {
     (req, res) => {
       const { role } = req.user;
       if (role === 'admin') {
-        res.redirect('/blog-form'); // Redirect to admin panel
+        res.redirect('/all-blogs-list'); // Redirect to admin panel
       } else {
-        res.redirect('/'); // Redirect to home page
+        res.redirect('/login'); // Redirect to home page
       }
     }
   );
@@ -482,7 +565,7 @@ app.get('/login', (req, res) => {
       if (err) {
         console.error('Error during logout:', err);
       }
-      res.redirect('/');
+      res.redirect('/login');
     });
   });
   

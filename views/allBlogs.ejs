@@ -1,0 +1,81 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    .bl{
+        background-color: black;
+    }
+    .main-page{
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+    }
+    .bt{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        border-bottom: 1px solid black;
+        padding-block: 1rem;
+        /* margin-inline: 5vw; */
+    }
+    
+    .blog-table-body button{
+        background: transparent;
+        padding: .5rem 1.3rem;
+        border: 2px solid red ;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: red;
+    } 
+    .blog-table-body a{
+        background: transparent;
+        padding: .5rem 1.3rem;
+        border: 2px solid #11b911;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #11b911;
+    } 
+
+    .action-btns{
+        width: 100%;
+        padding: 1rem 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .action-btns a{
+        background: transparent;
+        padding: .5rem 1.3rem;
+        border: 2px solid #C4C800;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #000;
+    }
+    
+</style>
+
+<div class="main-page">
+    <div class="action-btns">
+        <a href="/blog-form">Create New Blog</a>
+    <a href="/logout">Logout</a>
+    </div>
+    <hr>
+    <div class="bt blog-table-head">
+        <h3>Blog Title</h3>
+        <h3>Edit Blog</h3>
+        <h3>Delete Blog</p>
+    </div>
+    <% AllBlogs.forEach(blog => { %>
+    <div class="bt blog-table-body">
+           
+                <h3><%= blog.title %></h3>
+                <a href="/edit-blog/<%= blog.canonical %>">Edit</a>
+                <form method="POST" action="/delete-blog/<%= blog._id %>?_method=DELETE">
+                    <button type="submit">Delete</button>
+                </form>
+           
+            </div>
+            <% }); %>
+</div>
