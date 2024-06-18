@@ -301,14 +301,14 @@ app.put('/update-blog/:id', uploadFields, async (req, res) => {
         const { id } = req.params;
         const { blogTitle, blogShortDesc, headings, paragraphs, metaTitle, metaDescription, metaKeywords, canonical, contentText } = req.body;
 
-        const blog = await Blog.findById(id);
+        const existingBlog = await Blog.findById(id);
 
-        if (!blog) {
+        if (!existingBlog) {
             return res.status(404).send('Blog not found');
         }
 
-        const bannerImage = req.files['blogBannerImage'] ? req.files['blogBannerImage'][0] : blog.bannerImage;
-        const images = req.files['images'] ? req.files['images'].map(img => `/uploads/${img.filename}`) : blog.content.map(item => item.image);
+        const bannerImage = req.files['blogBannerImage'] ? req.files['blogBannerImage'][0] : existingBlog.bannerImage;
+        const images = req.files['images'] ? req.files['images'].map(img => `/uploads/${img.filename}`) : existingBlog.content.map(item => item.image);
 
         const content = [];
         for (let i = 0; i < headings.length; i++) {
