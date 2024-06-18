@@ -107,9 +107,8 @@
                 }
             });
 
-            quill.root.innerHTML = '<%= blog.contentText %>';
-
-            var form = document.getElementById('blogForm');
+            quill.root.innerHTML = `<%= blog.contentText %>`;
+                        var form = document.getElementById('blogForm');
             form.onsubmit = function () {
                 var contentText = document.querySelector('input[name=contentText]');
                 contentText.value = quill.root.innerHTML;

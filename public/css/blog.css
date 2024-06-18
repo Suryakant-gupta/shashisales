@@ -61,6 +61,7 @@
     display: grid;
   }
   .blog-page-cont .mar-desc h3{
+    text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -215,7 +215,7 @@ app.get("/blog-form",isAdmin,  (req, res) => {
 // Route for handling blog upload
 app.post('/upload-blog', uploadFields, async (req, res) => {
     try {
-        const { blogTitle, blogShortDesc, headings, paragraphs, metaTitle, metaDescription, metaKeywords, canonical, contentText } = req.body;
+        const { blogTitle, blogShortDesc, headings, paragraphs, metaTitle, metaDescription, metaKeywords, canonical } = req.body;
         const bannerImage = req.files['blogBannerImage'] ? req.files['blogBannerImage'][0] : null;
         const images = req.files['images'] ? req.files['images'].map(img => `/uploads/${img.filename}`) : [];
 
@@ -231,6 +231,9 @@ app.post('/upload-blog', uploadFields, async (req, res) => {
                 image: images[i] || null
             });
         }
+
+        const contentText = req.body.contentText.replace(/<\/?[^>]+(>|$)/g, '');
+
 
         const blog = new Blog({
             title: blogTitle,
@@ -302,11 +305,10 @@ app.put('/update-blog/:id', uploadFields, async (req, res) => {
         const { blogTitle, blogShortDesc, headings, paragraphs, metaTitle, metaDescription, metaKeywords, canonical, contentText } = req.body;
 
         const existingBlog = await Blog.findById(id);
-
         if (!existingBlog) {
             return res.status(404).send('Blog not found');
         }
-
+        
         const bannerImage = req.files['blogBannerImage'] ? req.files['blogBannerImage'][0] : existingBlog.bannerImage;
         const images = req.files['images'] ? req.files['images'].map(img => `/uploads/${img.filename}`) : existingBlog.content.map(item => item.image);
 
@@ -318,7 +320,9 @@ app.put('/update-blog/:id', uploadFields, async (req, res) => {
                 image: images[i] || null
             });
         }
-
+        
+        
+        
         const updatedBlog = await Blog.findByIdAndUpdate(id, {
             title: blogTitle,
             shortDescription: blogShortDesc,
