@@ -11,7 +11,7 @@
 .back-desi{
     position: absolute;
     bottom: 0;
-    background-image: url("/assets/images/backg-desi.png");
+    background-image: url("/assets/images/backg-desi.webp");
     width: 100%;
     height: 21vw;
     background-size: cover;
@@ -64,6 +64,8 @@
 }
 
 .design-section-one-right{
+    height: 55vw;
+    aspect-ratio: 648 / 801;
     position: relative;
     width: 50%;
     display: flex;
@@ -94,8 +96,8 @@
     width: 100%;
 }
 .design-section-one-right img {
-    height: 85%;
-    width: 90%;
+    height: 80%;
+    width: auto;
 }
 
 
@@ -198,7 +200,7 @@
 
 .design-section-two p img{
     width: 100%;
-
+    height: auto;
 }
 .design-section-two div:nth-child(1) div:nth-child(1){
     width: 33.33%;
@@ -206,6 +208,7 @@
     gap: 2vw;
 }
 .design-section-two p{
+    height: auto;
     width: 33.33%;
     font-size: 1.1vw;
 }

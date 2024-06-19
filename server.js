@@ -5,7 +5,9 @@ const bodyParser = require('body-parser');
 const ejsMate = require("ejs-mate");
 const cors = require("cors");
 const axios = require("axios");
-const crypto = require("crypto-js");
+// const crypto = require("crypto-js");
+const crypto = require('crypto');
+
 const dotenv = require('dotenv');
 const mailsender = require("./utils/mailsender");
 const session = require('express-session');
@@ -48,12 +50,12 @@ app.use(
             maxAge: 48 * 60 * 60 * 1000,
         },
     })
-    );
-    
-    
-    // Passport middleware
-    app.use(passport.initialize());
-    app.use(passport.session());
+);
+
+
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 
@@ -107,18 +109,18 @@ dotenv.config();
 // Authentication middleware
 const isAdmin = (req, res, next) => {
     if (req.isAuthenticated() && req.user.role === 'admin') {
-      return next();
+        return next();
     }
     res.redirect('/login');
-  };
+};
 
 
 
 
 
 
-app.get("/", async(req, res) => {
-    const blogs = await Blog.find().sort({ createdAt: -1 }); 
+app.get("/", async (req, res) => {
+    const blogs = await Blog.find().sort({ createdAt: -1 });
     const successMessage = req.session.successMessage || null;
     const errorMessage = req.session.errorMessage || null;
     console.log('successMessage:', successMessage); // Log the value of successMessage
@@ -131,54 +133,54 @@ app.get("/", async(req, res) => {
 
 
 
-app.get("/about-us" , (req, res)=>{
+app.get("/about-us", (req, res) => {
     res.render("aboutUs")
 })
-app.get("/web-development" , (req, res)=>{
+app.get("/web-development", (req, res) => {
     res.render("webDevelopment")
 })
-app.get("/contact-us" , (req, res)=>{
+app.get("/contact-us", (req, res) => {
     res.render("contact")
 })
-app.get("/fusion-marketing" , (req, res)=>{
+app.get("/fusion-marketing", (req, res) => {
     res.render("advertisement")
 })
-app.get("/terms-of-use" , (req, res)=>{
+app.get("/terms-of-use", (req, res) => {
     res.render("terms")
 })
-app.get("/cookie-policy" , (req, res)=>{
+app.get("/cookie-policy", (req, res) => {
     res.render("cookiePolicy")
 })
-app.get("/refund-policy" , (req, res)=>{
+app.get("/refund-policy", (req, res) => {
     res.render("refundPolicy")
 })
-app.get("/privacy-policy" , (req, res)=>{
+app.get("/privacy-policy", (req, res) => {
     res.render("privacyPolicy")
 })
 
-app.get("/graphic-design" , (req, res)=>{
+app.get("/graphic-design", (req, res) => {
     res.render("design")
 })
 
 
-app.get("/email-marketing" , (req, res)=>{
+app.get("/email-marketing", (req, res) => {
     res.render("emailMarketing")
 })
 
 
-app.get("/hidden-img" , (req, res)=>{
+app.get("/hidden-img", (req, res) => {
     res.render("hidden")
 })
 
-app.get("/hidden-img2" , (req, res)=>{
+app.get("/hidden-img2", (req, res) => {
     res.render("hidden2")
 })
 
 function truncateString(str, length = 200) {
-  if (str.length > length) {
-    return `${str.substring(0, length)}...`;
-  }
-  return str;
+    if (str.length > length) {
+        return `${str.substring(0, length)}...`;
+    }
+    return str;
 }
 
 app.get("/blogs", async (req, res) => {
@@ -196,7 +198,7 @@ app.get("/blogs", async (req, res) => {
 app.get("/blog-detail/:canonical", async (req, res) => {
     try {
         const { canonical } = req.params;
-        const blog = await Blog.findOne({ canonical: canonical});
+        const blog = await Blog.findOne({ canonical: canonical });
 
         if (!blog) {
             return res.status(404).send("Blog not found");
@@ -209,7 +211,7 @@ app.get("/blog-detail/:canonical", async (req, res) => {
     }
 });
 
-app.get("/blog-form",isAdmin,  (req, res) => {
+app.get("/blog-form", isAdmin, (req, res) => {
     res.render("uploadForm");
 });
 
@@ -261,10 +263,10 @@ app.post('/upload-blog', uploadFields, async (req, res) => {
 
 
 
-app.get("/all-blogs-list", isAdmin, async(req, res)=>{
+app.get("/all-blogs-list", isAdmin, async (req, res) => {
     const AllBlogs = await Blog.find();
     // console.log(AllBlogs);
-    res.render("allBlogs" , {AllBlogs})
+    res.render("allBlogs", { AllBlogs })
 })
 
 app.delete('/delete-blog/:id', async (req, res) => {
@@ -309,7 +311,7 @@ app.put('/update-blog/:id', uploadFields, async (req, res) => {
         if (!existingBlog) {
             return res.status(404).send('Blog not found');
         }
-        
+
         const bannerImage = req.files['blogBannerImage'] ? req.files['blogBannerImage'][0] : existingBlog.bannerImage;
         const images = req.files['images'] ? req.files['images'].map(img => `/uploads/${img.filename}`) : existingBlog.content.map(item => item.image);
 
@@ -321,9 +323,9 @@ app.put('/update-blog/:id', uploadFields, async (req, res) => {
                 image: images[i] || null
             });
         }
-        
-        
-        
+
+
+
         const updatedBlog = await Blog.findByIdAndUpdate(id, {
             title: blogTitle,
             shortDescription: blogShortDesc,
@@ -346,7 +348,7 @@ app.put('/update-blog/:id', uploadFields, async (req, res) => {
 
 
 //   const recipients = ['suryakantgupta678@gmail.com', 'bgmilelomujhse@gmail.com'];
-  const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
+const recipients = ['anurag.tiwari@shashisales.com', 'info@shashisales.com'];
 
 
 
@@ -370,214 +372,210 @@ app.post('/submit-quote', (req, res) => {
 
 
 
-  
-
-  
 
 
 
 
 
-// Function to generate a unique transaction ID
-function generatedTranscId() {
-  return 'T' + Date.now();
-}
 
-// POST route for initiating payment
-app.post("/payment", async (req, res) => {
-  console.log(req.body);
 
-  try {
-      const price = parseFloat(req.body.price);
-      const { user_id, phone, name, email,  } = req.body;
 
-      // Set the values to variables for later use
-      this.name = name;
-      this.email = email;
-      this.user = user_id;
-      this.phone = phone;
-      this.price = price;
 
-      // Prepare payment request data
-      const data = {
-          merchantId: process.env.PHONEPE_MERCHANT_ID,
-          merchantTransactionId: generatedTranscId(),
-          merchantUserId: 'MUID' + user_id,
-          name: name,
-          amount: price * 100,
-          redirectUrl: `http://localhost:4000/api/v1/orders/status/${generatedTranscId()}`,
-          redirectMode: "POST",
-          mobileNumber: phone,
-          paymentInstrument: {
-              type: "PAY_PAGE",
-          },
-      };
-
-      // Convert payload to Base64 encoding
-      const payload = JSON.stringify(data);
-      const payloadMain = Buffer.from(payload).toString("base64");
-
-      // Generate checksum
-      const key = process.env.PHONEPE_SALT;
-      const keyIndex = 1;
-      const string = payloadMain + "/pg/v1/pay" + key;
-      const sha256 = crypto.SHA256(string).toString();
-      const checksum = sha256 + "###" + keyIndex;
-
-      // Prepare request options
-      const prod_URL = "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay";
-      const requestData = {
-          method: "POST",
-          url: prod_URL,
-          headers: {
-              accept: "application/json",
-              "Content-Type": "application/json",
-              "X-VERIFY": checksum,
-          },
-          data: {
-              request: payloadMain,
-          },
-      };
-
-      // Make payment API request
-      axios.request(requestData)
-          .then(async function (response) {
-              const phonePeTransactionId = response.data.transactionId;
-              res.status(201).send({
-                  msg: "payment done",
-                  status: "success",
-                  data: response.data,
-                  phonePeTransactionId: phonePeTransactionId,
-              });
-              console.log("Payment API Response:", response.data);
-          })
-          .catch(function (error) {
-              console.error("Payment API Error:", error.message);
-              res.status(500).json({ msg: "Payment Failed", status: "error", error: error.message });
-          });
-  } catch (e) {
-      console.error("Internal Server Error:", e.message);
-      res.status(500).json({ msg: "Internal Server Error", status: "error", error: e.message });
-  }
-});
-
-// POST route for checking payment status
-app.post('/status/:txnId', async (req, res) => {
-  try {
-      const merchantTransactionId = req.params.txnId;
-      const merchantUserId = "PGTESTPAYUAT";
-      const key = "099eb0cd-02cf-4e2a-8aca-3e6c6aff0399";
-
-      // Generate checksum
-      const keyIndex = 1;
-      const string = `/pg/v1/status/${merchantUserId}/${merchantTransactionId}` + key;
-      const sha256 = crypto.SHA256(string).toString();
-      const checksum = sha256 + "###" + keyIndex;
-
-      // Prepare request options
-      const URL = `https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/${merchantUserId}/${merchantTransactionId}`;
-      const options = {
-          method: 'GET',
-          url: URL,
-          headers: {
-              accept: 'application/json',
-              'Content-Type': 'application/json',
-              'X-VERIFY': checksum,
-              'X-MERCHANT-ID': merchantUserId,
-          }
-      };
-
-      // Make status API request
-      const response = await axios.request(options);
-
-      if (response.data.data.responseCode === 'SUCCESS') {
-          // Handle successful payment
-          // Create a new order instance and save it to the database
-          // Redirect to success URL
-      } else {
-          // Handle failed payment
-          // Redirect to failure URL
-      }
-  } catch (error) {
-      console.error("Error:", error.message);
-      res.status(500).json({ msg: "Error", status: "error", error: error.message });
-  }
-});
 
 
 // admin panel code 
 async function createDefaultAdminUsers() {
     try {
-      // Check if any admin or manager users exist
-      const existingAdmins = await User.find({ role: 'admin' });
-      
-  
-      if (existingAdmins.length > 0) {
-        console.log('Admin user already exist');
-        return;
-      }
-  
-      // Check if environment variables are set
-      if (!process.env.ADMIN_PASS || !process.env.ADMIN_EMAIL) {
-        throw new Error('Environment variables MANAGER_PASS, ADMIN_PASS, and ADMIN_EMAIL must be set');
-      }
-  
-      
-      
-  
-      const adminUser = new User({
-        name: 'Admin User',
-        email: process.env.ADMIN_EMAIL,
-        password:  process.env.ADMIN_PASS, // await the hashed password
-        role: 'admin'
-      });
-  
-      await adminUser.save();
-  
-      console.log('Default admin created successfully');
+        // Check if any admin or manager users exist
+        const existingAdmins = await User.find({ role: 'admin' });
+
+
+        if (existingAdmins.length > 0) {
+            console.log('Admin user already exist');
+            return;
+        }
+
+        // Check if environment variables are set
+        if (!process.env.ADMIN_PASS || !process.env.ADMIN_EMAIL) {
+            throw new Error('Environment variables MANAGER_PASS, ADMIN_PASS, and ADMIN_EMAIL must be set');
+        }
+
+
+
+
+        const adminUser = new User({
+            name: 'Admin User',
+            email: process.env.ADMIN_EMAIL,
+            password: process.env.ADMIN_PASS, // await the hashed password
+            role: 'admin'
+        });
+
+        await adminUser.save();
+
+        console.log('Default admin created successfully');
     } catch (err) {
-      console.error('Error creating default admin and manager users:', err);
+        console.error('Error creating default admin and manager users:', err);
     }
-  }
-  // Call the function to create the default admin users
+}
+// Call the function to create the default admin users
 //   createDefaultAdminUsers();
 
 
 app.get('/login', (req, res) => {
     const { successMessage, errorMessage } = req.flash();
     res.render('login', { successMessage, errorMessage });
-  });
+});
 
-  app.post(
+app.post(
     '/login',
     passport.authenticate('local', {
-      failureRedirect: '/login',
-      failureFlash: true,
+        failureRedirect: '/login',
+        failureFlash: true,
     }),
     (req, res) => {
-      const { role } = req.user;
-      if (role === 'admin') {
-        res.redirect('/all-blogs-list'); // Redirect to admin panel
-      } else {
-        res.redirect('/login'); // Redirect to home page
-      }
+        const { role } = req.user;
+        if (role === 'admin') {
+            res.redirect('/all-blogs-list'); // Redirect to admin panel
+        } else {
+            res.redirect('/login'); // Redirect to home page
+        }
     }
-  );
+);
 
 
-  app.get('/logout', (req, res) => {
+app.get('/logout', (req, res) => {
     req.logout((err) => {
-      if (err) {
-        console.error('Error during logout:', err);
-      }
-      res.redirect('/login');
+        if (err) {
+            console.error('Error during logout:', err);
+        }
+        res.redirect('/login');
     });
+});
+
+
+
+
+
+//   payment gateway integration
+
+
+
+
+app.get("/phonepe-form", async (req, res) => {
+    res.render("phonepayForm")
+})
+
+app.post("/payment", async (req, res) => {
+    try {
+        const { name, number, amount } = req.body;
+        const merchantTransactionId =  'T' + Date.now();;
+        const data = {
+            "merchantId": "M22OQOM3GDAES",
+            "merchantTransactionId":merchantTransactionId,
+            "merchantUserId": "MUID1234353ABC",
+
+            "amount": amount * 100,
+            "redirectUrl": `https://shashisales.com/status/${merchantTransactionId}`,
+            "redirectMode": "POST",
+            "mobileNumber": number,
+            "paymentInstrument": {
+                "type": "PAY_PAGE"
+            }
+        };
+
+        const payload = JSON.stringify(data);
+        const payloadMain = Buffer.from(payload).toString('base64');
+        const key = 'e4622f89-6a9a-420b-afa1-d23407d94267';
+        const keyIndex = 1;
+        const stringToHash = payloadMain + '/pg/v1/pay' + key;
+        const sha256 = crypto.createHash('sha256').update(stringToHash).digest('hex');
+        const checksum = sha256 + '###' + keyIndex;
+        const URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
+
+        const options = {
+            method: 'post',
+            url: URL,
+            headers: {
+                accept: 'application/json',
+                'Content-Type': 'application/json',
+                'X-VERIFY': checksum,
+            },
+            data: {
+                request: payloadMain
+            }
+        };
+
+        axios
+  .request(options)
+      .then(function (response) {
+          console.log(response.data);
+        res.redirect(response.data.data.instrumentResponse.redirectInfo.url)
+
+  })
+  .catch(function (error) {
+    console.error(error);
   });
-  
+       
+
+       
+    } catch (error) {
+        console.error('Error details:', {
+            message: error.message,
+            status: error.response?.status,
+            headers: error.response?.headers,
+            data: error.response?.data,
+        });
+        res.status(500).send({
+            message: error.message,
+            success: false,
+            details: error.response?.data || 'No additional details available'
+        });
+    }
+});
+
+
+
+app.post("/status/:txnId", async (req, res) => {
+    console.log("status body" , res.req.body);
+    const merchantId = res.req.body.merchantId;
+    const merchantTransactionId = res.req.body.transactionId;
+    const key = 'e4622f89-6a9a-420b-afa1-d23407d94267';
+    const keyIndex = 1;
+    const string = `/pg/v1/status/${merchantId}/${merchantTransactionId}` + key;
+    const sha256 = crypto.createHash('sha256').update(string).digest('hex');
+    const checksum = sha256 + '###' + keyIndex;
+
+    const URL = `https://api.phonepe.com/apis/hermes/pg/v1/status/${merchantId}/${merchantTransactionId}`
+
+
+    const options = {
+        method: 'GET',
+        url: URL,
+        headers: {
+            accept: 'application/json',
+            'Content-Type': 'application/json',
+            'X-VERIFY' : checksum,
+            'X-MERCHANT-ID': `${merchantId}`
+        },
+    };
+    axios
+        .request(options)
+        .then(function (response) {
+            console.log(response.data);
+           
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+
+})
 
 
 
 
-app.listen(4000 , ()=>{
+
+
+
+app.listen(4000, () => {
     console.log("listening on port 4000");
 })

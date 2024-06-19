@@ -65,8 +65,11 @@
     overflow: hidden;
 } */
 .nav2-right img{
+    position: absolute;
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
 }
 
 /* Section logi.logo-divi */
@@ -217,13 +220,12 @@ h1{
             clip-path: polygon(0px 0%, 100% 0%, 100% 100%, 0px 100%);
 }
 .mar-img{
-    height: 13vw;
-    width: 19.4vw;
+    aspect-ratio: 390 / 296;
     overflow: hidden;
 }
 .mar-img img{
-    width: 100%;
-    height: 13vw;
+    width: auto;
+    height: 100%;
     display: block;
 }
 .mar-desc{
@@ -602,7 +604,7 @@ footer{
     position: relative;
     color: #000;
 }
-.up{
+/* .up{
     width: 25vw;
     position: absolute;
     bottom: 70%;
@@ -610,7 +612,7 @@ footer{
 .up img{
     width: 10vw;
     
-}
+} */
 .down{
     font-size: 3vw;
     width: 25vw;
@@ -670,16 +672,6 @@ footer{
     .marketing-card{
         background-color: #F2F2F2;
         width: 48%;
-    }
-    .mar-img{
-        height: 30vw;
-        width: 100%;
-        overflow: hidden;
-    }
-    .mar-img img{
-        width: 100%;
-        height: 30vw;
-        display: block;
     }
     .mar-desc{
         margin: 1vw;

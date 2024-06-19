@@ -111,10 +111,10 @@ document.getElementById("bor1").addEventListener("click", function() {
         "Portfolios, blogs, or personal interests.",
         "Nonprofit or NGO Websites",
         "Promoting the mission, goals, and activities of nonprofit organizations.",
-        "/assets/images/w-img-3.png",
-        "/assets/images/ii1.png",
-        "/assets/images/i2.png",
-        "/assets/images/i3.png"
+        "/assets/images/w-img-3.webp",
+        "/assets/images/ii1.webp",
+        "/assets/images/i2.webp",
+        "/assets/images/i3.webp"
     );
 });
 
@@ -126,10 +126,10 @@ document.getElementById("bor2").addEventListener("click", function() {
         "Onlines Stores Facilitating The Buying Ans Selling Of Products Of Services",
         "Blogs",
         "Promoting Products Servicces, And Information About A Company",
-        "/assets/images/w-img-32.jpeg",
-        "/assets/images/i1.png",
-        "/assets/images/ii2.png",
-        "/assets/images/i3.png"
+        "/assets/images/w-img-32.webp",
+        "/assets/images/i1.webp",
+        "/assets/images/ii2.webp",
+        "/assets/images/i3.webp"
     );
 });
 
@@ -141,10 +141,10 @@ document.getElementById("bor3").addEventListener("click", function() {
         "Featuring Property Listings, Real Estate Information, And Services",
         "Job Board",
         "Job Listings Connect Job Services With Employers",
-        "/assets/images/w-img-33.png",
-        "/assets/images/i1.png",
-        "/assets/images/i2.png",
-        "/assets/images/ii3.png"
+        "/assets/images/w-img-33.webp",
+        "/assets/images/i1.webp",
+        "/assets/images/i2.webp",
+        "/assets/images/ii3.webp"
     );
 });
 
@@ -183,7 +183,7 @@ document.getElementById("bor3").addEventListener("click", function() {
 
 // When the page loads
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("im1").src = "/assets/images/ii1.png";
+    document.getElementById("im1").src = "/assets/images/ii1.webp";
     document.getElementById("basic").style.color = "#C4C800";
     document.getElementById("bor1").style.borderBottom = "0.3vw solid #C4C800"
     
@@ -566,15 +566,6 @@ document.getElementById("idr5").addEventListener("click", function() {
     document.getElementById("idr4").style.color = ""
     document.getElementById("idr5").style.color = "#C4C800"
 });
-
-
-
-
-
-
-
-
-
 
 
 
