@@ -562,10 +562,12 @@ app.post("/status/:txnId", async (req, res) => {
         .request(options)
         .then(function (response) {
             console.log(response.data);
+            res.redirect("/");
            
         })
         .catch(function (error) {
             console.error(error);
+            res.redirect("/phonepe-form")
         });
 
 })
