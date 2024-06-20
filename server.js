@@ -168,6 +168,12 @@ app.get("/email-marketing", (req, res) => {
 })
 
 
+app.get("/search-engine-optimization" , (req, res)=>{
+    res.render("seo")
+})
+
+
+
 app.get("/hidden-img", (req, res) => {
     res.render("hidden")
 })
@@ -470,9 +476,9 @@ app.post("/payment", async (req, res) => {
         const { name, number, amount } = req.body;
         const merchantTransactionId =  'T' + Date.now();;
         const data = {
-            "merchantId": "M22OQOM3GDAES",
+            "merchantId": process.env.PHONEPE_MERCHANT_ID,
             "merchantTransactionId":merchantTransactionId,
-            "merchantUserId": "MUID1234353ABC",
+            "merchantUserId": process.env.PHONEPE_MERCHANT_UID,
 
             "amount": amount * 100,
             "redirectUrl": `https://shashisales.com/status/${merchantTransactionId}`,
@@ -485,8 +491,8 @@ app.post("/payment", async (req, res) => {
 
         const payload = JSON.stringify(data);
         const payloadMain = Buffer.from(payload).toString('base64');
-        const key = 'e4622f89-6a9a-420b-afa1-d23407d94267';
-        const keyIndex = 1;
+        const key = process.env.PHONEPE_SALT;
+        const keyIndex = process.env.PHONEPE_KEY_INDEX;
         const stringToHash = payloadMain + '/pg/v1/pay' + key;
         const sha256 = crypto.createHash('sha256').update(stringToHash).digest('hex');
         const checksum = sha256 + '###' + keyIndex;
@@ -539,8 +545,8 @@ app.post("/status/:txnId", async (req, res) => {
     console.log("status body" , res.req.body);
     const merchantId = res.req.body.merchantId;
     const merchantTransactionId = res.req.body.transactionId;
-    const key = 'e4622f89-6a9a-420b-afa1-d23407d94267';
-    const keyIndex = 1;
+    const key = process.env.PHONEPE_SALT;
+    const keyIndex = process.env.PHONEPE_KEY_INDEX;
     const string = `/pg/v1/status/${merchantId}/${merchantTransactionId}` + key;
     const sha256 = crypto.createHash('sha256').update(string).digest('hex');
     const checksum = sha256 + '###' + keyIndex;

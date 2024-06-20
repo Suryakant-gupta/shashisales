@@ -434,3 +434,215 @@
         top: 5%;
     }
 }
+
+
+
+
+/* SEO.css */
+
+
+
+/* SEO section one */
+.seo-section-one{
+    padding-top: 5vw;
+    position: relative;
+    display: flex;
+    background: black;
+    color: white;
+}
+.seo-section-one-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.seo-section-one-left div:nth-child(1){
+    width: 81%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+.seo-section-one-left div:nth-child(1) p:nth-child(1){
+    font-family: "Roboto Serif";
+    font-size: 2.9vw;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.seo-section-one-left button a, .seo-section-two button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C4C800;
+    width: 40%;
+    background: transparent;
+    border: 1px solid #C4C800;
+    padding: 0.8vw;
+    border-radius: 4vw;
+    color: #C4C800;
+    font-size: 1.1vw;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.seo-section-one-left button a:hover, .seo-section-two button a:hover{
+    background: #C4C800;
+    color: black;
+    transform: scale(1.1);
+}
+
+.seo-section-one-left button, .seo-section-two button{
+    z-index: 1;
+    background: none;
+    border: none;
+}
+
+.seo-section-one-right{
+    aspect-ratio: 988/977;
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.seo-section-one-right-in{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.blur-img {
+    height: 10vw !important;
+    width: 10vw !important;
+    position: absolute;
+    top: 15%;
+    left: 6%;
+}
+.blur-img img{
+    width: 100%;
+    height: 100%;
+}
+.seo-section-one-right div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.seo-section-one-right img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Our Digital Package */
+.package-section{
+    padding: 0 4vw 4vw 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+.package-section ul{
+    font-size: 0.9vw;
+    padding: 1vw 0vw 2vw 2vw;
+    line-height: 1.5;
+}
+.package-sec-in{
+    position: relative;
+    padding: 1.5vw;
+    width: 30%;
+    background: #090909;
+    color: #C1BEBE;
+    border-radius: 0.5vw;
+}
+.bttn{
+    position: absolute;
+    bottom: -4%;
+    left: 0px;
+    width: 100%;
+}
+.bttn button{
+    width: 100%;
+    padding: 0.4vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+    border-radius: 2vw;
+    background: #C4C800;
+    color: black;
+    border: 0;
+}
+.bttn button:hover{
+    cursor: pointer;
+}
+
+.seo-sec-8-mob .design-section-card{
+    width: 20vw !important;
+}
+.septr2{
+        margin: 3vw 4vw;
+        border-bottom: 1px solid
+}
+.hed-psi{
+    color: #C4C800;
+    border-bottom: 2px solid #C4C800;
+    font-size: 1.3vw;
+}
+@media only screen and (max-width: 600px){
+    .seo-sec-7-mob{
+        display: grid !important;
+    }
+    .seo-sec-7-mob .design-section-card{
+        width: 100%;
+    }
+    .seo-sec-7-mob .design-section-card p:nth-child(1), .seo-sec-8-mob .design-section-card p:nth-child(1){
+        font-size: 2.8vw;
+    }
+    .seo-sec-7-mob .design-section-card p:nth-child(2), .seo-sec-8-mob .design-section-card p:nth-child(2){
+        font-size: 2.5vw;
+    }
+    .fsm{
+        font-size: 5.5vw !important;
+    }
+    .seo-sec-8-mob{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100% !important;
+    }
+    .seo-sec-8-mob .design-section-card{
+        width: 48% !important;
+    }
+    .septr2{
+        margin: 3vw 4vw;
+        border-bottom: 0px solid
+    }
+    .seo-section-one {
+        padding-top: 14vw;
+    }
+    .package-section {
+        padding: 0px 0vw 20vw 0vw;
+        display: block;
+    }
+    .package-sec-in {
+        width: 100%;
+        margin-bottom: 8vw;
+        padding: 5.5vw;
+    }
+    .hed-psi{
+        color: #C4C800;
+        border-bottom: 2px solid #C4C800;
+        font-size: 4vw;
+    }
+    .package-section ul{
+        font-size: 2.7vw;
+        padding: 3vw 0vw 12vw 4vw;
+        line-height: 1.5;
+    }
+    .bttn button {
+        width: 100%;
+        padding: 2.4vw;
+        font-size: 3.3vw;
+        letter-spacing: 0.2vw;
+        font-weight: 700;
+        border-radius: 5vw;
+        background: #C4C800;
+        color: black;
+        border: 0;
+    }
+}
