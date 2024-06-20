@@ -291,7 +291,7 @@
         -ms-flex-pack: center;
             justify-content: center;
 }
-.pay-card button{
+.pay-card button, .pay-card a{
     font-size: 1.3vw;
     padding: 0.8vw;
     width: 13vw;
@@ -300,7 +300,7 @@
     border-radius: 5px;
     background: transparent;
 }
-.pay-card button:hover{
+.pay-card button:hover, .pay-card a:hover{
     cursor: pointer;
     background: #C4C800;
     color: black;
@@ -333,7 +333,7 @@
         color: #909090;
         font-size: 0.6rem;
     }
-    .pay-card button {
+    .pay-card button, .pay-card a {
         font-size: 0.5rem;
         width: 13rem;
         border: 1px solid #C4C800;
