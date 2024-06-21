@@ -18,11 +18,9 @@ const multer = require('multer');
 const fs = require('fs');
 const User = require("./models/User");
 const Blog = require('./models/Blog');
-// const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const passport = require('./config/passport');
-// const LocalStrategy = require('passport-local').Strategy;
-const puppeteer = require('puppeteer');
-const nodemailer = require('nodemailer');
+const LocalStrategy = require('passport-local').Strategy;
 
 const app = express();
 
@@ -170,7 +168,7 @@ app.get("/email-marketing", (req, res) => {
 })
 
 
-app.get("/search-engine-optimization", (req, res) => {
+app.get("/search-engine-optimization" , (req, res)=>{
     res.render("seo")
 })
 
@@ -463,81 +461,10 @@ app.get('/logout', (req, res) => {
 
 
 
-// pdf sender
-
-
-
-function generatePaymentReceiptHTML(paymentData) {
-    return `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Payment Receipt</title>
-      <style>
-        /* Add your styles here */
-      </style>
-    </head>
-    <body>
-      <h1>Payment Receipt</h1>
-      <p>Amount Paid: ₹${paymentData.amount}</p>
-      <p>Transaction ID: ${paymentData.transactionId}</p>
-      <p>Date: ${new Date().toLocaleString()}</p>
-      <!-- Add more details as needed -->
-    </body>
-    </html>
-  `;
-}
-
-async function generatePDF(html) {
-    const browser = await puppeteer.launch({
-        args: ['--no-sandbox'],
-        timeout: 60000
-    });
-    const page = await browser.newPage();
-    await page.setContent(html, { waitUntil: 'networkidle0' });
-    const pdfBuffer = await page.pdf({ format: 'A4' });
-    await browser.close();
-    return pdfBuffer;
-}
-
-async function sendPDFEmail(pdfBuffer, recipient) {
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.FROM_EMAIL,
-            pass: process.env.EMAIL_PASS
-        }
-    });
-
-    const mailOptions = {
-        from: process.env.FROM_EMAIL,
-        to: recipient,
-        subject: 'Payment Receipt',
-        text: 'Please find attached your payment receipt.',
-        attachments: [
-            {
-                filename: 'payment_receipt.pdf',
-                content: pdfBuffer
-            }
-        ]
-    };
-
-    await transporter.sendMail(mailOptions);
-}
-
-async function generateAndSendReceipt(paymentData, recipientEmail) {
-    const receiptHTML = generatePaymentReceiptHTML(paymentData);
-    const pdfBuffer = await generatePDF(receiptHTML);
-    await sendPDFEmail(pdfBuffer, recipientEmail);
-}
-
-
-
-
 
 //   payment gateway integration
+
+
 
 
 app.get("/phonepe-form", async (req, res) => {
@@ -546,75 +473,72 @@ app.get("/phonepe-form", async (req, res) => {
 
 app.post("/payment", async (req, res) => {
     try {
-      const { name, number, amount, email } = req.body;
-      const merchantTransactionId = 'T' + Date.now();
-      const data = {
-        "merchantId": process.env.PHONEPE_MERCHANT_ID,
-        "merchantTransactionId": merchantTransactionId,
-        "merchantUserId": process.env.PHONEPE_MERCHANT_UID,
-        "amount": amount * 100,
-        "redirectUrl": `https://www.shashisales.com/status/${merchantTransactionId}`,
-        "redirectMode": "POST",
-        "mobileNumber": number,
-        "paymentInstrument": {
-          "type": "PAY_PAGE"
-        }
-      };
-  
-      const payload = JSON.stringify(data);
-      const payloadMain = Buffer.from(payload).toString('base64');
-      const key = process.env.PHONEPE_SALT;
-      const keyIndex = process.env.PHONEPE_KEY_INDEX;
-      const stringToHash = payloadMain + '/pg/v1/pay' + key;
-      const sha256 = crypto.createHash('sha256').update(stringToHash).digest('hex');
-      const checksum = sha256 + '###' + keyIndex;
-      const URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
-  
-      const options = {
-        method: 'post',
-        url: URL,
-        headers: {
-          accept: 'application/json',
-          'Content-Type': 'application/json',
-          'X-VERIFY': checksum,
-        },
-        data: {
-          request: payloadMain
-        }
-      };
-  
-      const response = await axios.request(options);
-      
-      if (response.data.success) {
-        // Generate and send PDF receipt
-        const paymentDetails = {
-          amount: amount,
-          transactionId: merchantTransactionId
+        const { name, number, amount } = req.body;
+        const merchantTransactionId =  'T' + Date.now();;
+        const data = {
+            "merchantId": process.env.PHONEPE_MERCHANT_ID,
+            "merchantTransactionId":merchantTransactionId,
+            "merchantUserId": process.env.PHONEPE_MERCHANT_UID,
+
+            "amount": amount * 100,
+            "redirectUrl": `https://www.shashisales.com/status/${merchantTransactionId}`,
+            // "redirectUrl": `http://localhost:4000/status/${merchantTransactionId}`,
+            "redirectMode": "POST",
+            "mobileNumber": number,
+            "paymentInstrument": {
+                "type": "PAY_PAGE"
+            }
         };
-        await generateAndSendReceipt(paymentDetails, email);
-  
-        // Redirect to PhonePe payment page
-        res.redirect(response.data.data.instrumentResponse.redirectInfo.url);
-      } else {
-        res.status(400).send({
-          message: "Payment initiation failed",
-          success: false
-        });
-      }
-    } catch (error) {
-      console.error('Error details:', {
-        message: error.message,
-        status: error.response?.status,
-        headers: error.response?.headers,
-        data: error.response?.data,
-      });
-      res.status(500).send({
-        message: error.message,
-        success: false,
-        details: error.response?.data || 'No additional details available'
-      });
-    }
+
+        const payload = JSON.stringify(data);
+        const payloadMain = Buffer.from(payload).toString('base64');
+        const key = process.env.PHONEPE_SALT;
+        const keyIndex = process.env.PHONEPE_KEY_INDEX;
+        const stringToHash = payloadMain + '/pg/v1/pay' + key;
+        const sha256 = crypto.createHash('sha256').update(stringToHash).digest('hex');
+        const checksum = sha256 + '###' + keyIndex;
+        const URL = "https://api.phonepe.com/apis/hermes/pg/v1/pay";
+
+        const options = {
+            method: 'post',
+            url: URL,
+            headers: {
+                accept: 'application/json',
+                'Content-Type': 'application/json',
+                'X-VERIFY': checksum,
+            },
+            data: {
+                request: payloadMain
+            }
+        };
+
+        axios
+  .request(options)
+      .then(function (response) {
+          console.log(response.data);
+        res.redirect(response.data.data.instrumentResponse.redirectInfo.url)
+
+  })
+  .catch(function (error) {
+    console.error(error);
   });
+       
+
+       
+    } catch (error) {
+        console.error('Error details:', {
+            message: error.message,
+            status: error.response?.status,
+            headers: error.response?.headers,
+            data: error.response?.data,
+        });
+        res.status(500).send({
+            message: error.message,
+            success: false,
+            details: error.response?.data || 'No additional details available'
+        });
+    }
+});
 
 
 
@@ -649,7 +573,7 @@ app.post("/status/:txnId", async (req, res) => {
     try {
         const response = await axios.request(options);
         console.log("PhonePe API Response:", response.data);
-
+        
         if (response.data.success === true) {
             console.log("Payment successful, redirecting to success page");
             // Get the amount from the response
@@ -664,7 +588,7 @@ app.post("/status/:txnId", async (req, res) => {
         console.error("Status:", error.response?.status);
         console.error("Headers:", error.response?.headers);
         console.error("Data:", error.response?.data);
-
+        
         return res.redirect("/phonepe-form");
     }
 });
@@ -673,7 +597,7 @@ app.get("/payment-successful", (req, res) => {
     const amount = req.query.amount || 'N/A';
     res.render("paymentsucess.ejs", { amount: amount });
 });
-app.get("/payment-failed", (req, res) => {
+app.get("/payment-failed" , (req, res)=>{
     res.render("paymentfail.ejs")
 })
 
