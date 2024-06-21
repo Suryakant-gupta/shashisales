@@ -481,7 +481,7 @@ app.post("/payment", async (req, res) => {
             "merchantUserId": process.env.PHONEPE_MERCHANT_UID,
 
             "amount": amount * 100,
-            "redirectUrl": `https://shashisales.com/status/${merchantTransactionId}`,
+            "redirectUrl": `https://www.shashisales.com/status/${merchantTransactionId}`,
             // "redirectUrl": `http://localhost:4000/status/${merchantTransactionId}`,
             "redirectMode": "POST",
             "mobileNumber": number,
