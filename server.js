@@ -542,9 +542,9 @@ app.post("/payment", async (req, res) => {
 
 
 app.post("/status/:txnId", async (req, res) => {
-    console.log("status body" , res.req.body);
-    const merchantId = res.req.body.merchantId;
-    const merchantTransactionId = res.req.body.transactionId;
+    console.log("status body" , req.body);
+    const merchantId = process.env.PHONEPE_MERCHANT_ID;
+    const merchantTransactionId = res.req.body.merchantTransactionId;
     const key = process.env.PHONEPE_SALT;
     const keyIndex = process.env.PHONEPE_KEY_INDEX;
     const string = `/pg/v1/status/${merchantId}/${merchantTransactionId}` + key;
@@ -568,7 +568,7 @@ app.post("/status/:txnId", async (req, res) => {
         .request(options)
         .then(function (response) {
             console.log(response.data);
-            if(res.data.success === true){
+            if(response.data.success === true){
                 return res.redirect("/");
             } else {
                 return res.redirect("/phonepe-form");
