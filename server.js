@@ -544,7 +544,8 @@ app.post("/payment", async (req, res) => {
 app.post("/status/:txnId", async (req, res) => {
     console.log("status body" , req.body);
     const merchantId = process.env.PHONEPE_MERCHANT_ID;
-    const merchantTransactionId = res.req.body.merchantTransactionId;
+    const merchantTransactionId = req.params.txnId;
+    // const merchantTransactionId = res.req.body.merchantTransactionId;
     const key = process.env.PHONEPE_SALT;
     const keyIndex = process.env.PHONEPE_KEY_INDEX;
     const string = `/pg/v1/status/${merchantId}/${merchantTransactionId}` + key;
