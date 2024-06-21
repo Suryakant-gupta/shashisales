@@ -24,7 +24,7 @@ const sendEmail = (recipient, htmlTemplate) => {
   const mailOptions = {
     from: fromUser, // Replace with your Gmail email
     to: recipient,
-    subject: 'New Form Submission',
+    subject: 'Payment Notification',
     html: htmlTemplate,
   };
 

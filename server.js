@@ -591,6 +591,12 @@ app.post("/payment", async (req, res) => {
             font-size: 2rem;
             color: #28a745;
         }
+        @media screen and (max-width:400px) {
+            ._success{
+                padding: 20px;
+                width: 95%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -755,6 +761,12 @@ app.post("/payment", async (req, res) => {
         span{
             font-size: 2rem;
             color: #28a745;
+        }
+        @media screen and (max-width:400px) {
+            ._success{
+                padding: 20px;
+                width: 95%;
+            }
         }
     </style>
 </head>
