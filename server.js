@@ -482,6 +482,7 @@ app.post("/payment", async (req, res) => {
 
             "amount": amount * 100,
             "redirectUrl": `https://shashisales.com/status/${merchantTransactionId}`,
+            // "redirectUrl": `http://localhost:4000/status/${merchantTransactionId}`,
             "redirectMode": "POST",
             "mobileNumber": number,
             "paymentInstrument": {
@@ -542,46 +543,53 @@ app.post("/payment", async (req, res) => {
 
 
 app.post("/status/:txnId", async (req, res) => {
-    console.log("status body" , req.body);
+    console.log("Received status callback for txnId:", req.params.txnId);
+    console.log("Request body:", req.body);
+
     const merchantId = process.env.PHONEPE_MERCHANT_ID;
-    const merchantTransactionId = req.params.txnId;
-    // const merchantTransactionId = res.req.body.merchantTransactionId;
+    const merchantTransactionId = req.body.transactionId;
     const key = process.env.PHONEPE_SALT;
     const keyIndex = process.env.PHONEPE_KEY_INDEX;
-    const string = `/pg/v1/status/${merchantId}/${merchantTransactionId}` + key;
+    const string = `/pg/v1/status/${merchantId}/${merchantTransactionId}${key}`;
     const sha256 = crypto.createHash('sha256').update(string).digest('hex');
-    const checksum = sha256 + '###' + keyIndex;
+    const checksum = sha256 + "###" + keyIndex;
 
-    const URL = `https://api.phonepe.com/apis/hermes/pg/v1/pay/${merchantId}/${merchantTransactionId}`
+    console.log("Generated checksum:", checksum);
 
+    const URL = `https://api.phonepe.com/apis/hermes/pg/v1/status/${merchantId}/${merchantTransactionId}`;
+    console.log("Requesting URL:", URL);
 
     const options = {
         method: 'GET',
         url: URL,
         headers: {
-            accept: 'application/json',
+            'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'X-VERIFY' : checksum,
-            'X-MERCHANT-ID': `${merchantId}`
+            'X-VERIFY': checksum,
+            'X-MERCHANT-ID': merchantId
         },
     };
-    axios
-        .request(options)
-        .then(function (response) {
-            console.log(response.data);
-            if(response.data.success === true){
-                return res.redirect("/");
-            } else {
-                return res.redirect("/phonepe-form");
-            }
-           
-        })
-        .catch(function (error) {
-            console.error(error);
-            
-        });
 
-})
+    try {
+        const response = await axios.request(options);
+        console.log("PhonePe API Response:", response.data);
+        
+        if (response.data.success === true) {
+            console.log("Payment successful, redirecting to home");
+            return res.redirect("/");
+        } else {
+            console.log("Payment unsuccessful, redirecting to form");
+            return res.redirect("/phonepe-form");
+        }
+    } catch (error) {
+        console.error("Error in PhonePe status check:");
+        console.error("Status:", error.response?.status);
+        console.error("Headers:", error.response?.headers);
+        console.error("Data:", error.response?.data);
+        
+        return res.redirect("/phonepe-form");
+    }
+});
 
 
 
